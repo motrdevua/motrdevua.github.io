@@ -1,0 +1,21 @@
+mixin icon(name,mod)
+  if(mod)
+    svg(class="svg-sprite-icon icon-" + name + ' ' + mod)
+      use(xlink:href="img/spriteSvg.svg#sprite-" + name)
+  else
+    svg(class="svg-sprite-icon icon-" + name)
+      use(xlink:href="img/spriteSvg.svg#sprite-" + name)
+
+//- Portfolio Card
+
+mixin portfolioCard(title, text, icon1, icon2, icon3)
+  .portfolio__card.card
+    .card__front
+    .card__back
+      .card__desc
+        h3.card__title= title
+        p.card__text= text
+      .card__icons
+        div(class="card__icon card__icon--" + icon1)
+        div(class="card__icon card__icon--" + icon2)
+        div(class="card__icon card__icon--" + icon3)
