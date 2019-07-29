@@ -1,0 +1,72 @@
+/*================ Service =====================*/
+
+.wedo
+  display: flex
+  align-items: center
+  margin: 0 -15px
+  &__item
+    padding: 0 15px
+    flex: 1 1 0
+    width: 100%
+  &__img
+    display: block
+    margin: 0 auto
+    max-width: 100%
+    height: auto
+    padding-bottom: 15px
+
+.accordion
+  &__item
+    margin-bottom: 10px
+    border: 1px solid #e5e5e5
+    &--active .accordion__text
+      display: block
+    &--active .accordion__header
+      border-bottom: 1px solid #e5e5e5
+    &--active .accordion__header::after
+      margin-top: -4px
+      transform: rotate(45deg)
+
+  &__header
+    position: relative
+    display: flex
+    align-items: center
+    width: 100%
+    padding: 15px
+    border-bottom: none
+    color: #333333
+    +rfs(14)
+    font-weight: 400
+    text-transform: uppercase
+    cursor: pointer
+    &::after
+      position: absolute
+      top: 50%
+      margin-top: -10px
+      right: 20px
+      content: ''
+      width: 17px
+      height: 17px
+      border-left: 3px solid #cccccc
+      border-top: 3px solid #cccccc
+      transform: rotate(-135deg)
+  &__header h3
+    padding-left: 15px
+  &__header svg
+    +rfs(32)
+    color: #95e1d3
+  &__text
+    display: none
+    height: 163px
+    padding: 14px 20px 14px 20px
+    color: #999999
+    font-family: $roboto
+    +rfs(15)
+    font-weight: 300
+    font-style: italic
+    line-height: 24px
+  &__text p
+    height: 150px
+    padding-right: 20px
+    overflow-y: auto
+    transition: all .2s linear

@@ -1,0 +1,90 @@
+// ====================== Reset ======================
+
+@import modules/reset
+
+// ==============  Responsive Font Size  =============
+
+@import ../../../node_modules/rfs/sass
+
+// ===================  Modules  =====================
+
+@import modules/mixin_font-face
+@import modules/fontstylesheet
+@import modules/variables
+
+// ===================================================
+//      Uncomment if png or svg folder not empty
+// ===================================================
+// @import modules/mixin-spritePng
+// @import tmp/spritePng
+// @import tmp/spriteSvg
+// =====================  Slick  =====================
+@import ../../../node_modules/slick-carousel/slick/slick.scss
+@import ../../../node_modules/animate.css/animate
+// ====================  Default  ====================
+
+p
+  hyphens: auto
+
+button,
+a,
+input
+  outline: 0
+
+button,
+a
+  cursor: pointer
+
+a
+  text-decoration: none
+
+.icon
+  transition: fill ease-in-out .2s
+
+*,
+*:before,
+*:after
+  box-sizing: border-box
+
+html,
+body
+  height: 100%
+  margin: 0
+  padding: 0
+
+body
+  +rfs(16)
+  font-family: $main
+  color: $textcolor
+  line-height: 1.6
+
+.container
+  width: 100%
+  max-width: 1230px
+  margin: 0 auto
+  padding: 0 15px
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+/*=================== Partials ====================*/
+
+@import partials/header
+@import partials/section
+@import partials/card
+@import partials/socials
+@import partials/statistics
+@import partials/services
+@import partials/design
+@import partials/service
+@import partials/reviews
+@import partials/logos
+@import partials/works
+@import partials/clients
+@import partials/blog
+@import partials/map
+@import partials/footer
+
+/*===================== Media =====================*/
+
+@import partials/media

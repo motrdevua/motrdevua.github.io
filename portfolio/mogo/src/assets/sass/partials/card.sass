@@ -1,0 +1,65 @@
+/*==================== card =====================*/
+
+.card
+  display: flex
+  justify-content: space-between
+  margin: 50px -15px 0
+  &__inner
+    position: relative
+    background: #95e1d3
+    &:hover .card__image
+      transform: translate(-10px, -10px)
+    &:hover .card__image img
+      opacity: 0.1
+    &:hover .card__description
+      opacity: 1
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 0 15px
+    &--active .card__image
+      transform: translate(-10px, -10px)
+    &--active .card__image img
+      opacity: 0.1
+    &--active .card__description
+      opacity: 1
+  &__image
+    background-image: linear-gradient(to top, #fce38a 0%, #f38181 100%)
+    transition: all .2s linear
+  &__image img
+    display: block
+    max-width: 100%
+    height: auto
+  &__description
+    position: absolute
+    top: calc(50% - 10px)
+    left: calc(50% - 10px)
+    transform: translate(-50%, -50%)
+    opacity: 0
+    color: #ffffff
+    +rfs(18)
+    text-transform: uppercase
+    transition: all .2s linear
+  &__description .fa-users
+    +rfs(32)
+  &__title
+    display: flex
+    flex-direction: column
+    align-items: center
+    color: #ffffff
+  &__info
+    margin-top: 30px
+    text-align: center
+  &__name
+    color: #333333
+    +rfs(14)
+    text-transform: uppercase
+  &__post
+    padding-top: 5px
+    color: #999999
+    font-family: $roboto
+    +rfs(15)
+    font-weight: 300
+    font-style: italic
+    line-height: 24px

@@ -1,0 +1,31 @@
+/*============== Amazing Services ==============*/
+
+.services
+  display: flex
+  flex-wrap: wrap
+  &__item
+    position: relative
+    margin-top: 50px
+    padding: 0 40px 50px 90px
+    width: 33.3333%
+    border-bottom: 1px solid #e5e5e5
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6)
+      border-bottom: 0
+  &__icon
+    position: absolute
+    top: 0
+    left: 30px
+    color: #95e1d3
+  &__icon svg
+    +rfs(32)
+  &__title
+    color: #333333
+    +rfs(14)
+    text-transform: uppercase
+  &__text
+    color: #999999
+    font-family: $roboto
+    +rfs(15)
+    line-height: 24px

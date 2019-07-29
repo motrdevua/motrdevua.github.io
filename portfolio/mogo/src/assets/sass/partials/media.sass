@@ -1,0 +1,249 @@
+/*==================== media ====================*/
+
+@media (max-width: 1200px)
+  .reviews
+    &__text
+      +rfs(20)
+
+@media (max-width: 992px)
+  .logos
+    &__inner
+      justify-content: center
+
+  .clients
+    justify-content: center
+    align-items: center
+    &__item
+      width: 80%
+    &__content
+      max-width: 100%
+
+  .blog
+    &__date
+      top: 50%
+
+  .footer__col
+    &--left
+      width: 100%
+    &--middle,
+    &--right
+      width: 50%
+
+@media (max-width: 780px)
+
+  .nav
+    &__menu
+      position: absolute
+      top: 100%
+      left: 0
+      width: 100%
+      display: none
+      flex-direction: column
+      align-items: center
+      text-align: center
+      +rfs(32)
+    &__button
+      width: 100%
+      +rfs(32)
+      padding: 10px
+    &--active .nav__menu
+      display: flex
+      justify-content: space-between
+      background: rgba(243, 129, 129, 0.9)
+
+  .menu
+    &__item
+      padding: 10px
+
+
+  .slider-nav
+    &__text
+      display: none
+
+  .card
+    margin-top: 30px
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &__item
+      padding: 15px
+      width: 100%
+      &:last-child
+        padding-bottom: 0
+
+  .stat
+    justify-content: center
+  .counter
+    flex: none
+    width: 33.3333%
+    padding: 10px 0
+    border-left: 0
+    border-bottom: 1px solid #b5eae0
+    border-right: 1px solid #b5eae0
+    &:nth-child(3)
+      border-right: 0
+    &:last-child
+      border-right: 0
+
+  .services
+    &__item
+      width: 50%
+      &:nth-child(4)
+        border-bottom: 1px solid #e5e5e5
+
+  .wedo
+    flex-direction: column
+    align-items: center
+
+  .reviews
+    &__slide
+      flex-direction: column
+      align-items: center
+    &__text
+      +rfs(16)
+    &__slide
+      padding: 30px
+    &__photo
+      margin-bottom: 30px
+    &__btn
+      top: 25%
+    &__review
+      width: 100%
+
+  .works
+    flex-wrap: wrap
+    padding: 0 15px
+    &__column
+      flex: none
+      width: 50%
+
+  .clients
+    &__item
+      width: 100%
+
+  .blog
+    flex-direction: column
+    &__item
+      width: 80%
+      align-items: center
+    &__date
+      top: 60%
+
+  .nav-burger
+    display: block
+
+@media (max-width: 575px)
+
+  .services
+    &__item
+      width: 100%
+      border-bottom: 1px solid #e5e5e5
+      &:nth-child(5)
+        border-bottom: 1px solid #e5e5e5
+
+  .wedo
+    &__item
+      &--photo
+        display: none
+
+  .section
+    &--service
+      padding-bottom: 40px
+
+  .footer
+    &__col
+      &--middle,
+      &--right
+        width: 100%
+  .blogs
+    &__item
+      justify-content: flex-start
+  .subscribe
+    max-width: 100%
+
+@media (max-width: 480px)
+
+  .header-wrap
+    min-height: 100%
+  .slide
+    &__suptitle
+      +rfs(32)
+    &__title
+      +rfs(60)
+      line-height: 70px
+
+  .slider-nav
+    &__btn
+      &--active::before
+        width: 40%
+      &:hover::before
+        width: 40%
+
+  .section
+    padding: 40px 0
+    &--design
+      height: 550px
+    &--service
+      padding: 80px 0 40px 0
+    &__header
+      margin: 0 auto 22px
+    &__title
+      &::after
+        margin: 13px auto 21px
+
+  .design
+    &__ipad
+      max-width: 300px
+    &__iphone
+      max-width: 180px
+      bottom: -68px
+      left: 70%
+
+  .stat
+    flex-direction: column
+  .counter
+    flex: 1 1 0
+    width: 100%
+    border-left: 0
+    border-right: 0
+    border-bottom: 1px solid #b5eae0
+    &:last-child
+      border-bottom: 0
+
+  .services
+    &__item
+      margin-top: 25px
+      padding-bottom: 25px
+
+  .works
+    &__column
+      width: 100%
+
+  .reviews
+    &__slider
+      margin: 0 -15px
+
+  .clients
+    &__item
+      flex-direction: column
+      align-items: center
+    &__content
+      padding-left: 0
+    &__title
+      text-align: center
+      &::after
+        margin: 17px auto
+
+  .blog
+    &__item
+      align-items: center
+      width: 100%
+
+  .subscribe
+    justify-content: center
+    align-items: center
+    &__input
+      width: 100%
+    &__btn
+      margin-top: 15px
+
