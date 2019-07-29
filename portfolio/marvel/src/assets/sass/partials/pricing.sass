@@ -1,0 +1,159 @@
+// Pricing
+
+.pricing
+  padding: 100px 0
+  background: url("../img/pricing-bg.jpg") no-repeat center
+  background-size: cover
+
+  .section
+    &__title
+      color: #e6d119
+
+    &__subtitle
+      top: 75%
+
+      +rfs(30)
+
+  &__cards
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    padding: 100px 0 0 0
+    margin: 0 -15px
+
+  &__card
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 33.33%
+    margin: 0 15px
+    text-align: center
+
+    &:nth-child(2) .pricing__price
+      background: url("../img/pricing-card-bg-2.jpg") no-repeat center
+      background-size: cover
+
+    &:nth-child(3) .pricing__price
+      background: url("../img/pricing-card-bg-3.jpg") no-repeat center
+      background-size: cover
+
+  &__popular
+    width: 100%
+    padding: 6px
+    margin: 0 0 1px 0
+    background-color: #e6e6e6
+
+    +rfs(15)
+
+    font-family: $muli
+    font-weight: 400
+    line-height: 24px
+
+  &__price
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    padding: 40px 0
+    height: auto
+    background: url("../img/pricing-card-bg-1.jpg") no-repeat center
+    background-size: cover
+
+  &__title
+    color: #ffffff
+
+    +rfs(15)
+
+    font-family: $poppins
+    font-weight: 400
+    line-height: 24px
+    text-transform: uppercase
+    letter-spacing: 3px
+
+  &__subtitle
+    padding: 25px 0 15px 0
+    text-transform: uppercase
+    line-height: 24px
+    color: #ffffff
+
+  &__num sup
+    +rfs(40)
+
+    font-family: $muli
+    font-weight: 400
+
+  &__num
+    +rfs(60)
+
+    font-weight: 700
+
+  &__month
+    +rfs(13)
+
+    font-family: $muli
+
+  &__desc
+    display: block
+
+    +rfs(13)
+
+    color: #dbdbdb
+    font-family: $muli
+    font-weight: 400
+
+  &__base
+    padding-bottom: 1px
+
+  &__list
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    padding: 60px 0 0 0
+    border: 1px solid #f1f1f1
+    background: #fff
+
+  &__item
+    padding: 18px 0
+    max-width: 90%
+    border-bottom: 1px solid #f0f0f0
+    color: #808080
+
+    +rfs(13)
+
+    font-family: $muli
+
+    &:last-child
+      border-bottom: 0
+
+  &__item span
+    position: relative
+
+  &__item span
+    &::before
+      position: absolute
+      top: 50%
+      left: -15px
+      display: block
+      content: ""
+      height: 6px
+      width: 6px
+      border-top: 1px solid #808080
+      border-right: 1px solid #808080
+      transform: translateY(-50%) rotate(45deg)
+
+  &__button
+    display: block
+    margin-top: 4px
+    background-color: #ffffff
+
+    +rfs(14)
+
+    font-weight: 400
+    line-height: 40px
+    color: $textcolor
+    transition: all 0.2s linear
+
+    &:hover
+      background: #444444
+      color: $yellow

@@ -1,0 +1,70 @@
+// Footer
+
+.footer
+  text-align: center
+
+  a
+    color: #fff
+    transition: all 0.2s linear
+
+    &:hover
+      color: $yellow
+
+  &__top
+    background-color: #212121
+
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 80px
+
+  &__bottom
+    padding: 10px
+    background-color: #2e2d2d
+    color: #ffffff
+
+    +rfs(12)
+
+    font-family: $muli
+    font-weight: 400
+    line-height: 24px
+    text-align: center
+
+  &__phone,
+  &__location
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__phone-icon,
+  &__location-icon
+    display: flex
+    justify-content: center
+    align-items: center
+
+    +rfs(24)
+
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    border: 1px solid #808080
+    background-color: #2e2d2d
+
+  &__socials
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+  &__soc-item
+    padding: 0 18px
+
+  &__phone-number,
+  &__location-adress
+    padding-top: 30px
+
+    +rfs(13)
+
+    font-family: $muli
+    font-weight: 400
+    line-height: 24px

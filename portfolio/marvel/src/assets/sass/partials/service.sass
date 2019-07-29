@@ -1,0 +1,78 @@
+// Service
+
+.service
+  padding: 100px 0
+  background: url("../img/service-bg.jpg") center no-repeat
+  background-size: cover
+
+  .section
+    &__header
+      align-items: flex-start
+      text-align: left
+
+    &__subtitle
+      top: 75%
+
+      +rfs(30)
+
+  &__inner
+    display: flex
+    justify-content: flex-end
+
+  &__content
+    width: 50%
+    height: 100%
+
+  &__cards
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    padding: 100px 0 0 0
+
+  &__card
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    padding: 50px 15px
+    width: 50%
+    text-align: center
+
+    &:nth-child(1)
+      border-bottom: 1px solid #e6e6e6
+      border-right: 1px solid #e6e6e6
+
+    &:nth-child(2)
+      border-bottom: 1px solid #e6e6e6
+
+    &:nth-child(3)
+      border-right: 1px solid #e6e6e6
+
+    &:nth-child(2) .service__image
+      +sprite($service-icon-2)
+
+    &:nth-child(3) .service__image
+      +sprite($service-icon-3)
+
+    &:nth-child(4) .service__image
+      +sprite($service-icon-4)
+
+  &__image
+    +sprite($service-icon-1)
+
+  &__title
+    padding: 35px 0 45px 0
+
+    +rfs(18)
+
+    font-weight: 700
+    text-transform: uppercase
+
+  &__text
+    max-width: 214px
+
+    +rfs(16)
+
+    font-family: $opensans
+    line-height: 26px
+    color: #757575

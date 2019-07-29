@@ -1,0 +1,46 @@
+// Banner
+
+.banner
+  padding: 100px 0
+  background: url("../img/banner-bg.jpg") center no-repeat
+  background-size: cover
+  color: #ffffff
+  font-family: $lato
+  font-weight: 400
+
+  &__inner
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+
+  &__title
+    +rfs(30)
+
+    text-transform: uppercase
+    letter-spacing: 1.2px
+
+  &__subtitle
+    +rfs(13)
+
+    letter-spacing: 0.52px
+
+  &__buttons
+    padding: 100px 0 0 0
+
+    +rfs(13)
+
+    text-transform: uppercase
+    letter-spacing: 0.52px
+
+  &__button
+    display: inline-block
+    padding: 16px 37px
+    margin: 0 8px
+    background: $yellow
+    color: #000000
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2)
+    transition: all 0.2s linear
+
+    &:hover
+      background: #fff
