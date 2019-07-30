@@ -32,7 +32,7 @@ $(document).ready(function() {
     slidesNavigation: true,
     slidesNavPosition: 'bottom',
 
-    // Скроллинг
+    // scrolling
     css3: true,
     scrollingSpeed: 700,
     autoScrolling: true,
@@ -55,26 +55,26 @@ $(document).ready(function() {
     normalScrollElementTouchThreshold: 5,
     bigSectionsDestination: null,
 
-    // Доступ
+    // access
     keyboardScrolling: true,
     animateAnchor: true,
     recordHistory: true,
 
-    // Дизайн
+    // view
     controlArrows: false,
     verticalCentered: true,
-    paddingTop: '4em',
+    // paddingTop: '4em',
     paddingBottom: '0px',
     responsiveWidth: 0,
     responsiveHeight: 0,
 
-    // Селекторы
+    // selectors
     sectionSelector: '.section',
     slideSelector: '.slide',
 
     lazyLoading: true,
 
-    // события
+    // events
     onLeave(index, nextIndex, direction) {
       if (index === 3 && !sliding) {
         if (direction === 'down' && slideIndex < 3) {
