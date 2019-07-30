@@ -1,19 +1,99 @@
 .team {
-  .container {
-    justify-content: flex-start;
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  &__title {
+  &__details {
     font-family: $fira-sans;
-    font-weight: 700;
+    font-weight: 500;
 
     display: block;
 
-    width: 100%;
-    padding: 85px 0 55px 0;
+    min-width: 112px;
+
+    color: $text-color;
+
+    @include rfs(14);
+
+    &:hover {
+      color: $active-color;
+    }
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+
+    height: 400px;
+    margin: 0 15px;
+
+    border: 1px solid #ececeb;
+    background: #fff;
+  }
+
+  &__left {
+    width: calc(57% - 30px);
+  }
+
+  &__right {
+    width: calc(43% - 30px);
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &__text {
+    padding: 46px;
+  }
+
+  &__name {
+    font-family: $fira-sans;
+    font-weight: 500;
 
     color: #242424;
 
-    @include rfs(46);
+    @include rfs(18);
   }
+
+  &__position {
+    font-family: $lato;
+    font-weight: 600;
+
+    display: block;
+
+    margin: 12px 0 20px 0;
+
+    text-transform: uppercase;
+
+    color: $active-color;
+
+    @include rfs(8);
+  }
+
+  &__desc {
+    font-family: $lato;
+    font-weight: 400;
+    line-height: 24px;
+
+    color: #777;
+
+    @include rfs(14);
+  }
+
+  &__top-line {
+    display: block;
+
+    width: 65%;
+    height: 1px;
+    margin: 0 30px;
+
+    background: #ececeb;
+  }
+
 }

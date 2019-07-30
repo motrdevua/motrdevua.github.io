@@ -1,0 +1,38 @@
+.button {
+  font-family: $fira-sans;
+  font-weight: 700;
+  line-height: 1;
+
+  display: inline-block;
+
+  padding: 20px 50px;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: $active-color;
+  border: 2px solid $active-color;
+  border-radius: 30px;
+  background: #fff;
+
+  @include rfs(15);
+
+  &:hover {
+    color: #fff;
+    background: $active-color;
+  }
+
+  &--send {
+    margin-top: 26px;
+
+    letter-spacing: 1.3px;
+
+    @include rfs(13);
+  }
+
+  &--all {
+    letter-spacing: 1.3px;
+
+    @include rfs(13);
+  }
+}

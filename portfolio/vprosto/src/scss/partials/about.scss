@@ -29,35 +29,6 @@
     @include rfs(14);
   }
 
-  &__button {
-    background: #fff;
-
-    &--request {
-      font-family: $fira-sans;
-      font-weight: 700;
-      line-height: 1;
-
-      display: inline-block;
-
-      padding: 20px 40px;
-
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-
-      color: $active-color;
-      background: #fff;
-      border: 2px solid $active-color;
-      border-radius: 29px;
-
-      @include rfs(15);
-
-      &:hover {
-        color: #fff;
-        background: $active-color;
-      }
-    }
-  }
-
   &__circle {
     transform-origin: 50% 50% 0;
     animation: rotate 100s infinite linear;
