@@ -1,19 +1,4 @@
 .service {
-
-  &__title {
-    font-family: $fira-sans;
-    font-weight: 700;
-
-    display: block;
-
-    width: 100%;
-    padding: 0 0 55px 0;
-
-    color: #242424;
-
-    @include rfs(46);
-  }
-
   .column {
     position: relative;
 

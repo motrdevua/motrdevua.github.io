@@ -2,7 +2,7 @@
  * Modal Window
  */
 
-$('.about__button--request').on('click', function() {
+$('.button--request').on('click', function() {
   $('.modal').addClass('modal--active');
 });
 
@@ -26,7 +26,7 @@ $('.modal__button--send').on('click', function() {
 $('.modal').on('click', function(e) {
   e.preventDefault();
   if (
-    !$('.about__button--request').is(e.target) &&
+    !$('.button--request').is(e.target) &&
     !$('.modal__inner').is(e.target) &&
     $('.modal__inner').has(e.target).length === 0
   ) {
