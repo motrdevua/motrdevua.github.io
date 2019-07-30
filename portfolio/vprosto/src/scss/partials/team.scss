@@ -1,6 +1,14 @@
 .team {
 
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__title {
+    position: relative;
+    display: block;
     font-family: $fira-sans;
     font-weight: 700;
 
@@ -12,5 +20,29 @@
     color: #242424;
 
     @include rfs(46);
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 30%;
+      left: 295px;
+      transform: translateY(-50%);
+      height: 1px;
+      width: 100%;
+      background: #ececeb;
+    }
+
+  }
+
+  &__details {
+    display: block;
+  }
+
+  .column {
+    width: calc(50% - 30px);
+    height: 400px;
+    background: #fff;
+    border: 1px solid #ececeb;
   }
 }
