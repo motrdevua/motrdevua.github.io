@@ -4,3 +4,4 @@ import 'fullpage.js/dist/jquery.fullpage.extensions.min';
 import './fullPage-settings';
 import './burger';
 import './modal';
+import './map';
