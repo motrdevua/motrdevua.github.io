@@ -90,6 +90,20 @@ $(document).ready(function() {
           return false;
         }
       }
+      if (index === 5 && !sliding) {
+        if (direction === 'down' && slideIndex < 5) {
+          sliding = true;
+          $.fn.fullpage.moveSlideRight();
+          slideIndex += 1;
+          return false;
+        }
+        if (direction === 'up' && slideIndex > 1) {
+          sliding = true;
+          $.fn.fullpage.moveSlideLeft();
+          slideIndex -= 1;
+          return false;
+        }
+      }
       return true;
     },
     afterSlideLoad() {
