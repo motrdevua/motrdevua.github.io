@@ -1,0 +1,65 @@
+.blog {}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: calc(33.33% - 30px);
+  margin: 0 15px;
+
+  &__desc {
+    padding: 25px 30px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__date {
+    font-family: $lato;
+    @include rfs(11);
+    color: #b3b3b3;
+  }
+
+  &__more {
+    position: relative;
+    display: block;
+    width: 12px;
+    height: 1px;
+    background: #242424;
+
+    &:hover {
+      background: $active-color;
+      transform: translateX(5px);
+
+      &::after {
+        border-top: 1px solid $active-color;
+        border-right: 1px solid $active-color;
+        // transform: rotate(45deg) translate(calc(-50% + 5px), 0);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(50% - 1px);
+      right: -2px;
+      width: 5px;
+      height: 5px;
+      border-top: 1px solid #242424;
+      border-right: 1px solid #242424;
+      transform: rotate(45deg) translate(-50%, 0);
+    }
+  }
+}
