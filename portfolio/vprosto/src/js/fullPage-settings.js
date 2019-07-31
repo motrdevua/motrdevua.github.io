@@ -91,7 +91,7 @@ $(document).ready(function() {
         }
       }
       if (index === 5 && !sliding) {
-        if (direction === 'down' && slideIndex < 5) {
+        if (direction === 'down' && slideIndex < 3) {
           sliding = true;
           $.fn.fullpage.moveSlideRight();
           slideIndex += 1;

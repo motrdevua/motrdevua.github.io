@@ -187,7 +187,7 @@ function initMap() {
     const marker = new google.maps.Marker({
       position: coordinates,
       map: myMap,
-      icon: '../img/marker.png',
+      icon: 'img/marker.png',
     });
     const info = new google.maps.InfoWindow({
       content: '<h4>Всё просто</h4>',
