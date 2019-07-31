@@ -8,6 +8,10 @@
 
     border: 1px solid #ececeb;
     background: #fff;
+
+    &:hover {
+      border: 1px solid $active-color;
+    }
   }
 
   .section__title {
@@ -22,7 +26,9 @@
   display: flex;
   justify-content: flex-start;
 
-
+  &__photo {
+    height: 100%;
+  }
 
   &__desc {
     display: flex;
