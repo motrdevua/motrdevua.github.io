@@ -7,6 +7,16 @@
   width: calc(33.33% - 30px);
   margin: 0 15px;
 
+  &:hover .card__more {
+    background: $active-color;
+    transform: translateX(5px);
+
+    &::after {
+      border-top: 1px solid $active-color;
+      border-right: 1px solid $active-color;
+    }
+  }
+
   &__desc {
     padding: 25px 30px;
   }
@@ -16,14 +26,6 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 10px;
-
-    div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 12px;
-      height: 12px;
-    }
   }
 
   &__date {
@@ -38,17 +40,6 @@
     width: 12px;
     height: 1px;
     background: #242424;
-
-    &:hover {
-      background: $active-color;
-      transform: translateX(5px);
-
-      &::after {
-        border-top: 1px solid $active-color;
-        border-right: 1px solid $active-color;
-        // transform: rotate(45deg) translate(calc(-50% + 5px), 0);
-      }
-    }
 
     &::after {
       content: '';

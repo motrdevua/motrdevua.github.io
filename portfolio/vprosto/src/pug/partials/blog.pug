@@ -1,13 +1,12 @@
 mixin card(photo, title, text, date)
-  .blog__card.card
+  a(href="#").blog__card.card
     img(src="img/" + photo, alt="photo").card__photo
     .card__desc
       h4.card__title= title
       p.card__text= text
       .card__bottom
         span.card__date= date
-        div
-          a(href="#").card__more
+        div.card__more
 
 section.section.blog
   .outer
