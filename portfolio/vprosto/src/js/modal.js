@@ -10,7 +10,7 @@ $('.modal__button--close').on('click', function() {
   $('.modal').removeClass('modal--active');
 });
 
-$('.modal__button--send').on('click', function() {
+$('.button--send').on('click', function() {
   $('.modal__message').addClass('modal__message--active');
   setTimeout(() => {
     $('.modal__message').removeClass('modal__message--active');

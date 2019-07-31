@@ -39,8 +39,7 @@ $(document).ready(function() {
     fitToSection: true,
     fitToSectionDelay: 1000,
     scrollBar: false,
-    easing: 'easeInOutCubic',
-    easingcss3: 'ease',
+    easingcss3: 'cubic-bezier(0.86, 0, 0.07, 1)',
     loopBottom: false,
     loopTop: false,
     loopHorizontal: false,
@@ -91,13 +90,13 @@ $(document).ready(function() {
         }
       }
       if (index === 5 && !sliding) {
-        if (direction === 'down' && slideIndex < 3) {
+        if (direction === 'down' && slideIndex < 7) {
           sliding = true;
           $.fn.fullpage.moveSlideRight();
           slideIndex += 1;
           return false;
         }
-        if (direction === 'up' && slideIndex > 1) {
+        if (direction === 'up' && slideIndex > 3) {
           sliding = true;
           $.fn.fullpage.moveSlideLeft();
           slideIndex -= 1;
