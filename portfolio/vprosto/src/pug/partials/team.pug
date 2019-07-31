@@ -1,3 +1,10 @@
+mixin person(name, position, photo)
+  .team__person
+    img(src="img/" + photo, alt="photo").team__photo
+    .team__hover
+      h4.team__name= name
+      span.team__position= position
+
 section.section.team
   .outer
     .container
@@ -7,10 +14,15 @@ section.section.team
         a(href="#").team__details Подробнее о нас
       .inner
         .team__left
-          img(src="img/photo-founder.jpg", alt="photo").team__img
+          img(src="img/photo-founder.jpg", alt="photo").team__photo
           .team__text
             h4.team__name Михаил
             span.team__position Основатель
             p.team__desc Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона...
             a(href="#").team__socials
         .team__right
+          +person('Иван', 'Менеджер', 'photo-team-1.jpg')
+          +person('Ольга', 'Менеджер', 'photo-team-2.jpg')
+          +person('Иван', 'Менеджер', 'photo-team-1.jpg')
+          +person('Ольга', 'Менеджер', 'photo-team-2.jpg')
+
