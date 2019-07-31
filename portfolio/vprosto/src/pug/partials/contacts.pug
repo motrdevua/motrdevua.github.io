@@ -1,5 +1,23 @@
-section.section.blog
+section.section.contacts
   .outer
     .container
-      h2.section__title Контакты
+      .contacts__top
+        h2.section__title Контакты
+        .contacts__address.address
+          .contacts__icon.contacts__icon--address
+          .contacts__desc
+            span г. Москва,
+            span 1-й Нагатинский проезд, д.8 с.1
+        .contacts__phone
+          .contacts__icon.contacts__icon--phone
+          .contacts__desc
+            span.contacts__text Тел.:
+            a(href="tel:+89152023372").contacts__number 8 (915) 202-33-72
+        .contacts__mail.mail
+          .contacts__icon.contacts__icon--mail
+          .contacts__desc
+            span.contacts__text E-Mail:
+            a(type="mailto:mike@vprosto.ru").contacts__address mike@vprosto.ru
       .inner
+        .map
+          #map
