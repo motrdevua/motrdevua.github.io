@@ -1,5 +1,10 @@
 .blog {
 
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .card {
     flex-direction: column;
 
