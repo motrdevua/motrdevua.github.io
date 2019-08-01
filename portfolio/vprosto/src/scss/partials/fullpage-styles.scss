@@ -15,6 +15,11 @@
 
 .fp-slidesNav {
   left: 50% !important;
+  transform: translateX(-7%);
+}
+
+.fp-slidesNav.bottom {
+  bottom: 4%;
 }
 
 #fp-nav ul li {
