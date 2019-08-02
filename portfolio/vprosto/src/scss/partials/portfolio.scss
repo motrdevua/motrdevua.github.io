@@ -13,18 +13,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     width: 100%;
   }
 }
 
 .card {
   position: relative;
-
   display: flex;
   overflow: hidden;
   justify-content: flex-start;
-
   width: calc(33.33% - 30px);
   height: 400px;
   margin: 0 15px;
@@ -48,13 +45,10 @@
 
   &__front {
     position: absolute;
-
     width: 100%;
     height: 100%;
-
     transition: .3s all ease-in-out;
     transform: translateX(0);
-
     background-color: #edeeef;
     background-image: url('../img/card-1-bg.png');
     background-repeat: no-repeat;
@@ -65,21 +59,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     width: 100%;
     height: 100%;
     padding: 34px;
-
     transition: .3s all ease-in-out;
     transform: translateX(100%);
-
     background: #fff;
   }
 
   &__title {
     font-family: $fira-sans;
     line-height: 24px;
-
     color: #242424;
 
     @include rfs(18);
@@ -88,9 +78,7 @@
   &__text {
     font-family: $lato;
     line-height: 22px;
-
     padding-top: 18px;
-
     color: #777;
 
     @include rfs(14);
@@ -104,7 +92,6 @@
 
   &__icon {
     transform: scale(.7);
-
     filter: grayscale(1);
 
     &:hover {

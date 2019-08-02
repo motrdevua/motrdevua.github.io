@@ -1,11 +1,14 @@
 .reviews {
+  .inner {
+    padding-top: 0;
+  }
+
   .container {
     position: relative;
   }
 
   .column {
     height: 305px;
-
     border: 1px solid #ececeb;
     background: #fff;
 
@@ -28,7 +31,6 @@
     align-items: flex-start;
     flex-direction: column;
     justify-content: space-between;
-
     padding: 0 45px 30px 45px;
   }
 
@@ -36,7 +38,6 @@
     padding-top: 33px;
     font-family: $fira-sans;
     font-weight: 500;
-
     color: #242424;
 
     @include rfs(18);
@@ -50,11 +51,8 @@
   &__company {
     font-family: $lato;
     font-weight: 600;
-
     display: inline-block;
-
     text-transform: uppercase;
-
     color: $active-color;
 
     @include rfs(8);
@@ -63,7 +61,6 @@
   &__text {
     font-family: $lato;
     line-height: 24px;
-
     color: #777;
 
     @include rfs(14);
@@ -74,7 +71,6 @@
     position: relative;
     font-family: $fira-sans;
     font-weight: 500;
-
     color: #242424;
 
     @include rfs(11);

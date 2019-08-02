@@ -1,13 +1,9 @@
 .team {
-
   &__details {
     font-family: $fira-sans;
     font-weight: 500;
-
     display: block;
-
     min-width: 112px;
-
     color: $text-color;
 
     @include rfs(14);
@@ -23,16 +19,13 @@
     align-items: flex-start;
     flex-direction: row;
     justify-content: center;
-
     height: 400px;
     margin: 0 15px;
-
     background: #fff;
   }
 
   &__left {
     width: calc(57% - 30px);
-
     border: 1px solid #ececeb;
   }
 
@@ -40,7 +33,6 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
-
     width: calc(43% - 30px);
   }
 
@@ -55,7 +47,6 @@
   &__name {
     font-family: $fira-sans;
     font-weight: 500;
-
     color: #242424;
 
     @include rfs(18);
@@ -64,13 +55,9 @@
   &__position {
     font-family: $lato;
     font-weight: 600;
-
     display: block;
-
     margin: 12px 0 20px 0;
-
     text-transform: uppercase;
-
     color: $active-color;
 
     @include rfs(8);
@@ -80,7 +67,6 @@
     font-family: $lato;
     font-weight: 400;
     line-height: 24px;
-
     color: #777;
 
     @include rfs(14);
@@ -94,17 +80,14 @@
 
   &__line {
     display: block;
-
     width: 65%;
     height: 1px;
     margin: 0 30px;
-
     background: #ececeb;
   }
 
   &__person {
     position: relative;
-
     background: #fff;
 
     &:hover {
@@ -118,15 +101,12 @@
     position: absolute;
     top: 0;
     left: 0;
-
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: flex-end;
-
     width: 100%;
     height: 100%;
-
     background: linear-gradient(to top, #fff 0%, rgba(#fff, .1) 100%);
     opacity: 0;
   }

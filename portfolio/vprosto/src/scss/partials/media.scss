@@ -1,7 +1,5 @@
 // ==================== media ====================
 
-@media (max-width: 1200px) {}
-
 @media (max-width: 992px) {
   .menu {
     &__item {
@@ -17,13 +15,10 @@
     right: 0;
     left: 0;
     z-index: 99;
-
     overflow: hidden;
-
     height: 0;
-
     opacity: 1;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, .9);
 
     &--active {
       height: 100%;
@@ -33,7 +28,6 @@
       align-items: center;
       flex-direction: column;
       justify-content: center;
-
       margin-top: -64px;
     }
 
@@ -49,6 +43,19 @@
 
   .burger {
     display: block;
+  }
+
+  .service {
+    .inner {
+      flex-direction: column;
+    }
+
+    .column {
+      width: calc(100% - 30px);
+      height: calc(50% - 30px);
+      margin: 15px 0 0 15px;
+      padding: 30px;
+    }
   }
 }
 
