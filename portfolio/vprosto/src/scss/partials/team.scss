@@ -1,9 +1,4 @@
 .team {
-  &__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
 
   &__details {
     font-family: $fira-sans;
@@ -97,7 +92,7 @@
     @include spritePng($instagram);
   }
 
-  &__top-line {
+  &__line {
     display: block;
 
     width: 65%;

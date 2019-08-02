@@ -2,14 +2,13 @@
   display: none;
 }
 
-.tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-box {
+.tooltipster-base.tooltipster-follower.tooltipster-noir.tooltipster-noir-customized .tooltipster-box {
   background: rgba(#fff, 0.85);
   border: 3px solid transparent;
   border-radius: 5px;
-  max-width: 220px;
 }
 
-.tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-content {
+.tooltipster-base.tooltipster-follower.tooltipster-noir.tooltipster-noir-customized .tooltipster-content {
   color: $text-color;
   padding: 8px;
   font-family: $lato;
