@@ -13,13 +13,6 @@
       border: 1px solid $active-color;
     }
   }
-
-  .section__title {
-    position: absolute;
-    top: calc(65px + 85px);
-    left: 0;
-    z-index: 99;
-  }
 }
 
 .review {
