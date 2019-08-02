@@ -18,15 +18,16 @@
 
     &__bottom {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       padding-top: 10px;
     }
 
     &__date {
-      font-family: $lato;
-      @include rfs(11);
       color: #b3b3b3;
+      font-family: $lato;
+
+      @include rfs(11);
     }
 
     &__more {
@@ -37,7 +38,6 @@
       background: #242424;
 
       &::after {
-        content: '';
         position: absolute;
         top: calc(50% - 1px);
         right: -2px;
@@ -45,6 +45,7 @@
         height: 5px;
         border-top: 1px solid #242424;
         border-right: 1px solid #242424;
+        content: '';
         transform: rotate(45deg) translate(-50%, 0);
       }
     }

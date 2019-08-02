@@ -3,22 +3,24 @@
 }
 
 .tooltipster-base.tooltipster-follower.tooltipster-noir.tooltipster-noir-customized .tooltipster-box {
-  background: rgba(#fff, .85);
   border: 3px solid transparent;
   border-radius: 5px;
+  background: rgba(#fff, .85);
 }
 
 .tooltipster-base.tooltipster-follower.tooltipster-noir.tooltipster-noir-customized .tooltipster-content {
-  color: $text-color;
   padding: 8px;
-  font-family: $lato;
-  @include rfs(12);
+  color: $text-color;
   font-weight: 300;
+  font-family: $lato;
+
+  @include rfs(12);
 }
 
 .tooltip_title {
-  font-family: $lato;
-  @include rfs(14);
-  font-weight: 700;
   padding-bottom: 10px;
+  font-weight: 700;
+  font-family: $lato;
+
+  @include rfs(14);
 }

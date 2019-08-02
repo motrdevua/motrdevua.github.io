@@ -1,10 +1,10 @@
 .team {
   &__details {
-    font-family: $fira-sans;
-    font-weight: 500;
     display: block;
     min-width: 112px;
     color: $text-color;
+    font-weight: 500;
+    font-family: $fira-sans;
 
     @include rfs(14);
 
@@ -19,8 +19,8 @@
     align-items: flex-start;
     flex-direction: row;
     justify-content: center;
-    height: 400px;
     margin: 0 15px;
+    height: 400px;
     background: #fff;
   }
 
@@ -45,29 +45,29 @@
   }
 
   &__name {
-    font-family: $fira-sans;
-    font-weight: 500;
     color: #242424;
+    font-weight: 500;
+    font-family: $fira-sans;
 
     @include rfs(18);
   }
 
   &__position {
-    font-family: $lato;
-    font-weight: 600;
     display: block;
     margin: 12px 0 20px 0;
-    text-transform: uppercase;
     color: $active-color;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: $lato;
 
     @include rfs(8);
   }
 
   &__desc {
-    font-family: $lato;
-    font-weight: 400;
-    line-height: 24px;
     color: #777;
+    font-weight: 400;
+    font-family: $lato;
+    line-height: 24px;
 
     @include rfs(14);
   }
@@ -75,14 +75,15 @@
   &__socials {
     display: block;
     margin-top: 40px;
+
     @include spritePng($instagram);
   }
 
   &__line {
     display: block;
+    margin: 0 30px;
     width: 65%;
     height: 1px;
-    margin: 0 30px;
     background: #ececeb;
   }
 

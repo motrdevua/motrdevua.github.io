@@ -36,9 +36,9 @@
 
   &__name {
     padding-top: 33px;
-    font-family: $fira-sans;
-    font-weight: 500;
     color: #242424;
+    font-weight: 500;
+    font-family: $fira-sans;
 
     @include rfs(18);
   }
@@ -49,29 +49,29 @@
 
   &__position,
   &__company {
-    font-family: $lato;
-    font-weight: 600;
     display: inline-block;
-    text-transform: uppercase;
     color: $active-color;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: $lato;
 
     @include rfs(8);
   }
 
   &__text {
+    color: #777;
+    hyphens: auto;
     font-family: $lato;
     line-height: 24px;
-    color: #777;
 
     @include rfs(14);
-    hyphens: auto;
   }
 
   &__more {
     position: relative;
-    font-family: $fira-sans;
-    font-weight: 500;
     color: #242424;
+    font-weight: 500;
+    font-family: $fira-sans;
 
     @include rfs(11);
 
@@ -90,28 +90,28 @@
 
     &::before,
     &::after {
-      content: '';
       position: absolute;
       display: block;
+      content: '';
     }
 
     &::before {
-      right: -10px;
       top: calc(50% + 1px);
-      transform: translateY(-50%);
+      right: -10px;
       width: 1px;
       height: 7px;
       background: #242424;
+      transform: translateY(-50%);
     }
 
     &::after {
-      right: -11px;
       top: calc(50% + 1px);
+      right: -11px;
       width: 3px;
       height: 3px;
-      transform: rotate(135deg);
       border-top: 1px solid #242424;
       border-right: 1px solid #242424;
+      transform: rotate(135deg);
     }
   }
 }
