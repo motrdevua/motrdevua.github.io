@@ -1,13 +1,10 @@
 .service {
   .column {
     position: relative;
-
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-
     padding: 50px 30px;
-
     border: 1px solid #e5e5e5;
     background: #fff;
 
@@ -15,17 +12,13 @@
       position: absolute;
       top: -1%;
       left: -1%;
-      z-index: -1;
-
+      z-index: 99;
       display: block;
-
       width: 102%;
       height: 102%;
-
+      border: 1px dotted transparent;
       content: '';
       transition: all .5s linear;
-
-      border: 1px dotted transparent;
     }
 
     &:hover {
@@ -38,13 +31,12 @@
   }
 
   &__desc {
-    max-width: 350px;
     padding-left: 35px;
+    max-width: 350px;
   }
 
   &__img {
     display: flex;
-
     min-width: 160px;
 
     &--ie {
@@ -57,25 +49,21 @@
   }
 
   &__subtitle {
-    font-family: $fira-sans;
-    font-weight: 500;
-    line-height: 1;
-
     padding: 0 0 40px 0;
-
     color: #242424;
+    font-weight: 500;
+    font-family: $fira-sans;
+    line-height: 1;
 
     @include rfs(24);
   }
 
   &__text {
-    font-family: $lato;
-    font-weight: 400;
-    line-height: 24px;
-
     padding: 0 0 40px 0;
-
     color: #777;
+    font-weight: 400;
+    font-family: $lato;
+    line-height: 24px;
 
     @include rfs(14);
   }
@@ -83,37 +71,30 @@
   &__item {
     display: flex;
     align-items: center;
-
     padding: 0 0 30px 0;
 
     &::before {
       display: inline-block;
-
       width: 8px;
       height: 8px;
-
-      content: '';
-
       border-radius: 50%;
       background-color: $active-color;
+      content: '';
     }
   }
 
   &__link {
-    font-family: $lato;
-    font-weight: 700;
-    line-height: 24px;
-
     padding: 0 0 0 15px;
-
     color: #242424;
+    font-weight: 700;
+    font-family: $lato;
+    line-height: 24px;
 
     @include rfs(14);
 
     &:hover {
-      text-decoration: underline;
-
       color: $active-color;
+      text-decoration: underline;
     }
 
     &:hover+.service__arrow {
@@ -129,37 +110,29 @@
 
   &__arrow {
     position: relative;
-
+    margin: 0 0 0 13px;
     width: 13px;
     height: 2px;
-    margin: 0 0 0 13px;
-
     background: #242424;
 
     &::before,
     &::after {
       position: absolute;
       right: 0;
-
       display: block;
-
       width: 6px;
       height: 2px;
-
-      content: '';
-
       background: #242424;
+      content: '';
     }
 
     &::before {
       top: -2px;
-
       transform: rotate(45deg);
     }
 
     &::after {
       top: 2px;
-
       transform: rotate(-45deg);
     }
   }

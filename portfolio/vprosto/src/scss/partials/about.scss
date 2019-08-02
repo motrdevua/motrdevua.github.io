@@ -1,11 +1,13 @@
 .about {
+  .inner {
+    padding-top: 0;
+  }
 
   &__title {
-    font-family: $fira-sans;
-    font-weight: 600;
-    line-height: 71px;
-
     color: #242424;
+    font-weight: 600;
+    font-family: $fira-sans;
+    line-height: 71px;
 
     @include rfs(60);
 
@@ -15,16 +17,13 @@
   }
 
   &__text {
-    font-family: $lato;
-    font-weight: 400;
-    line-height: 26px;
-
-    max-width: 435px;
     padding: 65px 0 125px 0;
-
-    text-align: justify;
-
+    max-width: 435px;
     color: #777;
+    text-align: justify;
+    font-weight: 400;
+    font-family: $lato;
+    line-height: 26px;
 
     @include rfs(14);
   }
@@ -44,7 +43,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%);
 
     @include spritePng($about_logo);
@@ -56,28 +54,23 @@
     position: absolute;
     top: 275px;
     left: 235px;
-
     display: block;
-
+    opacity: .5;
+    filter: grayscale(1);
     cursor: pointer;
     transform: rotate(45deg) translateY(-310px) rotate(-45deg);
     animation: python 200s linear infinite;
 
-    opacity: .5;
-
     @include spritePng($lang-python);
-    filter: grayscale(1);
 
     &:hover {
       opacity: 1;
-
       filter: grayscale(0);
     }
 
     &:nth-child(2) {
       top: 258px;
       left: 232px;
-
       transform: rotate(45deg) translateX(210px) rotate(-45deg);
       animation: php 105s linear infinite;
 
@@ -87,7 +80,6 @@
     &:nth-child(3) {
       top: 260px;
       left: 240px;
-
       transform: rotate(45deg) translateY(210px) rotate(-45deg);
       animation: java 105s linear infinite;
 
@@ -97,7 +89,6 @@
     &:nth-child(4) {
       top: 270px;
       left: 270px;
-
       transform: rotate(45deg) translateY(-120px) rotate(-45deg);
       animation: redis 75s linear infinite;
 
@@ -107,7 +98,6 @@
     &:nth-child(5) {
       top: 270px;
       left: 240px;
-
       transform: rotate(45deg) translateY(-210px) rotate(-45deg);
       animation: devops 105s linear infinite;
 
@@ -117,7 +107,6 @@
     &:nth-child(6) {
       top: 265px;
       left: 265px;
-
       transform: rotate(45deg) translateY(285px) rotate(-45deg);
       animation: data 200s linear infinite;
 

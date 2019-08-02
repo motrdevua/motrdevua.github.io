@@ -1,8 +1,6 @@
 .contacts {
-  .section {
-    &__top {
-      left: 0;
-    }
+  .inner {
+    margin: 0;
   }
 
   &__address,
@@ -28,17 +26,14 @@
   }
 
   &__desc {
-    font-family: $fira-sans;
-    font-weight: 500;
-    line-height: 24px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     margin-left: 25px;
-
     color: #242424;
+    font-weight: 500;
+    font-family: $fira-sans;
+    line-height: 24px;
 
     @include rfs(16);
   }

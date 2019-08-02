@@ -3,13 +3,11 @@
 .navbar {
   position: fixed;
   z-index: 9999;
-
-  width: 100%;
   padding: 10px 0;
-
+  width: 100%;
   border-bottom: 1px solid #ebebeb;
   background: transparent;
-  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, .03);
 
   &__inner {
     display: flex;
@@ -22,7 +20,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-
   color: $text-color;
 
   &__image {
@@ -30,13 +27,11 @@
   }
 
   &__text {
-    font-family: $open-sans;
-    font-weight: 700;
-
     display: flex;
     flex-direction: column;
-
     padding: 0 0 0 20px;
+    font-weight: 700;
+    font-family: $open-sans;
 
     @include rfs(18);
 
@@ -70,15 +65,12 @@
     &::after,
     &::before {
       display: block;
-
+      margin-left: -10%;
       width: 120%;
       height: 2px;
-      margin-left: -10%;
-
+      background: $active-color;
       content: '';
       transform: scale(0);
-
-      background: $active-color;
     }
 
     &::before {
@@ -107,14 +99,11 @@
   }
 
   &__link {
-    font-family: $fira-sans;
-    font-weight: 600;
-
     display: block;
-
-    text-transform: uppercase;
-
     color: $text-color;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: $fira-sans;
 
     @include rfs(14);
   }
@@ -122,27 +111,20 @@
 
 .burger {
   position: relative;
-
   display: none;
-
   width: 30px;
   height: 19px;
-
   cursor: pointer;
 
   &__line {
     position: absolute;
     left: 0;
-
     display: block;
-
     width: 100%;
     height: 3px;
-
-    transform: rotate(0deg);
-
-    opacity: 1;
     background: $text-color;
+    opacity: 1;
+    transform: rotate(0deg);
 
     &:nth-child(1) {
       top: 0;
@@ -162,19 +144,16 @@
 
     &:nth-child(1) {
       top: 8px;
-
       transform: rotate(135deg);
     }
 
     &:nth-child(2) {
       left: 60px;
-
       opacity: 0;
     }
 
     &:nth-child(3) {
       top: 8px;
-
       transform: rotate(-135deg);
     }
   }
