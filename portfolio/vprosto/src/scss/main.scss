@@ -50,18 +50,18 @@ li {
 }
 
 body {
+  color: $text-color;
   font-family: $open-sans;
   line-height: 1.6;
-  color: $text-color;
 
   @include rfs(16);
 }
 
 html,
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 .wrapper {
@@ -90,10 +90,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
+  max-width: 1170px;
+  width: 100%;
 }
 
 .column {
@@ -101,9 +101,9 @@ body {
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
+  margin: 0 15px;
   width: calc(50% - 30px);
   height: 100%;
-  margin: 0 15px;
 }
 
 .section {
@@ -119,16 +119,18 @@ body {
   }
 
   &__title {
-    font-family: $fira-sans;
-    font-weight: 700;
-    line-height: 1;
     position: relative;
     display: block;
     color: #242424;
+    font-weight: 700;
+    font-family: $fira-sans;
+    line-height: 1;
 
     @include rfs(46);
   }
 }
+
+
 
 
 

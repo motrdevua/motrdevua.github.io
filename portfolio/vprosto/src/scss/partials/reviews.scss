@@ -21,9 +21,11 @@
 .review {
   display: flex;
   justify-content: flex-start;
+  height: 100%;
 
   &__photo {
     height: 100%;
+    width: auto;
   }
 
   &__desc {
