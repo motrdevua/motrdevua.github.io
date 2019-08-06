@@ -8,11 +8,14 @@
   }
 
   .inner {
+    flex-wrap: nowrap;
+    padding-top: 110px;
     width: calc(100% - 30px - 40px);
   }
 
   .section {
     &__top {
+      top: calc(65px + 30px);
       width: calc(100% - 30px - 95px);
     }
   }
@@ -23,23 +26,29 @@
     }
   }
 
+  .card {
+    &__desc {
+      hyphens: auto;
+      text-align: justify;
+    }
+  }
+
   .service {
     .column {
       margin: 15px 15px 0 15px;
       padding: 30px;
       width: calc(100% - 30px);
-      height: calc(53% - 45px);
+      height: calc(55% - 45px);
     }
 
     .inner {
       flex-direction: column;
       justify-content: flex-start;
-      padding-top: 150px;
       height: 90vh;
     }
 
     &__desc {
-      max-width: 500px;
+      max-width: 640px;
     }
 
     &__subtitle {
@@ -54,6 +63,44 @@
       display: flex;
       align-items: center;
       padding: 0 0 8px 0;
+    }
+  }
+
+  .portfolio {
+    .inner {
+      width: calc(100% - 30px - 70px);
+    }
+  }
+
+  .team {
+    .inner {
+      flex-direction: column;
+    }
+
+    &__left,
+    &__right {
+      width: 100%;
+      height: calc(55% - 45px);
+    }
+
+    &__right {
+      justify-content: space-between;
+    }
+  }
+
+  .reviews {
+    .inner {
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 90vh;
+      padding-top: 110px;
+    }
+
+    .column {
+      margin: 15px 15px 0 15px;
+      padding: 30px;
+      width: calc(100% - 30px);
+      height: calc(50% - 45px);
     }
   }
 
@@ -124,8 +171,8 @@
 
   .about {
     .inner {
-      padding-top: 110px;
       flex-direction: column;
+      padding-top: 110px;
     }
 
     .column {
@@ -204,7 +251,6 @@
   // Team
 
   .team {
-
     .inner {
       flex-direction: column;
       padding-top: 136px;
