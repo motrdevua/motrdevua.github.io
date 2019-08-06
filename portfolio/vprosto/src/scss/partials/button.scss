@@ -10,6 +10,7 @@
   font-weight: 700;
   font-family: $fira-sans;
   line-height: 1;
+  min-width: 220px;
 
   @include rfs(15);
 

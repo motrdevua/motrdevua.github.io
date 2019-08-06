@@ -64,7 +64,7 @@ $(document).ready(function() {
     verticalCentered: true,
     // paddingTop: '4em',
     paddingBottom: '0px',
-    // responsiveWidth: 1200,
+    responsiveWidth: 575,
 
     // selectors
     sectionSelector: '.section',
