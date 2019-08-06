@@ -74,6 +74,40 @@ $(document).ready(function() {
 
     // events
     onLeave(index, nextIndex, direction) {
+      console.log(index);
+
+      /**
+       * Animations
+       */
+      if (index === 1 && nextIndex === 2) {
+        $('.column.ie')
+          .addClass('animated fadeInLeft')
+          .css('animation-delay', '.3s');
+        $('.column.de')
+          .addClass('animated fadeInRight')
+          .css('animation-delay', '.3s');
+      }
+      if (index === 3 && slideIndex === 3) {
+        $('.team__left')
+          .addClass('animated fadeInLeft')
+          .css('animation-delay', '.3s');
+        $('.team__right')
+          .addClass('animated fadeInRight')
+          .css('animation-delay', '.3s');
+      }
+      if (index === 3 && slideIndex === 3) {
+        $('.team__left')
+          .addClass('animated fadeInLeft')
+          .css('animation-delay', '.3s');
+        $('.team__right')
+          .addClass('animated fadeInRight')
+          .css('animation-delay', '.3s');
+      }
+
+      /**
+       * Sliders
+       */
+
       if (index === 3 && !sliding) {
         if (direction === 'down' && slideIndex < 3) {
           sliding = true;
