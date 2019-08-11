@@ -1,0 +1,364 @@
+// ===================== RIGHT =====================
+
+.right {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1px;
+  width: 75%;
+  height: 100%;
+
+  @include to($break_md) {
+    width: 100%;
+    height: 60%;
+  }
+}
+
+.panel {
+  position: relative;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  border-radius: 4px;
+  background-color: $bg-light;
+  transition: flex-grow .3s ease-in-out;
+
+  &:hover {
+    &::before {
+      color: $blue;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    z-index: 99;
+    margin-right: 6px;
+    color: $dark;
+    text-transform: uppercase;
+    font-size: 2em;
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity .3s ease-in-out, color .3s ease-in-out;
+
+    user-select: none;
+  }
+
+  &:nth-child(1)::before {
+    content: 'Resume';
+  }
+
+  &:nth-child(2)::before {
+    content: 'Skills';
+  }
+
+  &:nth-child(3)::before {
+    content: 'Portfolio';
+  }
+
+  &:not(:last-child) {
+    border-bottom: 2px solid $bg-dark;
+  }
+
+  &__container {
+    position: absolute;
+    z-index: -9999;
+    overflow: visible;
+    padding: 0 20px;
+    width: 100%;
+    height: 0;
+    color: $dark;
+    opacity: 0;
+    transition: height .7s, opacity .3s, overflow 3s;
+    transition-timing-function: ease-in-out;
+  }
+}
+
+.panel--active {
+  flex-grow: 8;
+
+  &::before {
+    margin-right: 0;
+    color: $blue;
+    opacity: 0;
+  }
+
+  & .panel__container {
+    overflow-y: scroll;
+    height: 100%;
+    opacity: 1;
+  }
+
+  & .portfolio {
+    display: flex;
+  }
+
+  & .skills {
+    display: block;
+  }
+
+  & .resume {
+    display: flex;
+  }
+}
+
+
+.resume {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__objective .resume__text {
+    margin: 0 auto;
+
+    @include size(10);
+
+    @include to($break_md) {
+      @include size(12);
+    }
+  }
+
+  &__title {
+    color: $blue;
+    text-transform: uppercase;
+
+    @include to($break_md) {
+      padding: 10px 0;
+      border-top: 1px dotted $dark;
+      border-bottom: 1px dotted $dark;
+      text-align: center;
+      font-size: 1.4em;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 0;
+    color: $dark;
+
+    @include to($break_md) {
+      flex-direction: column;
+      font-size: 1.2em;
+    }
+
+    &--university {
+      border-bottom: 1px dashed $dark;
+    }
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__period {
+    text-align: center;
+
+    @include size(3);
+
+    @include to($break_md) {
+      @include size(12);
+    }
+  }
+
+  &__about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include size(6);
+
+    @include to($break_md) {
+      @include size(12);
+    }
+  }
+
+  &__institution {
+    padding: 5px;
+    text-align: center;
+  }
+
+  &__speciality {
+    padding: 5px;
+    border-top: 1px dotted $dark;
+    text-align: center;
+  }
+
+  &__link {
+    text-align: center;
+  }
+
+  &__picture {
+    margin: 0 auto;
+    max-width: 160px;
+
+    @include size(12);
+  }
+
+  &__level {
+    text-align: center;
+
+    @include size(3);
+
+    @include to($break_md) {
+      @include size(12);
+    }
+  }
+}
+
+.skills {
+  display: none;
+
+  &__title {
+    color: $blue;
+    text-transform: uppercase;
+
+    @include to($break_md) {
+      padding: 10px 0;
+      border-top: 1px dotted $dark;
+      border-bottom: 1px dotted $dark;
+      text-align: center;
+      font-size: 1.4em;
+    }
+  }
+
+  &__item {
+    margin: 10px;
+
+    @include to($break_md) {
+      font-size: 1.2em;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    @include col();
+    @include size(12);
+  }
+}
+
+.icon {
+  height: 100%;
+
+  @include size(2);
+
+  @include to($break_md) {
+    padding: 10px;
+
+    @include size(6);
+  }
+
+  &-yarn {
+    fill: $yarn;
+  }
+
+  &-npm {
+    fill: $npm;
+  }
+
+  &-visualstudio {
+    fill: $visualstudio;
+  }
+}
+
+.fa-check-square {
+  margin-right: 19px;
+  color: $blue;
+}
+
+.portfolio {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  @include to($break_md) {
+    justify-content: center;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
+    border: 1px solid $dark;
+    border-radius: 4px;
+
+    @include size(4);
+
+    @include to($break_md) {
+      @include size(12);
+    }
+
+    &:hover .portfolio__title {
+      color: $green;
+    }
+
+    &:hover .portfolio__img {
+      filter: grayscale(0);
+    }
+
+    &:hover .portfolio__title,
+    &:focus .portfolio__title {
+      outline: none;
+    }
+
+    &:hover .portfolio__title::before,
+    &:hover .portfolio__title::after,
+    &:focus .portfolio__title::before,
+    &:focus .portfolio__title::after {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  &__img {
+    height: 200px;
+    filter: grayscale(100%);
+    transition: all .4s ease-in-out;
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    display: block;
+    margin-top: -23px;
+    padding: 4px;
+    border: 1px solid $dark;
+    border-radius: 4px;
+    background: $bg-light;
+    color: $dark;
+    text-align: center;
+    font-size: 2em;
+
+    &::before,
+    &::after {
+      display: inline-block;
+      opacity: 0;
+      transition: transform .3s, opacity .2s;
+    }
+
+    &::before {
+      margin-right: 10px;
+      content: '[';
+      transform: translateX(20px);
+    }
+
+    &::after {
+      margin-left: 10px;
+      content: ']';
+      transform: translateX(-20px);
+    }
+  }
+}
