@@ -1,0 +1,37 @@
+.header {
+  background: $white;
+  background: rgba($white, .85);
+  position: fixed;
+  padding: 21px 0;
+  z-index: 99;
+
+  &--active {
+    padding: 5px 0;
+  }
+
+  &__logo {
+    display: block;
+
+    @include spritePng($logo);
+  }
+
+  &__menu {
+    margin: 0;
+  }
+}
+
+.menu {
+  &__item {
+    margin-left: 50px;
+  }
+
+  &__link {
+    color: $gray;
+    text-transform: uppercase;
+    line-height: 37px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
