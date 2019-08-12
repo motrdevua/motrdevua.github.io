@@ -1,21 +1,29 @@
 .left
+  .toggle-box
+    .languages
+      span.languages__item.languages__item--en EN
+      span.languages__item.languages__item--ua UA
+      span.languages__item.languages__item--en RU
+    +icon('lightbulb-off')
   .photo
     img(src="img/photo.jpg", alt="alt").photo__pic
-  .about
-    h1.about__name Igor Lukashev
-    h2.about__specialty Frontend Developer
-    span.about__desc Zaporizhzhia, Ukraine.
-    .about__contacts
-      .top.door
-      .bottom.door
+  .profile
+    h2.profile__name Igor Lukashev
+    h3.profile__specialty Junior Frontend Developer
+    .profile__location.location
+      .location__city Zaporizhzhia
+      .location__country Ukraine
+    .profile__communication
+      .door.top
+      .door.bottom
       .contacts
-        a(href="tel:+380956010640").contacts__link.phone
+        a(href="tel:+380956010640").contacts__link.contacts__link--phone
           i.fas.fa-phone
-        a(href="mailto:fedeveloperua@gmail.com").contacts__link.mail
+        a(href="mailto:motrdevua@gmail.com").contacts__link.contacts__link--mail
           i.fas.fa-envelope
-        a(href="skype:fedeveloperua?call").contacts__link.skype
-          i.fab.fa-skype
-        a(href="https://www.linkedin.com/in/igor-lukashev-52b25011b/" target="_blank" rel="noopener").contacts__link.linkedin
-          i.fab.fa-linkedin
-        a(href="https://github.com/fedeveloperua" target="_blank" rel="noopener").contacts__link.github
+        a(href="https://github.com/motrdevua" target="_blank" rel="noopener").contacts__link.contacts__link--github
           i.fab.fa-github-alt
+        a(href="skype:fedeveloperua?call").contacts__link.contacts__link--skype
+          i.fab.fa-skype
+        a(href="https://www.linkedin.com/in/igor-lukashev-52b25011b/" target="_blank" rel="noopener").contacts__link.contacts__link--linkedin
+          i.fab.fa-linkedin
