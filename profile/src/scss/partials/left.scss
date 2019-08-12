@@ -17,11 +17,42 @@
   }
 }
 
+.toggle-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    transition: all .3s linear;
+    cursor: pointer;
+  }
+}
+
+.languages {
+  margin-bottom: 10px;
+  align-self: center;
+
+  &__item {
+    padding: 2px;
+    cursor: pointer;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+
 .photo {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 15%;
+  margin: 5% 15%;
 
   @include to($break_md) {
     display: none;
@@ -38,26 +69,28 @@
   }
 }
 
-.about {
+.profile {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   color: $dark;
+  text-align: center;
 
   &__name {
-    margin-bottom: 0;
+    margin: 0;
   }
 
   &__specialty {
     margin-bottom: 0;
+    max-width: 155px;
   }
 
-  &__desc {
+  &__location {
     margin-top: 27px;
   }
 
-  &__contacts {
+  &__communication {
     position: relative;
     width: 220px;
     height: 80px;
@@ -65,7 +98,7 @@
     box-shadow: inset -7px 0 12px -8px rgba(0, 0, 0, 0), inset 7px 0 12px -8px rgba(0, 0, 0, 0);
     cursor: pointer;
     transition: background .4s ease-in-out, box-shadow .4s;
-    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
 
     -webkit-font-smoothing: antialiased;
 
@@ -138,7 +171,7 @@
   &::before {
     position: absolute;
     display: block;
-    margin-left: 58px;
+    left: 64px;
     color: $dark;
     content: 'contacts';
     text-transform: uppercase;
@@ -169,6 +202,36 @@
     text-align: center;
     cursor: pointer;
     transition: 300ms;
+
+    &--phone {
+      &:hover svg path {
+        fill: $phone;
+      }
+    }
+
+    &--mail {
+      &:hover svg path {
+        fill: $mail;
+      }
+    }
+
+    &--skype {
+      &:hover svg path {
+        fill: $skype;
+      }
+    }
+
+    &--linkedin {
+      &:hover svg path {
+        fill: $linkedin;
+      }
+    }
+
+    &--github {
+      &:hover svg path {
+        fill: $github;
+      }
+    }
 
     &:hover {
       background-color: $bg-dark;
@@ -209,35 +272,5 @@
     & svg path {
       fill: $bg-light;
     }
-  }
-}
-
-.phone {
-  &:hover svg path {
-    fill: $phone;
-  }
-}
-
-.mail {
-  &:hover svg path {
-    fill: $mail;
-  }
-}
-
-.skype {
-  &:hover svg path {
-    fill: $skype;
-  }
-}
-
-.linkedin {
-  &:hover svg path {
-    fill: $linkedin;
-  }
-}
-
-.github {
-  &:hover svg path {
-    fill: $github;
   }
 }
