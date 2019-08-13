@@ -1,0 +1,29 @@
+mixin offer-card(photo, label, price, title, desc)
+  a(href="#").offer__card
+    .offer__photo
+      img(src= photo, alt="photo").offer__img
+      span.offer__label= label
+    span.offer__price= price
+    h5.offer__card-title= title
+    span.offer__desc= desc
+
+
+section.section.offer
+  .container
+    .row
+      .col.d-flex.flex-column.justify-content-center.align-items-center
+        span.section__suptitle WE OFFER
+        h3.section__title offer Tour Package
+    .row
+      .swiper-container.col-9
+        .swiper-wrapper
+          .swiper-slide
+            +offer-card('img/tour/tour_3.jpg', 'Honeymoon', '$299/person', 'Blue Beauty of Greece', '5 Days / 6 Night')
+          .swiper-slide
+            +offer-card('img/tour/tour_1.jpg', 'Holiday', '$178/person', 'Nature of Phuket', '3 Days / 4 Night')
+          .swiper-slide
+            +offer-card('img/tour/tour_2.jpg', 'Holiday', '$1111/person', 'World Tour of Paris', '7 Days / 8 Night')
+      .swiper-button-prev.swiper-button-prev-offer
+        +icon('tour-prev')
+      .swiper-button-next.swiper-button-next-offer
+        +icon('tour-next')

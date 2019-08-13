@@ -1,0 +1,24 @@
+mixin review(photo, name, text)
+  .col-4
+    .reviews__card
+      .reviews__photo
+        img(src= photo, alt="photo").reviews__img
+      span.reviews__name= name
+      p.reviews__text= text
+      .reviews__quotes
+
+section.section.reviews
+  .container
+    .row
+      .col
+        span.section__suptitle OUR SMILES
+        h3.section__title Happy Travelers
+    .row
+      +review('img/reviews/review_1.jpg', 'Ribeca Singh', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard")
+      +review('img/reviews/review_2.jpg', 'Jimmy dean', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard")
+      +review('img/reviews/review_3.jpg', 'Theodule Terer', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard")
+    .row
+      .col
+        h3.reviews__question Ready to plan your trip?
+        button.reviews__button BOOK NOW
+

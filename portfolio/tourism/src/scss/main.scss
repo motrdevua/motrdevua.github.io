@@ -79,10 +79,44 @@ body {
   position: relative;
 }
 
+.section {
+  &__suptitle {
+    text-transform: uppercase;
+    line-height: 37px;
+
+    @include rfs(16);
+  }
+
+  &__title {
+    @include rfs(26);
+    text-transform: capitalize;
+
+    &::after {
+      display: block;
+      margin: 8px auto;
+      margin-top: 8px;
+      content: '';
+
+      @include spritePng($wave_2);
+    }
+  }
+
+  &__text {
+    line-height: 22px;
+  }
+}
+
 // ====================  Partials  ======================
 
 @import 'partials/header';
 @import 'partials/banner';
+@import 'partials/services';
+@import 'partials/discover';
+@import 'partials/counters';
+@import 'partials/offer';
+@import 'partials/discount';
+@import 'partials/reviews';
+@import 'partials/popular';
 
 // ======================  Media  =======================
 

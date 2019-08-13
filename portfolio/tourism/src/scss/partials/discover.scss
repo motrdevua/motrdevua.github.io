@@ -1,0 +1,21 @@
+.discover {
+  height: 500px;
+  background: linear-gradient(rgba(#000, .7), rgba(#000, .8)), url('../img/discover_bg.jpg') center bottom/cover no-repeat;
+  color: $white;
+  text-align: center;
+  font-weight: 600;
+
+  &__desc {
+    padding: 55px 0 32px 0;
+  }
+
+  &__video {
+    video {
+      outline: none;
+    }
+
+    iframe .ytp-gradient-top {
+      display: none;
+    }
+  }
+}
