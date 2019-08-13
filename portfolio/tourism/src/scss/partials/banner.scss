@@ -1,9 +1,14 @@
-.swiper-container {
+.swiper-banner {
   padding-top: 80px;
   height: calc(100vh);
 }
 
 .swiper-slide {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
   &--slide1 {
     background: $gradient-sea-05, url('../img/slides/slide_1.jpg') center/cover no-repeat;
   }
@@ -34,14 +39,28 @@
   width: 33px;
   height: 33px;
   background: $white;
+  outline: none;
 }
 
 .swiper-button-prev {
   left: 5%;
+
+  &:hover {
+    .icon--arrow-left {
+      transform: translateX(-3px);
+
+    }
+  }
 }
 
 .swiper-button-next {
   right: 5%;
+
+  &:hover {
+    .icon--arrow-right {
+      transform: translateX(3px);
+    }
+  }
 }
 
 .icon {
@@ -50,14 +69,36 @@
   &--arrow-right {
     width: 14px;
     height: 12px;
+
+    use {
+      fill: $arrow;
+    }
+  }
+
+  &--mouse {
+    width: 21px;
+    height: 32px;
+    transition: all .2s linear;
+    animation-duration: 3s;
+    animation-name: mouse;
+    animation-iteration-count: infinite;
+
+    use {
+      fill: $white;
+    }
+
+    &:hover {
+
+      use {
+        fill: $yellow;
+      }
+    }
   }
 }
 
-.slide {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+
+.banner {
+  position: relative;
   color: $white;
   text-align: center;
 
@@ -87,5 +128,30 @@
     line-height: 37px;
 
     @include rfs(18);
+  }
+
+  &__mouse {
+    position: absolute;
+    left: 50%;
+    bottom: 45px;
+    transform: translateX(-50%);
+    z-index: 999;
+    width: 21px;
+    height: 32px;
+    cursor: pointer;
+  }
+}
+
+@keyframes mouse {
+  0% {
+    transform: translateY(5px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(5px);
   }
 }

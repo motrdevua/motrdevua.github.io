@@ -1,0 +1,24 @@
+mixin article(image, title, text)
+  article.article
+    .article__photo-wrap
+      img(src= image, alt="photo").article__photo
+    h4.article__title= title
+    p.article__text= text
+
+section.section.services
+  .container
+    .row
+      .col-3
+        .services__card
+          span.section__suptitle Discover
+          h3.section__title Our Hot Services
+          p.section__text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+      .col-3
+        +article('img/services/services_1.jpg', 'FLIGHT BOOKING', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.')
+        +article('img/services/services_4.jpg', 'CRUISE TOUR', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.')
+      .col-3
+        +article('img/services/services_2.jpg', 'HOTEL & RESORT BOOKING', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.')
+        +article('img/services/services_5.jpg', 'FIRE CAMP', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.')
+      .col-3
+        +article('img/services/services_3.jpg', 'FAMILY TRIP PLANNER', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.')
+        +article('img/services/services_6.jpg', 'CORPORATE HOLIDAYS', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.')
