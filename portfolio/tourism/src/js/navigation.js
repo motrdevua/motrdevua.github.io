@@ -49,3 +49,13 @@ $(window).on('scroll', function() {
     $('.header').removeClass('header--active');
   }
 });
+
+// Burger menu
+const burger = $('.nav-burger');
+const nav = $('.nav');
+
+burger.on('click', function(e) {
+  e.preventDefault();
+  burger.toggleClass('nav-burger--active');
+  nav.toggleClass('nav--active');
+});

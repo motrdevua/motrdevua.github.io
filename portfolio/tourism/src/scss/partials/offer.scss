@@ -86,7 +86,6 @@
   height: 44px;
   border-radius: 50%;
   border: 1px solid $border;
-  z-index: 999999;
   cursor: pointer;
 
   &:hover .icon--tour-prev {
@@ -96,6 +95,14 @@
   &:hover .icon--tour-next {
     transform: translateX(2px);
   }
+}
+
+.swiper-button-prev-offer {
+  left: 0;
+}
+
+.swiper-button-next-offer {
+  right: 0;
 }
 
 .icon--tour-prev,
