@@ -1,1 +1,39 @@
 footer.footer
+  .container
+    .row
+      ul.col-2.footer-menu
+        li.footer-menu__item.footer-menu__item--title Quick Links
+        li.footer-menu__item
+          a(href="#").footer-menu__link Home
+        li.footer-menu__item
+          a(href="#").footer-menu__link About Company
+        li.footer-menu__item
+          a(href="#").footer-menu__link Testimonials
+        li.footer-menu__item
+          a(href="#").footer-menu__link Infrastructure
+      ul.col-2.footer-menu
+        li.footer-menu__item.footer-menu__item--title Support
+        li.footer-menu__item
+          a(href="#").footer-menu__link Get Started
+        li.footer-menu__item
+          a(href="#").footer-menu__link Lorem
+        li.footer-menu__item
+          a(href="#").footer-menu__link Help
+        li.footer-menu__item
+          a(href="#").footer-menu__link Ipsum
+      ul.col-4.footer-address
+        li.footer-address__item.footer-address__item--title Address
+        li.footer-address__item 14, 1 Ellis bridge ST,
+        li.footer-address__item auckland 3500, Australia
+        li.footer-address__item +1234567890
+        li.footer-address__item contactus@demo.com
+      .col-4
+        form(action="POST").footer__form
+          label(for="email").footer__label Subscribe to our newsletter
+          input(type="email", name="emailaddress", placeholder="Your email", required).footer__input
+          button(type="submit").footer__button SUBSCRIBE
+
+  .container-fluid
+    .row
+      .col.copyright
+        span.copyright__text trourism©All Rights Reserved

@@ -1,0 +1,101 @@
+.footer {
+  padding-top: 50px;
+  background: $background-dark;
+  line-height: 1;
+
+  &__form {
+    position: relative;
+    padding-top: 27px;
+  }
+
+  &__label {
+    color: $white;
+    font-weight: 400;
+    font-family: $roboto;
+  }
+
+  &__input {
+    padding: 12px 15px;
+    width: 260px;
+    border: 0;
+    border-radius: 3px;
+    background: $white;
+    color: $gray-dark;
+  }
+
+  &__button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 14px 15px 13px 15px;
+    border: 0;
+    border-radius: 3px;
+    background: $gradient-sea;
+    color: $black;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      overflow: hidden;
+      padding: 14px 15px 13px 15px;
+      background: linear-gradient(#08aeea, #2af598);
+      color: $black;
+      content: 'SUBSCRIBE';
+      opacity: 0;
+      transition: all .3s linear;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.footer-menu {
+  &__item {
+    padding-top: 25px;
+
+    &--title {
+      color: $white;
+      font-weight: 800;
+
+      @include rfs(20);
+    }
+  }
+
+  &__link {
+    color: $gray-light;
+  }
+}
+
+.footer-address {
+  &__item {
+    padding-top: 25px;
+    color: $gray-light;
+
+    &--title {
+      color: $white;
+      font-weight: 800;
+
+      @include rfs(20);
+    }
+  }
+}
+
+.copyright {
+  margin-top: 50px;
+  border-top: 1px solid $border;
+  text-align: center;
+
+  &__text {
+    display: block;
+    padding: 22px 0;
+    line-height: 1;
+  }
+}

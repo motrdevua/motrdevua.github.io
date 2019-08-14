@@ -117,7 +117,7 @@
   &__title {
     padding: 75px 0 30px 0;
     font-weight: 400;
-    font-family: Arial;
+    font-family: Arial, $raleway;
 
     @include rfs(78);
   }

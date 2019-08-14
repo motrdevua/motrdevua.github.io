@@ -1,0 +1,109 @@
+.popular {
+  padding: 70px 0;
+  color: $white;
+  line-height: 1;
+
+  .section {
+
+    &__suptitle {
+      color: $gray-dark;
+    }
+
+    &__title {
+      color: $black;
+
+      &::after {
+        margin-bottom: 55px;
+
+        @include spritePng($wave_1);
+      }
+    }
+  }
+
+  &__card {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 425px;
+    background: $gradient-grey;
+  }
+
+  &__desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 10px 16px;
+  }
+
+  &__img {
+    position: absolute;
+    right: -35%;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  &__country {
+    font-weight: 700;
+
+    @include rfs(30);
+  }
+
+  &__price {
+    font-family: $montserrat;
+
+    @include rfs(14);
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $gradient-sea;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      opacity: 0;
+      color: white;
+      font-weight: 700;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border-radius: 25px;
+      background: linear-gradient(#08AEEA, #2AF598);
+      transition: all .3s linear;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 20px;
+      height: 13px;
+      border-radius: 50%;
+      @include sprite('pop_arrow');
+      transition: all .3s linear;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:hover::after {
+      transform: translate(calc(-50% + 3px), -50%);
+    }
+  }
+}

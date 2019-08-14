@@ -19,9 +19,9 @@
 
 // Bootstrap
 
-@import 'node_modules/bootstrap/scss/bootstrap-reboot';
-@import 'node_modules/bootstrap/scss/_utilities';
-@import 'node_modules/bootstrap/scss/bootstrap-grid';
+@import '../../node_modules/bootstrap/scss/bootstrap-reboot';
+@import '../../node_modules/bootstrap/scss/_utilities';
+@import '../../node_modules/bootstrap/scss/bootstrap-grid';
 
 // Swiper
 
@@ -94,7 +94,6 @@ body {
     &::after {
       display: block;
       margin: 8px auto;
-      margin-top: 8px;
       content: '';
 
       @include spritePng($wave_2);
@@ -117,6 +116,8 @@ body {
 @import 'partials/discount';
 @import 'partials/reviews';
 @import 'partials/popular';
+@import 'partials/map';
+@import 'partials/footer';
 
 // ======================  Media  =======================
 
