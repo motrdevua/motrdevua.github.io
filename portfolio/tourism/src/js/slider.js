@@ -17,11 +17,21 @@ $(document).ready(function() {
   // eslint-disable-next-line no-unused-vars
   const offer = new Swiper('.swiper-container', {
     slidesPerView: 3,
-    spaceBetween: 30,
+    spaceBetween: 15,
     slidesPerGroup: 1,
-    centeredSlides: true,
+    centeredSlides: false,
     loop: true,
     loopFillGroupWithBlank: true,
+    breakpoints: {
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+    },
     navigation: {
       prevEl: '.swiper-button-prev.swiper-button-prev-offer',
       nextEl: '.swiper-button-next.swiper-button-next-offer',

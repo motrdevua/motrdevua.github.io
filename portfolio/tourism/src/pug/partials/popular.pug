@@ -1,0 +1,21 @@
+mixin popular-card(photo, country, price)
+  .col-xl-3.col-md-6
+    .popular__card
+      img(src= photo, alt="photo").popular__img
+      .popular__desc
+        .popular__text
+          h4.popular__country= country
+          span.popular__price= price
+        a(href="#").popular__link
+
+section.section.popular
+  .container
+    .row
+      .col.d-flex.flex-column.justify-content-center.align-items-center
+        span.section__suptitle DESTINATION
+        h3.section__title Popular Tourism Countries
+    .row
+      +popular-card('img/countries/Thailand.jpg', 'Thailand', '$900 - $1900')
+      +popular-card('img/countries/Italy.jpg', 'Italy', '$700 - $2000')
+      +popular-card('img/countries/Indonesia.jpg', 'Indonesia', '$300 - $1100')
+      +popular-card('img/countries/Singapore.jpg', 'Singapore', '$1900 - $2700')

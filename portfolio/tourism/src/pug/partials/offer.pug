@@ -8,14 +8,14 @@ mixin offer-card(photo, label, price, title, desc)
     span.offer__desc= desc
 
 
-section.section.offer
+section#tour.section.offer
   .container
     .row
       .col.d-flex.flex-column.justify-content-center.align-items-center
         span.section__suptitle WE OFFER
         h3.section__title offer Tour Package
     .row
-      .swiper-container.col-9
+      .swiper-container.col-9.col-md-10
         .swiper-wrapper
           .swiper-slide
             +offer-card('img/tour/tour_3.jpg', 'Honeymoon', '$299/person', 'Blue Beauty of Greece', '5 Days / 6 Night')

@@ -1,0 +1,85 @@
+/*==========  Desktop First  ==========*/
+
+//retina
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {}
+
+// ≥1200px
+@include media-breakpoint-down(lg) {}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+  .menu {
+    &__item {
+      margin-left: 25px;
+    }
+  }
+
+  .services {
+    &__card {
+      max-width: 100%;
+      padding-bottom: 50px;
+    }
+
+    .col-md-6:nth-child(5) {
+      display: none;
+    }
+  }
+
+  .article {
+
+    &__photo-wrap,
+    &__photo {
+      height: 220px;
+    }
+  }
+
+  .reviews {
+    &__card {
+      padding: 35px;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+
+    &__question {
+      padding: 50px 0;
+    }
+  }
+
+  .popular {
+    &__card {
+      margin-bottom: 15px;
+    }
+  }
+
+  .footer {
+    &__form {}
+  }
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {}
+
+// ≥576px
+@include media-breakpoint-down(xs) {}
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {}
+
+// ≤768px
+@include media-breakpoint-up(md) {}
+
+// ≤992px
+@include media-breakpoint-up(lg) {}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {}

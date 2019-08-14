@@ -4,9 +4,11 @@
   position: fixed;
   padding: 21px 0;
   z-index: 99;
+  transition: all .3s linear;
 
   &--active {
     padding: 5px 0;
+    box-shadow: 0px 1px 5px 0px rgba(101, 101, 101, 0.2);
   }
 
   &__logo {
@@ -21,8 +23,14 @@
 }
 
 .menu {
+  padding: 0;
+
   &__item {
     margin-left: 50px;
+
+    &--active .menu__link {
+      color: $violet;
+    }
   }
 
   &__link {
@@ -31,6 +39,7 @@
     line-height: 37px;
 
     &:hover {
+      color: $violet;
       text-decoration: none;
     }
   }

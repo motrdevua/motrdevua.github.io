@@ -1,15 +1,16 @@
 .reviews {
   padding: 70px 0;
-  text-align: center;
   background: url('../img/reviews/reviews_bg.jpg') bottom center/cover no-repeat;
+  text-align: center;
 
   .section {
     &__title {
       color: $black;
 
       &::after {
-        @include spritePng($wave_1);
         margin-bottom: 60px;
+
+        @include spritePng($wave_1);
       }
     }
   }
@@ -20,6 +21,7 @@
     flex-direction: column;
     justify-content: center;
     padding: 55px 35px 65px 35px;
+    margin-bottom: 15px;
     background: #f4f4f4;
   }
 
@@ -47,23 +49,46 @@
 
   &__quotes {
     margin-top: 8px;
+
     @include spritePng($qoutes);
   }
 
   &__question {
     padding: 310px 0 42px 0;
-    @include rfs(36);
     color: $white;
     line-height: 1;
+
+    @include rfs(36);
   }
 
   &__button {
+    position: relative;
     padding: 16px 40px 15px 40px;
+    border: 0;
     border-radius: 25px;
     background: $gradient-sea;
     color: white;
-    border: 0px;
     font-weight: 700;
     line-height: 1;
+
+    &:before {
+      content: "BOOK NOW";
+      position: absolute;
+      display: block;
+      padding: 16px 40px 15px 40px;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      opacity: 0;
+      color: white;
+      font-weight: 700;
+      border-radius: 25px;
+      background: linear-gradient(#08AEEA, #2AF598);
+      transition: all .3s linear;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
   }
 }
