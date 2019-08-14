@@ -2,18 +2,16 @@ const menuItem = $('.menu__item');
 const header = $('.header');
 const headerHeight = header.innerHeight();
 
-$('[data-scroll]').on('click', function(e) {
+// Smooth scroll to anchor
+$('.menu__link').on('click', function(e) {
   e.preventDefault();
-  const elementId = $(this).data('scroll');
-  const blockOffset = $(elementId).offset().top - 47;
+  const target = $(this).attr('href');
+  const blockOffset = $(target).offset().top - 47;
 
   menuItem.removeClass('menu__item--active');
   $(this)
     .parent()
     .addClass('menu__item--active');
-  // burger.toggleClass('nav-burger--active');
-  // nav.toggleClass('nav--active');
-
   $('html, body').animate(
     {
       scrollTop: blockOffset,
@@ -26,7 +24,6 @@ $(window).on('scroll', function() {
   const scrollOffset = $(this).scrollTop();
 
   // Change active menu item on scroll
-
   $('section').each(function() {
     const sectionId = $(this).attr('id');
     const offset = $(this).offset().top;
@@ -42,7 +39,7 @@ $(window).on('scroll', function() {
       }
     }
   });
-
+  // Change header menu height
   if (scrollOffset >= 79) {
     $('.header').addClass('header--active');
   } else {

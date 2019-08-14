@@ -13,6 +13,12 @@ only screen and (min-resolution: 2dppx) {}
 
 // ≥992px
 @include media-breakpoint-down(md) {
+  .menu {
+    &__item {
+      margin-left: 25px;
+    }
+  }
+
   .services {
     &__card {
       max-width: 100%;
@@ -49,10 +55,6 @@ only screen and (min-resolution: 2dppx) {}
   .popular {
     &__card {
       margin-bottom: 15px;
-    }
-
-    &__img {
-      right: 0;
     }
   }
 
