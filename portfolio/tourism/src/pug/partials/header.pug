@@ -1,9 +1,9 @@
 header.header.container-fluid.align-items-center
   .container
     nav.row.justify-content-between
-      div.col-2
+      div.col-xl-2.col-md-4.col-sm-12
         a(href="#").header__logo
-      ul.header__menu.menu.col_6.d-flex.justify-content-start
+      ul.header__menu.menu.col-xl-6.col-md-8.col-sm-12.d-flex.justify-content-start
         li.menu__item.menu__item--active
           a(href="#home").menu__link Home
         li.menu__item
@@ -12,4 +12,5 @@ header.header.container-fluid.align-items-center
           a(href="#about").menu__link About us
         li.menu__item
           a(href="#tour").menu__link Tour package
-
+      .burger
+        .burger__line

@@ -1,6 +1,7 @@
 .offer {
   padding: 65px 0 70px 0;
   line-height: 1;
+
   @include rfs(14);
 
   .container {
@@ -13,6 +14,7 @@
 
       &::after {
         margin-bottom: 55px;
+
         @include spritePng($wave_1);
       }
     }
@@ -24,10 +26,10 @@
 
   &__card {
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    box-shadow: 0px 0px 12px 0px rgba(101, 101, 101, 0.2);
+    box-shadow: 0 0 12px 0 rgba(101, 101, 101, .2);
 
     &:hover {
       .offer__img {
@@ -58,8 +60,8 @@
     left: 10px;
     padding: 5px 8px;
     background: $yellow;
-    font-weight: 600;
     color: $black;
+    font-weight: 600;
   }
 
   &__price {
@@ -68,8 +70,9 @@
   }
 
   &__card-title {
-    @include rfs(18);
     color: $violet;
+
+    @include rfs(18);
   }
 
   &__desc {
@@ -81,12 +84,12 @@
 .swiper-button-prev-offer,
 .swiper-button-next-offer {
   top: 60%;
-  transform: translateY(calc(-50% + 22px));
   width: 44px;
   height: 44px;
-  border-radius: 50%;
   border: 1px solid $border;
+  border-radius: 50%;
   cursor: pointer;
+  transform: translateY(calc(-50% + 22px));
 
   &:hover .icon--tour-prev {
     transform: translateX(-2px);

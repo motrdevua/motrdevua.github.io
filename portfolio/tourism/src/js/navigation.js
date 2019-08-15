@@ -1,13 +1,17 @@
 const menuItem = $('.menu__item');
-const header = $('.header');
-const headerHeight = header.innerHeight();
+const burger = $('.burger');
 
-// Smooth scroll to anchor
+/**
+ * Smooth scroll to anchor
+ */
+
 $('.menu__link').on('click', function(e) {
   e.preventDefault();
   const target = $(this).attr('href');
   const blockOffset = $(target).offset().top - 47;
 
+  burger.toggleClass('burger--active');
+  $('.menu').toggleClass('menu--active');
   menuItem.removeClass('menu__item--active');
   $(this)
     .parent()
@@ -23,7 +27,10 @@ $('.menu__link').on('click', function(e) {
 $(window).on('scroll', function() {
   const scrollOffset = $(this).scrollTop();
 
-  // Change active menu item on scroll
+  /**
+   * Change active menu item on scroll
+   */
+
   $('section').each(function() {
     const sectionId = $(this).attr('id');
     const offset = $(this).offset().top;
@@ -39,20 +46,26 @@ $(window).on('scroll', function() {
       }
     }
   });
-  // Change header menu height
+
+  /**
+   * Change header menu height
+   */
+
   if (scrollOffset >= 79) {
     $('.header').addClass('header--active');
+    burger.addClass('burger-15');
   } else {
     $('.header').removeClass('header--active');
+    burger.removeClass('burger-15');
   }
 });
 
-// Burger menu
-const burger = $('.nav-burger');
-const nav = $('.nav');
+/**
+ * Burger menu
+ */
 
 burger.on('click', function(e) {
   e.preventDefault();
-  burger.toggleClass('nav-burger--active');
-  nav.toggleClass('nav--active');
+  burger.toggleClass('burger--active');
+  $('.menu').toggleClass('menu--active');
 });
