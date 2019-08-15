@@ -1,10 +1,10 @@
 import $ from 'jquery';
-import 'bootstrap';
 import svg4everybody from 'svg4everybody/dist/svg4everybody.min';
 import './slider';
 import './counters';
 import './navigation';
 import './map';
+import './wow';
 
 $(document).ready(function() {
   svg4everybody({});

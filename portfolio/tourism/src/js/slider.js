@@ -23,7 +23,7 @@ $(document).ready(function() {
     loop: true,
     loopFillGroupWithBlank: true,
     breakpoints: {
-      480: {
+      768: {
         slidesPerView: 1,
         spaceBetween: 15,
       },

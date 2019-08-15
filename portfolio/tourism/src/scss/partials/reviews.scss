@@ -20,8 +20,8 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding: 55px 35px 65px 35px;
     margin-bottom: 15px;
+    padding: 55px 35px 65px 35px;
     background: #f4f4f4;
   }
 
@@ -72,18 +72,18 @@
     line-height: 1;
 
     &:before {
-      content: "BOOK NOW";
       position: absolute;
-      display: block;
-      padding: 16px 40px 15px 40px;
       top: 0;
       left: 0;
+      display: block;
       overflow: hidden;
-      opacity: 0;
-      color: white;
-      font-weight: 700;
+      padding: 16px 40px 15px 40px;
       border-radius: 25px;
-      background: linear-gradient(#08AEEA, #2AF598);
+      background: linear-gradient(#08aeea, #2af598);
+      color: white;
+      content: 'BOOK NOW';
+      font-weight: 700;
+      opacity: 0;
       transition: all .3s linear;
     }
 

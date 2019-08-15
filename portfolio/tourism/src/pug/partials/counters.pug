@@ -1,12 +1,12 @@
 mixin counter(number, title)
-    .counter.col-3.d-flex.flex-column.justify-content-center.align-items-center
+    .counter.col-xl-3.col-sm-6.d-flex.flex-column.justify-content-center.align-items-center
       .counter__icon
       span.counter__number(data-count= number) 0
       span.counter__title= title
 
 section.section.counters
   .container
-    .row
+    .row.wow.fadeInUp(data-wow-offset="150")
       +counter('120859', 'HAPPY TRAVELLERS')
       +counter('2594', 'SATISFIED TOURS')
       +counter('854', 'DESTINATION')

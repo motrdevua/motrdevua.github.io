@@ -21,8 +21,8 @@ only screen and (min-resolution: 2dppx) {}
 
   .services {
     &__card {
-      max-width: 100%;
       padding-bottom: 50px;
+      max-width: 100%;
     }
 
     .col-md-6:nth-child(5) {
@@ -54,20 +54,92 @@ only screen and (min-resolution: 2dppx) {}
 
   .popular {
     &__card {
-      margin-bottom: 15px;
+      margin-bottom: 30px;
     }
-  }
-
-  .footer {
-    &__form {}
   }
 }
 
 // ≥768px
-@include media-breakpoint-down(sm) {}
+@include media-breakpoint-down(sm) {
+  .burger {
+    display: block;
+  }
+
+  .menu {
+    display: none !important;
+
+    &--active {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center !important;
+      height: 100vh;
+      z-index: 99;
+    }
+  }
+
+  .header {
+    &--active {
+      padding: 10px 0;
+    }
+  }
+
+  .menu {
+    &__item {
+      margin: 15px 0;
+    }
+  }
+
+  .article {
+    &__photo {
+      height: 180px;
+      width: 100%;
+    }
+  }
+
+  .discover {
+    &__video iframe {
+      width: 480px;
+    }
+  }
+
+  .counter {
+    padding-bottom: 30px;
+  }
+
+  .discount {
+    &__form {
+      flex-direction: column;
+    }
+
+    &__input {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+  }
+
+  .footer {
+    &__input {
+      width: 100%;
+    }
+  }
+}
 
 // ≥576px
-@include media-breakpoint-down(xs) {}
+@include media-breakpoint-down(xs) {
+  .article {
+    &__photo {
+      height: 220px;
+      width: 100%;
+    }
+  }
+
+  .discover {
+    &__video iframe {
+      width: 100%;
+    }
+  }
+}
 
 
 /*==========  Mobile First  ==========*/

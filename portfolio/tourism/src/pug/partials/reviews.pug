@@ -9,11 +9,11 @@ mixin review(photo, name, text)
 
 section.section.reviews
   .container
-    .row
+    .row.wow.fadeInUp(data-wow-offset="50")
       .col
         span.section__suptitle OUR SMILES
         h3.section__title Happy Travelers
-    .row
+    .row.wow.fadeInUp(data-wow-offset="50")
       +review('img/reviews/review_1.jpg', 'Ribeca Singh', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard")
       +review('img/reviews/review_2.jpg', 'Jimmy dean', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard")
       +review('img/reviews/review_3.jpg', 'Theodule Terer', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard")
