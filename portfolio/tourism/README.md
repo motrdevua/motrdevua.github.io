@@ -2,11 +2,11 @@
 
 #### For this project I used:
 
-###Template: Tourism: Free one page Adobe XD template
-###Template author: undefined
+Template: Tourism: Free one page Adobe XD template
+Template author: undefined
 
 #### Technology stack:
-* [Webpack](https://flat.badgen.net/badge/webpack/4/14aaf3)](https://webpack.js.org)
+* [Webpack](https://webpack.js.org)
 * [Bootstrap 4 (only grid)](https://getbootstrap.com/)
 * [Sass](https://sass-lang.com/)
 * [jQuery](https://jquery.com/)
