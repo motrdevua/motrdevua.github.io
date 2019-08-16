@@ -5,5 +5,6 @@ import '@fortawesome/fontawesome-free/js/all.min';
 import './particles';
 import './left';
 import './right';
+import './theme';
 
 svg4everybody({});

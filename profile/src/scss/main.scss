@@ -53,10 +53,10 @@ li {
 }
 
 body {
-  color: $text-color;
+  color: var(--dark);
   font-family: $ExoRegular;
   -webkit-font-smoothing: subpixel-antialiased;
-  background: $bg-dark;
+  background: var(--bg);
 
   @include rfs(16);
 }
@@ -74,7 +74,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: $bg-dark;
+  background-color: var(--bg);
 }
 
 canvas {
@@ -109,4 +109,44 @@ canvas {
     flex-direction: column;
     height: calc(100% - 30px);
   }
+}
+
+// ===================== COLORS =====================
+
+html[data-theme='dark'] {
+  --bg: #282d34;
+  --bg-09: rgba(50, 56, 64, .9);
+  --contact: #282d34;
+  --dark: #1d2126;
+  --light: #ffffff;
+  --active: rgba(0, 167, 231, 1.000);
+  --active-dark: rgba(0, 100, 140, 1.000);
+  --green: #b3eb00;
+  --yellow: #fff707;
+  --purple: #aa73ff;
+  --black: #171515;
+  --red: #cb3837;
+}
+
+html[data-theme='light'] {
+  --bg: #fcfcfc;
+  --bg-09: rgba(235, 235, 235, .9);
+  --contact: #454d58;
+  --dark: #454d58;
+  --light: #ffffff;
+  --active: rgba(0, 167, 231, 1.000);
+  --active-dark: rgba(0, 100, 140, 1.000);
+  --green: #b3eb00;
+  --yellow: #fff707;
+  --purple: #aa73ff;
+  --black: #171515;
+  --red: #cb3837;
+}
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+  transition: all .2s !important;
+  transition-delay: 0s !important;
 }
