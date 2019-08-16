@@ -9,7 +9,7 @@
   width: 25%;
   height: 100%;
   border-radius: 4px;
-  background-color: $bg-light;
+  background-color: var(--bg-09);
 
   @include to($break_md) {
     width: 100%;
@@ -42,7 +42,7 @@
     cursor: pointer;
 
     &:hover {
-      color: $blue;
+      color: var(--active-dark);
     }
   }
 }
@@ -74,7 +74,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  color: $dark;
+  color: var(--dark);
   text-align: center;
 
   &__name {
@@ -103,20 +103,20 @@
     -webkit-font-smoothing: antialiased;
 
     &:hover .door::before {
-      color: $blue;
+      color: var(--active-dark);
     }
 
     &--active {
-      background: $bg-light;
+      background: var(--bg-09);
       box-shadow: inset -7px 0 12px -8px rgba(0, 0, 0, .3), inset 7px 0 12px -8px rgba(0, 0, 0, .3);
 
       .door {
-        background-color: rgba(50, 56, 64, .9);
+        background-color: var(--bg-09);
         box-shadow: 0 0 10px -2px rgba(0, 0, 0, .4);
         transform: scale(1.08);
 
         &::before {
-          color: $blue;
+          color: var(--active-dark);
         }
       }
 
@@ -172,7 +172,7 @@
     position: absolute;
     display: block;
     left: 64px;
-    color: $dark;
+    color: var(--dark);
     content: 'contacts';
     text-transform: uppercase;
     font-size: 19px;
@@ -197,45 +197,51 @@
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    background-color: $bg-dark;
-    color: $bg-light;
+    background-color: var(--contact);
+    color: var(--contact);
     text-align: center;
     cursor: pointer;
     transition: 300ms;
 
     &--phone {
       &:hover svg path {
-        fill: $phone;
+        fill: var(--green);
       }
     }
 
     &--mail {
       &:hover svg path {
-        fill: $mail;
+        fill: var(--yellow);
       }
     }
 
-    &--skype {
+    &--active {
       &:hover svg path {
-        fill: $skype;
-      }
-    }
-
-    &--linkedin {
-      &:hover svg path {
-        fill: $linkedin;
+        fill: var(--active-dark);
       }
     }
 
     &--github {
       &:hover svg path {
-        fill: $github;
+        fill: var(--black);
+      }
+    }
+
+    &--skype {
+      &:hover svg path {
+        fill: var(--active);
+      }
+    }
+
+    &--linkedin {
+      &:hover svg path {
+        fill: var(--active-dark);
       }
     }
 
     &:hover {
-      background-color: $bg-dark;
-      color: #00989a;
+      background-color: var(--contact);
+      color: var(--active-dark);
 
       &::after {
         opacity: 1;
@@ -250,7 +256,7 @@
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      box-shadow: 0 0 0 2px $bg-dark;
+      box-shadow: 0 0 0 2px var(--contact);
       content: '';
       opacity: 0;
       transition: 300ms;
@@ -270,7 +276,7 @@
     }
 
     & svg path {
-      fill: $bg-light;
+      fill: var(--bg-09);
     }
   }
 }

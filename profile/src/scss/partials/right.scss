@@ -25,12 +25,12 @@
   justify-content: center;
   width: 100%;
   border-radius: 4px;
-  background-color: $bg-light;
+  background-color: var(--bg-09);
   transition: flex-grow .3s ease-in-out;
 
   &:hover {
     &::before {
-      color: $blue;
+      color: var(--active-dark);
     }
   }
 
@@ -38,7 +38,7 @@
     position: absolute;
     z-index: 99;
     margin-right: 6px;
-    color: $dark;
+    color: var(--dark);
     text-transform: uppercase;
     font-size: 2em;
     opacity: 1;
@@ -61,7 +61,7 @@
   }
 
   &:not(:last-child) {
-    border-bottom: 2px solid $bg-dark;
+    border-bottom: 2px solid var(--bg);
   }
 
   &__container {
@@ -71,7 +71,7 @@
     padding: 0 20px;
     width: 100%;
     height: 0;
-    color: $dark;
+    color: var(--dark);
     opacity: 0;
     transition: height .7s, opacity .3s, overflow 3s;
     transition-timing-function: ease-in-out;
@@ -83,7 +83,7 @@
 
   &::before {
     margin-right: 0;
-    color: $blue;
+    color: var(--active-dark);
     opacity: 0;
   }
 
@@ -123,13 +123,13 @@
   }
 
   &__title {
-    color: $blue;
+    color: var(--active-dark);
     text-transform: uppercase;
 
     @include to($break_md) {
       padding: 10px 0;
-      border-top: 1px dotted $dark;
-      border-bottom: 1px dotted $dark;
+      border-top: 1px dotted var(--dark);
+      border-bottom: 1px dotted var(--dark);
       text-align: center;
       font-size: 1.4em;
     }
@@ -141,7 +141,7 @@
     align-items: center;
     justify-content: space-around;
     padding: 15px 0;
-    color: $dark;
+    color: var(--dark);
 
     @include to($break_md) {
       flex-direction: column;
@@ -149,7 +149,7 @@
     }
 
     &--university {
-      border-bottom: 1px dashed $dark;
+      border-bottom: 1px dashed var(--dark);
     }
   }
 
@@ -186,7 +186,7 @@
 
   &__speciality {
     padding: 5px;
-    border-top: 1px dotted $dark;
+    border-top: 1px dotted var(--dark);
     text-align: center;
   }
 
@@ -216,13 +216,13 @@
   display: none;
 
   &__title {
-    color: $blue;
+    color: var(--active-dark);
     text-transform: uppercase;
 
     @include to($break_md) {
       padding: 10px 0;
-      border-top: 1px dotted $dark;
-      border-bottom: 1px dotted $dark;
+      border-top: 1px dotted var(--dark);
+      border-bottom: 1px dotted var(--dark);
       text-align: center;
       font-size: 1.4em;
     }
@@ -258,22 +258,14 @@
     @include size(6);
   }
 
-  &-yarn {
-    fill: $yarn;
-  }
-
   &-npm {
-    fill: $npm;
-  }
-
-  &-visualstudio {
-    fill: $visualstudio;
+    fill: var(--red);
   }
 }
 
 .fa-check-square {
   margin-right: 19px;
-  color: $blue;
+  color: var(--active-dark);
 }
 
 .portfolio {
@@ -290,7 +282,7 @@
     display: block;
     overflow: hidden;
     margin: 10px 0;
-    border: 1px solid $dark;
+    border: 1px solid var(--dark);
     border-radius: 4px;
     height: 40%;
 
@@ -302,7 +294,7 @@
     }
 
     &:hover .portfolio__title {
-      color: $green;
+      color: var(--green);
     }
 
     &:hover .portfolio__img {
@@ -336,13 +328,13 @@
     left: 50%;
     z-index: 99;
     display: block;
-    padding: 4px;
+    padding: 10px;
     width: 80%;
     height: auto;
-    border: 1px solid $dark;
+    border: 1px solid var(--dark);
     border-radius: 4px;
-    background: $bg-light;
-    color: $dark;
+    background: var(--bg-09);
+    color: var(--dark);
     text-align: center;
     transform: translate(-50%, -50%);
 
