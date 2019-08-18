@@ -5,5 +5,6 @@ import './particles';
 import './left';
 import './right';
 import './theme';
+import './parallax';
 
 svg4everybody({});
