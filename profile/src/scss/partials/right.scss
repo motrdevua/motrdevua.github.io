@@ -229,6 +229,7 @@
   }
 
   &__item {
+    line-height: 1;
     margin: 10px;
 
     @include to($break_md) {
@@ -263,7 +264,9 @@
   }
 }
 
-.fa-check-square {
+.icon--check {
+  width: 16px;
+  height: 16px;
   margin-right: 19px;
   color: var(--active-dark);
 }
@@ -281,13 +284,13 @@
     position: relative;
     display: block;
     overflow: hidden;
-    margin: 10px 0;
+    margin: 15px 0;
     border: 1px solid var(--dark);
     border-radius: 4px;
-    height: 40%;
+    height: 49%;
 
 
-    @include size(5);
+    @include size(6);
 
     @include to($break_md) {
       @include size(12);
