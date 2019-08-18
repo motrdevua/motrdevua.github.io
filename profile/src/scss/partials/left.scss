@@ -19,23 +19,23 @@
 
 .toggle-box {
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   width: 100%;
   height: auto;
 
   .icon {
     width: 32px;
     height: 32px;
-    transition: all .3s linear;
     cursor: pointer;
+    transition: all .3s linear;
   }
 }
 
 .languages {
-  margin-bottom: 10px;
   align-self: center;
+  margin-bottom: 10px;
 
   &__item {
     padding: 2px;
@@ -46,7 +46,6 @@
     }
   }
 }
-
 
 .photo {
   display: flex;
@@ -79,11 +78,13 @@
 
   &__name {
     margin: 0;
+    font-weight: 400;
   }
 
   &__specialty {
     margin-bottom: 0;
     max-width: 155px;
+    font-weight: 400;
   }
 
   &__location {
@@ -135,7 +136,6 @@
   }
 }
 
-
 .top {
   top: 0;
   left: 0;
@@ -170,8 +170,8 @@
 
   &::before {
     position: absolute;
-    display: block;
     left: 64px;
+    display: block;
     color: var(--dark);
     content: 'contacts';
     text-transform: uppercase;
@@ -193,61 +193,16 @@
 
   &__link {
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 38px;
     height: 38px;
     border-radius: 50%;
     background-color: var(--contact);
-    color: var(--contact);
     text-align: center;
     cursor: pointer;
     transition: 300ms;
-
-    &--phone {
-      &:hover svg path {
-        fill: var(--green);
-      }
-    }
-
-    &--mail {
-      &:hover svg path {
-        fill: var(--yellow);
-      }
-    }
-
-    &--active {
-      &:hover svg path {
-        fill: var(--active-dark);
-      }
-    }
-
-    &--github {
-      &:hover svg path {
-        fill: var(--black);
-      }
-    }
-
-    &--skype {
-      &:hover svg path {
-        fill: var(--active);
-      }
-    }
-
-    &--linkedin {
-      &:hover svg path {
-        fill: var(--active-dark);
-      }
-    }
-
-    &:hover {
-      background-color: var(--contact);
-      color: var(--active-dark);
-
-      &::after {
-        opacity: 1;
-        transform: scale(1.15);
-      }
-    }
 
     &::after {
       position: absolute;
@@ -267,16 +222,38 @@
       margin-top: 60px;
     }
 
-    & svg {
-      display: block;
-      margin: 0 auto;
-      width: 100%;
-      height: 100%;
-      font-size: 24px;
-    }
+    &:hover {
+      .icon--phone {
+        color: var(--green);
+      }
 
-    & svg path {
-      fill: var(--bg-09);
+      .icon--mail {
+        color: var(--yellow);
+      }
+
+      .icon--github {
+        color: var(--black);
+      }
+
+      .icon--telegram {
+        color: var(--active);
+      }
+
+      .icon--linkedin {
+        color: var(--active-dark);
+      }
+
+      &::after {
+        opacity: 1;
+        transform: scale(1.15);
+      }
     }
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    color: var(--bg-09);
+    transition: none;
   }
 }
