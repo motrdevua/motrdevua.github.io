@@ -61,9 +61,11 @@
     width: 100%;
     border-radius: 4px;
     filter: grayscale(100%);
+    transition: all .3s linear;
 
     &:hover {
       filter: grayscale(0%);
+      transition: all .3s linear;
     }
   }
 }
@@ -175,7 +177,7 @@
     color: var(--dark);
     content: 'contacts';
     text-transform: uppercase;
-    font-size: 19px;
+    @include rfs(19);
     line-height: 50px;
     transition: color .7s ease-in-out;
   }

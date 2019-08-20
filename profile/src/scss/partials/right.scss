@@ -35,7 +35,7 @@
     z-index: 99;
     color: var(--dark);
     text-transform: uppercase;
-    font-size: 2em;
+    @include rfs(32);
     cursor: pointer;
     transition: all .2s linear;
 
@@ -120,7 +120,7 @@
       border-top: 1px dotted var(--dark);
       border-bottom: 1px dotted var(--dark);
       text-align: center;
-      font-size: 1.4em;
+      @include rfs(22);
     }
   }
 
@@ -134,7 +134,7 @@
 
     @include to($break_md) {
       flex-direction: column;
-      font-size: 1.2em;
+      @include rfs(19);
     }
 
     &--university {
@@ -213,7 +213,7 @@
       border-top: 1px dotted var(--dark);
       border-bottom: 1px dotted var(--dark);
       text-align: center;
-      font-size: 1.4em;
+      @include rfs(22);
     }
   }
 
@@ -222,7 +222,7 @@
     line-height: 1;
 
     @include to($break_md) {
-      font-size: 1.2em;
+      @include rfs(19);
     }
   }
 

@@ -1,5 +1,5 @@
 const myPanel = document.querySelector('.wrapper');
-const subpanel = document.querySelector('.container');
+const subPanel = document.querySelector('.container');
 
 let mouseX;
 let mouseY;
@@ -16,24 +16,24 @@ function transformPanel(mouseEvent) {
   const percentX = (mouseX - centerX) / (myPanel.clientWidth / 2);
   const percentY = -((mouseY - centerY) / (myPanel.clientHeight / 2));
 
-  subpanel.style.transform = `perspective(400px) rotateY(${percentX *
+  subPanel.style.transform = `perspective(400px) rotateY(${percentX *
     transformAmount}deg) rotateX(${percentY * transformAmount}deg)`;
 }
 
 function handleMouseEnter() {
   setTimeout(() => {
-    subpanel.style.transition = '';
+    subPanel.style.transition = '';
   }, 100);
-  subpanel.style.transition = 'transform 0.1s';
+  subPanel.style.transition = 'transform 0.1s';
 }
 
 function handleMouseLeave() {
-  subpanel.style.transition = 'transform 0.1s';
+  subPanel.style.transition = 'transform 0.1s';
   setTimeout(() => {
-    subpanel.style.transition = '';
+    subPanel.style.transition = '';
   }, 100);
 
-  subpanel.style.transform = 'perspective(400px) rotateY(0deg) rotateX(0deg)';
+  subPanel.style.transform = 'perspective(400px) rotateY(0deg) rotateX(0deg)';
 }
 
 document.body.onmousemove = transformPanel;
