@@ -9,6 +9,7 @@ mixin icon(name,mod)
 
 //-Portfolio item
 mixin portfolio(address, src, name)
-  a(href= address target="_blank" rel="noopener").portfolio__item
-    img(src= src, alt= name).portfolio__img
-    span.portfolio__title= name
+  .portfolio__item
+    a(href= address target="_blank" rel="noopener").portfolio__link
+      span.portfolio__title= name
+      img(src= src, alt= name).portfolio__img
