@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.keys {
+    position: absolute;
+    left: 50%;
+    margin-left: -225px;
+    top: 50%;
+    margin-top: -225px;
+    background-color: #21252b;
+    width: 450px;
+    height: 450px;
+    border-radius: 5px;
+}
+
+.key {
+    float: left;
+    background-color: rgba(150, 157, 167, 0.900);
+    margin-top: 3px;
+    margin-left: 3px;
+    width: 146px;
+    height: 146px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .07s;
+}
+
+.key kbd {
+    font-size: 56px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.playing {
+    transform: scale(0.97);
+    box-shadow: inset 0 0 65px 65px greenyellow;
+}

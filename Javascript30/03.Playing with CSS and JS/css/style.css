@@ -1,0 +1,28 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  background: #193549;
+  color: #fff;
+  font: 50px 'helvetica neue', sans-serif;
+}
+
+:root {
+  --base: #ffc600;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
+img {
+  margin-top: 50px;
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+}
+
+.hl {
+  color: var(--base);
+}

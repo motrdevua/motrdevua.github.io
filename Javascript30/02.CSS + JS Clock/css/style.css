@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -150px;
+}
+.clock-face {
+  width: 300px;
+  height: 300px;
+  background-image: url('../img/clock_face_11_by_stephenjohnsmith-d8xmo10.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.circle {
+  position: absolute;
+  background: black;
+  top: 50%;
+  left: 50%;
+  margin-top: -5px;
+  margin-left: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%
+}
+.hand {
+  position: absolute;
+  background: black;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+.seconds-hand {
+  width: 45%;
+  height: 2px;
+  left: 5%;
+  top: 49.5%;
+}
+.hours-hand {
+  width: 30%;
+  height: 6px;
+  top: 49%;
+  left: 20%;
+}
+.minutes-hand {
+  width: 40%;
+  height: 4px;
+  top: 49.3%;
+  left: 10%;
+}
