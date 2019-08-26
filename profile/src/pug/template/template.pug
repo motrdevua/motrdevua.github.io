@@ -1,0 +1,38 @@
+include ../utils/mixins
+block variables
+
+doctype html
+html(lang="en-EN" data-theme="dark")
+  head
+    meta(charset="utf-8")
+    title #{title}
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="keywords" content="")
+    meta(name="description" content=description)
+
+    <!--[if lt IE 9]>
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
+    <![endif]-->
+
+    link(rel="shortcut icon" href="favicon.png" type="image/png")
+
+    link(href="https://fonts.googleapis.com/css?family=Exo:300,300i,400,400i,500,500i,600,600i&display=swap" rel="stylesheet")
+
+    link(rel="stylesheet", href="assets/css/vendors.css")
+    link(rel="stylesheet", href="assets/css/main.css")
+
+  body(class=pageClass)
+
+    //- svg sprite
+    include ../../img/spriteSvg.svg
+    //- ==========
+
+    block particles
+
+    block content
+
+    block script
+
+    script(src="assets/js/vendors~main.js")
+    script(src="assets/js/main.js")

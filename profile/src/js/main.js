@@ -7,4 +7,6 @@ import './right';
 import './theme';
 import './parallax';
 
-svg4everybody({});
+$(document).ready(function() {
+  svg4everybody({});
+});

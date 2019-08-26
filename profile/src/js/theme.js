@@ -29,20 +29,14 @@ $('.toggle-box .icon').on('click', function() {
     $(this)
       .removeClass('icon--lightbulb-off')
       .addClass('icon--lightbulb-on');
-    $('.icon--lightbulb-on use').attr(
-      'xlink:href',
-      'img/spriteSvg.svg#sprite-lightbulb-on'
-    );
+    $('.icon--lightbulb-on use').attr('xlink:href', '#lightbulb-on');
     $(this).fadeIn(300);
   } else {
     $(this).fadeOut(100);
     $(this)
       .removeClass('icon--lightbulb-on')
       .addClass('icon--lightbulb-off');
-    $('.icon--lightbulb-off use').attr(
-      'xlink:href',
-      'img/spriteSvg.svg#sprite-lightbulb-off'
-    );
+    $('.icon--lightbulb-off use').attr('xlink:href', '#lightbulb-off');
     $(this).fadeIn(300);
   }
 });

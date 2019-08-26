@@ -1,0 +1,19 @@
+extends template/template
+
+block variables
+  - var title = 'Profile'
+  - var pageClass = 'index-page'
+  - var description = 'motrdevua profile'
+
+block particles
+  //- particles
+  #particles
+  //- =========
+
+block content
+  .wrapper
+    .container
+      include partials/left
+      include partials/right
+
+block script

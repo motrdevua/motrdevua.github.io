@@ -87,8 +87,9 @@ typings/
 # dotenv environment variables file
 .env
 
-#
+# Jetbrains
 .idea
-.vscode
+
+package-lock.json
 
 # End of https://www.gitignore.io/api/node,macos

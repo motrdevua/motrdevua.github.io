@@ -1,0 +1,162 @@
+// ===================  Modules  ==========================
+
+// @import 'modules/reset';
+@import 'modules/normalize';
+@import 'modules/mixin_font-face';
+@import 'modules/fontstylesheet';
+@import 'modules/variables';
+
+// Smart-grid
+
+@import 'modules/smart-grid';
+
+// Bootstrap
+
+// @import '../../node_modules/bootstrap/scss/bootstrap-grid';
+
+// Rfs
+
+@import '../../node_modules/rfs/scss';
+
+// ========================================================
+//      Uncomment if png or svg folder not empty
+// ========================================================
+//
+// @import 'modules/mixin-spritePng';
+// @import 'tmp/spritePng';
+@import 'tmp/spriteSvg';
+
+// ====================  Default  =========================
+
+p {
+  hyphens: auto;
+}
+
+button,
+a,
+input {
+  outline: 0;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: all .2s linear;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  color: var(--dark);
+  font-family: $ExoRegular;
+  -webkit-font-smoothing: subpixel-antialiased;
+  background: var(--bg);
+
+  @include rfs(16);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+// ==================== PARTICLES ====================
+
+#particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg);
+}
+
+canvas {
+  display: block;
+}
+
+// ===================== COLORS =====================
+
+html[data-theme='dark'] {
+  --bg: #282d34;
+  --bg-09: rgba(50, 56, 64, .9);
+  --contact: #282d34;
+  --dark: #1d2126;
+  --light: #ffffff;
+  --active: rgba(0, 167, 231, 1.000);
+  --active-dark: rgba(0, 100, 140, 1.000);
+  --green: #b3eb00;
+  --yellow: #fff707;
+  --purple: #aa73ff;
+  --black: #171515;
+  --red: #cb3837;
+}
+
+html[data-theme='light'] {
+  --bg: #fcfcfc;
+  --bg-09: rgba(235, 235, 235, .9);
+  --contact: #454d58;
+  --dark: #1d2126;
+  --light: #ffffff;
+  --active: rgba(0, 167, 231, 1.000);
+  --active-dark: rgba(0, 100, 140, 1.000);
+  --green: #b3eb00;
+  --yellow: #fff707;
+  --purple: #aa73ff;
+  --black: #171515;
+  --red: #cb3837;
+}
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+  transition: all .2s !important;
+  transition-delay: 0s !important;
+}
+
+// ====================== MAIN ======================
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  @include wrapper();
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 600px;
+  width: 100%;
+
+  @include to($break_md) {
+    flex-direction: column;
+    height: calc(100% - 30px);
+  }
+}
+
+// ====================== BLOCKS =====================
+
+@import 'partials/custom-scroll';
+@import 'partials/left';
+@import 'partials/right';
+
+// =====================  Media  ==========================
+
+// @import 'partials/media';
