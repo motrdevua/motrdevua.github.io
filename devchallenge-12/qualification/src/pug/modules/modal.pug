@@ -1,0 +1,174 @@
+.help
+  a(href="#").help__btn Допомогти вже зараз
+
+.modal
+  .btn-close
+    include ../../img/close.svg
+  form(action="#" method="post").form
+    .profile
+      h1.profile__title Заповніть форму
+      .profile-nav
+        span#individual.profile-nav__btn.profile-nav__btn--active Фіз. особа
+        span#entity.profile-nav__btn Юр. особа
+      .profile-container
+        .individual.profile-container__tab.profile-container__tab--active
+          .profile-container__wrap
+            .input.input--narrow
+              label(for="name").input__label Ім’я
+              input(type="text" id="name" required="required").input__field
+            .input.input--narrow
+              label(for="surname").input__label Прізвище
+              input(type="text" id="surname" required="required").input__field
+            .input.input--wide.company
+              label(for="company").input__label Назва компаніі, організації
+              input(type="text" id="company" required="required").input__field
+              .company__upload
+                label(for="companyLogo").company__label + Логотип
+                  input(id="companyLogo" type="file" name="companyLogo" accept=".jpeg,.png,.svg").company__input
+            .input.input--wide
+              label(for="email").input__label Email-адреса
+              input(type="email" id="email" required="required").input__field
+            .input.input--wide
+              label(for="phone").input__label Номер телефону
+              input(type="tel" id="phone" required="required").input__field
+          .profile-container__wrap
+            .input.input--wide
+              label(for="country").input__label Країна
+              input(type="text" id="country" required="required").input__field
+            .input.input--narrow
+              label(for="city").input__label Місто
+              input(type="text" id="city" required="required").input__field
+            .input.input--narrow
+              label(for="state").input__label Штат, район
+              input(type="text" id="state" required="required").input__field
+            .input.input--wide
+              label(for="address").input__label Адреса
+              input(type="text" id="address" required="required").input__field
+            .input.input--narrow
+              label(for="postalCode").input__label Поштовий індекс
+              input(type="text" id="postalCode" required="required").input__field
+        .entity.profile-container__tab
+          .profile-container__wrap
+            .input.input--wide
+              label(for="legalAddress").input__label Юридична адреса
+              input(type="text" id="legalAddress" required="required").input__field
+            .input.input--narrow
+              label(for="bankName").input__label Найменування банку
+              input(type="text" id="bankName" required="required").input__field
+            .input.input--narrow
+              label(for="bankMfo").input__label МФО банку
+              input(type="text" id="bankMfo" required="required").input__field
+            .input.input--wide
+              label(for="settlementAccount").input__label Розрахунковий рахунок
+              input(type="text" id="settlementAccount" required="required").input__field
+          .profile-container__wrap
+            .input.input--narrow
+              label(for="zkpo").input__label ЗКПО
+              input(type="text" id="zkpo" required="required").input__field
+            .input.input--narrow
+              label(for="taxationType").input__label Тип оподаткування
+              input(type="text" id="taxationType" required="required").input__field
+            .input.input--narrow
+              label(for="ine").input__label ІНН
+              input(type="text" id="ine" required="required").input__field
+            .input.input--narrow
+              label(for="taxSystem").input__label Система оподаткування
+              input(type="text" id="taxSystem" required="required").input__field
+            .input.input--narrow
+              label(for="accountancyPhone").input__label Телефон бухгалтерії
+              input(type="tel" id="accountancyPhone" required="required").input__field
+            .input.input--narrow
+              label(for="fax").input__label Факс
+              input(type="tel" id="fax" required="required").input__field
+    .aid
+      h1.aid__title Види допомоги
+      p.aid__description Ви можете змінити вид допомоги
+      .aid-nav
+        #make.aid-nav__btn
+          div.aid-nav__icon
+            include ../../img/hand.svg
+          span.aid-nav__desc Зробити
+        #financial.aid-nav__btn.aid-nav__btn--active
+          div.aid-nav__icon
+            include ../../img/wallet.svg
+          span.aid-nav__desc Фінансова допомога
+        #material.aid-nav__btn
+          div.aid-nav__icon
+            include ../../img/clothes.svg
+          span.aid-nav__desc Матеріальна допомога
+        #volunteering.aid-nav__btn
+          div.aid-nav__icon
+            include ../../img/heart.svg
+          span.aid-nav__desc Волонтерство
+      .aid-container
+        .make.aid-container__tab
+          p Натискайте цю кнопку, якщо Ви хочете зробити, наприклад: ремонт у дитячому будинку, складну операцію, побудувати дитячий майданчик або побудувати житло для переселенців і тд. Ця кнопка, для організацій, які можуть взяти на себе dідповідальність за увесь проект.
+        .financial.aid-container__tab.payment.aid-container__tab--active
+          .payment__wrap.payment__wrap--nav
+            span.payment__title Спосіб оплати
+            .payment__box
+              .payment__btn#visa
+                .payment__logo
+                  include ../../img/cards.svg
+                span.payment__desc Карта Visa/MasterCard
+              .payment__btn.payment__btn--active#privat24
+                .payment__logo
+                  include ../../img/privat24.svg
+                span.payment__desc Приват24
+              .payment__btn#terminals
+                .payment__logo
+                  include ../../img/terminal.svg
+                span.payment__desc Термінали України
+              .payment__btn#webmoney
+                .payment__logo
+                  include ../../img/webmoney.svg
+                span.payment__desc WebMoney
+              .payment__btn#paypal
+                .payment__logo
+                  include ../../img/paypal.svg
+                span.payment__desc PayPal
+          .payment__wrap.payment__wrap--container
+            span.payment__title Введіть наступні данні
+            .payment__box
+              .visa.payment__tab
+                .payment__number
+                  label(for="visaNumber").payment__label Номер карти
+                  .payment__input
+                    input(id="visaNumber" type="text" minlength="4" maxlength="4" required="required").payment__field
+                    input(type="text" minlength="4" maxlength="4" required="required").payment__field
+                    input(type="text" minlength="4" maxlength="4" required="required").payment__field
+                    input(type="text" minlength="4" maxlength="4" required="required").payment__field
+                .payment__verification
+                  .payment__validity
+                    label(for="visaValidity").payment__label Термін дії
+                    input(id="visaValidity" type="date" required="required").payment__field.payment__field--date
+                  .payment__cvc
+                    label(for="visaCvc").payment__label CVC/CVV
+                    input(id="visaCvc" type="text" minlength="3" maxlength="3" required="required").payment__field.payment__field--cvc
+              .privat24.payment__tab.payment__tab--active
+                .payment__number
+                  label(for="privat24Number").payment__label Номер карти
+                  .payment__input
+                    input(id="privat24Number" type="text" minlength="4" maxlength="4" required="required").payment__field
+                    input(type="text" minlength="4" maxlength="4" required="required").payment__field
+                    input(type="text" minlength="4" maxlength="4" required="required").payment__field
+                    input(type="text" minlength="4" maxlength="4" required="required").payment__field
+                .payment__verification
+                  .payment__validity
+                    label(for="privat24Validity").payment__label Термін дії
+                    input(id="privat24Validity" type="date" required="required").payment__field.payment__field--date
+                  .payment__cvc
+                    label(for="privat24Cvc").payment__label CVC/CVV
+                    input(id="privat24Cvc" type="text" minlength="3" maxlength="3" required="required").payment__field.payment__field--cvc
+              .terminals.payment__tab
+              .webmoney.payment__tab
+              .paypal.payment__tab
+        .material.aid-container__tab
+          p Зберіть ліки, речі, їжу, іграшки та інше, для тих, кому це необхідно.
+        .volunteering.aid-container__tab
+          p Допоможіть ділом або професійними навичками. Підтримайте проекти своєю роботою.
+
+    .submit
+      button(type="submit").submit__btn Допомогти
+
+.overflow

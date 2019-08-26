@@ -1,0 +1,27 @@
+//--------------- THIRD PARTY ----------------
+
+@import "../../bower_components/reset-css/_reset.scss";
+@import "../../bower_components/slick-carousel/slick/slick.scss";
+
+//----------------- CUSTOM -------------------
+
+@import "partials/fontsstylesheet";
+@import "partials/variables";
+@import "partials/sprites";
+
+//---------------- MAIN ------------------
+
+@import "partials/main partials/dheader";
+@import "partials/main partials/dprograms";
+@import "partials/main partials/dgallery";
+@import "partials/main partials/dreviews";
+@import "partials/main partials/dpartners";
+@import "partials/main partials/dquest";
+@import "partials/main partials/dfooter";
+
+
+//----------------- DEVICES ------------------
+
+@import "partials/mobile";
+@import "partials/tablet";
+@import "partials/desktop";

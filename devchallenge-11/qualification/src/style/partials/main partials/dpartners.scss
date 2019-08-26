@@ -1,0 +1,88 @@
+// -------------- PARTNERS --------------
+
+.partners {
+  height: 556px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.partners-title {
+  margin: 0 auto;
+  padding-top: 130px;
+  padding-bottom: 40px;
+  width: 580px;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5.5px;
+  font: 50px $roboto;
+  font-weight: 900;
+  line-height: 50px;
+
+  &__burg {
+    display: inline-block;
+    width: 31px;
+    height: 15px;
+    background: url('../img/gburg.png') no-repeat;
+    vertical-align: middle;
+    filter: invert(100%);
+
+    &--pre {
+      padding-right: 30px;
+    }
+
+    &--post {
+      padding-left: 25px;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__main {
+    display: inline-block;
+  }
+}
+
+.partners-line {
+  margin: 0 auto;
+  width: 220px;
+  height: 1px;
+  background-color: $lightgrey2;
+}
+
+.partners-slider {
+  margin: 0 auto;
+  padding-top: 100px;
+  width: 1110px;
+
+  &__slide {
+    display: inline-block;
+    padding: 0 40px;
+    vertical-align: middle;
+  }
+
+  &__link {}
+
+  &__img {}
+
+  &__arrows {
+    margin: -48px auto 0;
+    width: 1178px;
+    height: 16px;
+  }
+
+  &__arrow {
+    display: block;
+    width: 9px;
+    height: 16px;
+    background: url('../img/reviewarrow.png') no-repeat;
+    cursor: pointer;
+
+    &--prev {
+      float: left;
+    }
+
+    &--next {
+      float: right;
+      transform: rotate(180deg);
+    }
+  }
+}

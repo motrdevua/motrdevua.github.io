@@ -1,0 +1,409 @@
+// ====================== MODAL =======================
+
+.wrapper
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  left: 0
+  overflow: auto
+  background-image: linear-gradient(-39deg, rgba(71, 146, 225, 1) 0%, rgba(65, 116, 179, 1) 35%, rgba(54, 59, 93, 1) 100%)
+
+.overflow
+  position: fixed
+  display: none
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  background: $blueLight5
+  overflow: auto
+  z-index: 9998
+
+.btn-close
+  position: absolute
+  top: -56px
+  right: 13px
+  cursor: pointer
+  &:active
+    transform: scale(1.05)
+  &:hover path
+    fill: $black
+
+.modal
+  +wrapper()
+  position: relative
+  display: none
+  margin-top: 100px
+  margin-bottom: 50px
+  background-color: $white
+  border-radius: 15px
+  box-shadow: 3px 4px 10px $black2
+  z-index: 9999
+  +to(1385px)
+    margin: 100px 15px 50px 15px
+
+.form
+  +col()
+  display: flex
+  flex-direction: column
+  margin-left: 80px
+  padding: 46px 0 79px 0
+  +to($break_md)
+    margin: 0
+
+.profile
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  &__title
+    margin: 10px 0
+    text-align: center
+
+.profile-nav
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: 5px
+  border: 2px solid $blueDark
+  &__btn
+    padding: 13.8px 21px 12.2px 21px
+    text-align: center
+    +rfs(14)
+    font-family: $geometria
+    cursor: pointer
+    &--active, &:hover
+      color: $white
+      background-color: $blueDark
+
+.profile-container
+  +col()
+  +size(12)
+  margin-top: 50px
+  &__tab
+    +col()
+    +size(12)
+    justify-content: space-between
+    align-items: center
+    display: none
+    +to($break_md)
+      flex-wrap: wrap
+    +to(840px)
+      justify-content: center
+    &:last-child
+      margin-top: 36px
+    &--active
+      display: flex
+  &__wrap
+    +col()
+    +size(12)
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin: 0
+    width: 420px
+    +to(1150px)
+      width: 315px
+    +to(840px)
+      width: 420px
+
+.input
+  display: flex
+  flex-direction: column
+  margin-bottom: 32px
+  width: 100%
+  &--wide
+    width: 420px
+    +to(1150px)
+      width: 315px
+    +to(840px)
+      width: 100%
+  &--narrow
+    width: 200px
+    +to(1150px)
+      width: 150px
+    +to(840px)
+      width: 100%
+  &__label
+    +rfs(14)
+    font-family: $geometria
+    color: $greyCool
+    cursor: pointer
+  &__field
+    height: 36px
+    padding-left: 13px
+    border-radius: 5px
+    border: 2px solid transparent
+    outline: none
+    caret-color: $blueDark
+    background-color: $blueLight2
+
+.company
+  position: relative
+  &__upload
+    position: absolute
+    right: -25%
+    top: 50%
+    width: 20%
+    height: 32%
+    overflow: hidden
+    +to(1220px)
+      right: 0
+  &__label
+    +rfs(14)
+    font-family: $geometria
+    color: $blueSky
+    cursor: pointer
+  &__input
+    display: none
+
+.aid
+  display: flex
+  flex-direction: column
+  justify-content: center
+  &__title
+    align-self: center
+    margin-top: 44px
+    margin-bottom: 0
+  &__description
+    align-self: center
+    margin: 0
+    margin-bottom: 40px
+    +rfs(18)
+    font-family: $gilroyL
+    text-align: center
+
+.aid-nav
+  +row-flex()
+  &__btn
+    +col()
+    +size(3)
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    +to(1210px)
+      +size(6)
+      &:nth-child(1), &:nth-child(2)
+        margin-bottom: 25px
+    &:hover .aid-nav__icon
+      background-color: $purpleish
+      border: solid 2px $purpleish
+    &--active .aid-nav__icon
+      background-color: $purpleish
+      border: solid 2px $purpleish
+    &:hover .aid-nav__icon svg path
+      fill: $white
+    &--active .aid-nav__icon svg path
+      fill: $white
+    &:hover .aid-nav__desc
+      color: $blueDark
+    &--active .aid-nav__desc
+      color: $blueDark
+    &--active .aid-nav__icon
+      &::before, &::after
+        position: absolute
+        content: ''
+        top: 84px
+        border-bottom: solid 20px $blueLight
+        border-left: solid 15px transparent
+        border-right: solid 15px transparent
+        +to(1210px)
+          display: none
+      &::after
+        top: 86px
+        border-bottom: solid 20px $white
+  &__icon
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 76px
+    height: 76px
+    margin-right: 20px
+    border-radius: 15px
+    border: solid 2px $blueLight
+    background-color: $white
+    +to(540px)
+      margin-right: 0
+  &__desc
+    width: 130px
+    +rfs(18)
+    font-family: $geometriaEB
+    color: $blueLight
+    +to(540px)
+      display: none
+
+.aid-container
+  padding: 20px 20px 0 20px
+  margin-top: 25px
+  margin-bottom: 50px
+  border-radius: 15px
+  border: solid 1px $blueLight
+  &__tab
+    height: 100%
+    display: none
+    flex-direction: row
+    justify-content: space-between
+    +to(1032px)
+      flex-wrap: wrap
+      justify-content: center
+    &--active
+      display: flex
+
+.payment
+  &__wrap
+    display: flex
+    flex-direction: column
+    &:last-child
+      +to(1032px)
+        margin-bottom: 20px
+  &__title
+    +rfs(14)
+    font-family: $geometria
+    color: $greyCool
+  &__box
+    display: flex
+    flex-wrap: wrap
+    +to(1032px)
+      justify-content: center
+  &__tab
+    display: none
+    justify-content: space-between
+    flex-direction: column
+    padding: 20px
+    border-radius: 15px
+    background: $blueLight
+    &--active
+      display: flex
+  &__btn
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: center
+    margin-right: 20px
+    margin-bottom: 20px
+    width: 170px
+    height: 85px
+    border-radius: 10px
+    background: $blueLight
+    cursor: pointer
+    +to(1032px)
+      margin: 0 10px 20px 10px
+    &:hover, &--active
+      background: $purpleish
+    &:nth-child(2) .payment__desc
+      margin-top: 15px
+    &:nth-child(3) .payment__desc
+      margin-top: 6px
+    &:nth-child(4) .payment__desc
+      margin-top: 13px
+    &:nth-child(5) .payment__desc
+      margin-top: 4px
+  &__desc
+    margin-top: 11px
+    margin-bottom: 10px
+    +rfs(12)
+    font-family: $gilroyL
+    color: $white
+  &__input
+    display: flex
+    justify-content: flex-start
+    +to(498px)
+      flex-wrap: wrap
+      justify-content: center
+  &__label
+    +rfs(14)
+    font-family: $geometria
+    color: $white
+    margin: 0 7px
+  &__field
+    height: 34px
+    width: 68px
+    margin: 0 5px
+    border-radius: 5px
+    border: 2px solid transparent
+    background-color: $greyPale
+    caret-color: $blueDark
+    text-align: center
+    outline: none
+    +to(498px)
+      margin-bottom: 10px
+    &--date
+      height: 36px
+      width: 125px
+    &--cvc
+      height: 34px
+      width: 125px
+  &__verification
+    display: flex
+    justify-content: space-between
+    margin-top: 30px
+    +to(498px)
+      flex-wrap: wrap
+      justify-content: center
+      margin-top: 20px
+  &__validity
+    display: flex
+    flex-direction: column
+  &__cvc
+    display: flex
+    flex-direction: column
+
+.submit
+  align-self: center
+  cursor: pointer
+  &:hover .submit__btn::before
+    transform: translateX(-100px)
+    transition: transform ease-in-out .3s
+  &:active .submit__btn::before
+    background: $purpleish
+    transition: background ease-in-out .3s
+  &__btn
+    position: relative
+    display: block
+    padding: 22px 99px 20px 99px
+    border: 0
+    border-radius: 10px
+    +rfs(18)
+    font-family: $geometriaEB
+    color: $white
+    box-shadow: 0 0 15px 5px $lipstick4
+    overflow: hidden
+    z-index: -2
+    +to($break_xs)
+      padding: 22px 80px 20px 80px
+    &::before
+      position: absolute
+      content: ''
+      width: 500px
+      height: 65px
+      margin: -22px 0 0 -100px
+      background: linear-gradient(to right, $lipstick, $blue)
+      transition: transform ease-in-out .3s, background ease-in-out .3s
+      z-index: -1
+
+.help
+  position: absolute
+  display: flex
+  justify-content: center
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  text-align: center
+  &__btn
+    cursor: pointer
+    padding: 20px 20px
+    box-shadow: 0 0 15px 10px rgba(229, 54, 86, 0.2), 0 0 7px 2px rgba(157, 94, 154, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    +rfs(18)
+    font-family: $geometriaEB
+    text-decoration: none
+    color: $white
+    &:hover
+      background-color: $purpleish
+

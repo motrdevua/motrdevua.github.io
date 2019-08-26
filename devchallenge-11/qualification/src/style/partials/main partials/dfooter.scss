@@ -1,0 +1,168 @@
+// -------------- FOOTER --------------
+
+.footer {
+  height: 1158px;
+}
+
+.footer-wrapper {
+  margin: 0 auto;
+  width: 1200px;
+  height: auto;
+}
+
+.footer-title {
+  margin: 0 auto;
+  padding-top: 140px;
+  width: 659px;
+  height: 96px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font: 50px $roboto;
+  font-weight: 900;
+  line-height: 59px;
+}
+
+.footer-articles {
+  margin: 0 auto;
+  padding-top: 76px;
+  width: 1200px;
+
+  &__article {
+    display: inline-block;
+    width: 562px;
+    height: 335px;
+    color: white;
+    text-align: justify;
+    font: 16px $georgia;
+    font-weight: 400;
+    line-height: 26px;
+
+    &:first-child {
+      padding-right: 54px;
+    }
+  }
+}
+
+.footer-table {
+  margin-top: 68px;
+  width: 1200px;
+  height: 320px;
+  border-top: 2px solid $lightgrey4;
+  border-right: 1px solid $lightgrey4;
+  border-bottom: 2px solid $lightgrey4;
+  border-left: 1px solid $lightgrey4;
+  background-color: rgba(0, 0, 0, 0.38);
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  font: 13px $roboto;
+  font-weight: 900;
+  line-height: 97px;
+
+  &__row {
+    height: 98px;
+    border-bottom: 1px solid $lightgrey4;
+    transition: 0.3s;
+
+    &:first-child .footer-table__cell:hover {
+      background-color: transparent;
+      transition: 0.3s;
+    }
+
+    &:last-child .footer-table__cell:hover {
+      background-color: transparent;
+      transition: 0.3s;
+    }
+
+    &--contacts {
+      height: 115px;
+      line-height: 120px;
+    }
+  }
+
+  &__cell {
+    width: 400px;
+    border-right: 1px solid $lightgrey1;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: rgba(234, 185, 106, 0.3);
+      transition: 0.3s;
+    }
+  }
+
+  &__icon {
+    display: block;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+
+  // --footer menu ---
+
+  .fmenu {
+    &__item {
+      display: inline-block;
+      list-style-type: none;
+
+      &::before {
+        padding: 0 50px;
+        color: $white;
+        content: '\2022';
+        font-size: 14px;
+      }
+
+      &:first-child::before {
+        content: '';
+      }
+    }
+
+    &__link {
+      color: $white;
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition: 0.3s;
+
+      &:hover {
+        color: $yellow;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+.footer-copyrights {
+  margin: 25px auto 0;
+  width: 550px;
+  color: $white;
+  text-align: center;
+}
+
+.fcopy {
+  padding-right: 18px;
+  color: white;
+  font: 16px $georgia;
+  font-weight: 400;
+  line-height: 33px;
+
+  &--upper {
+    padding-left: 22px;
+    border-left: 2px solid $white;
+    text-transform: uppercase;
+    font: 13px $roboto;
+    font-weight: 900;
+    line-height: 44px;
+  }
+}
+
+.fcopy-link {
+  color: $white;
+  text-decoration: underline;
+  transition: 0.3s;
+
+  &:hover {
+    color: $yellow;
+    transition: 0.3s;
+  }
+}

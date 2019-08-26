@@ -1,0 +1,105 @@
+// ==================== FOOTER ======================
+.footer
+  +wrapper()
+  display: flex
+  flex-direction: column
+  background: $white
+  padding-left: 46px
+  &__top
+    width: 100%
+    margin-top: 74px
+    display: flex
+    justify-content: space-between
+    +to(560px)
+      flex-direction: column
+      align-items: center
+  &__bottom
+    width: 100%
+    position: relative
+    display: flex
+    justify-content: space-between
+    +to(880px)
+      flex-direction: column
+      align-items: center
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+      content: ''
+      height: 1px
+      width: 100%
+      background: #f2f2f3
+  &__nav
+    margin-bottom: 27px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+  &__address
+  &__logo
+    +sprite($s-logo-footer)
+  &__copyrights
+    padding: 24px 0
+    +rfs(14)
+    font-family: $RobotoSlabLight
+    color: $copyrights
+    line-height: 26px
+    text-align: center
+    +to(880px)
+      order: 1
+
+.address
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  margin-top: -9px
+  +to(560px)
+    align-items: center
+    margin-bottom: 30px
+  a
+    &:hover span
+      color: $orange
+  span
+    +rfs(15)
+    line-height: 30px
+    font-family: $RobotoRegular
+    color: $text
+    text-align: right
+    +to(560px)
+      text-align: center
+
+.footer-menu
+  margin-top: 27px
+  +to(980px)
+    display: none
+  &__item
+    display: inline-block
+    padding: 30px 29px 30px 29px
+    +to(1140px)
+      padding: 15px
+      &:first-child
+        padding-left: 9px
+    &:first-child
+      padding-left: 9px
+    &--active .footer-menu__link
+      color: $orange
+  &__link
+    +rfs(14)
+    font-family: $RobotoBlack
+    color: $main
+    letter-spacing: 0.16em
+    text-transform: uppercase
+    &:hover
+      color: $orange
+
+.socials-list
+  margin: 30px -10px 0 0
+  &__item
+    display: inline-block
+  &__link
+    span
+      +rfs(16)
+      color: $socials
+      padding: 0 12px
+    &:hover span
+      color: $orange

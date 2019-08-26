@@ -1,0 +1,58 @@
+//----------------------- GRID -------------------------//
+
+.container {
+  width: 1170px;
+  margin: 0 15px;
+  border-left: 1px solid $border;
+  border-right: 1px solid $border;
+}
+
+.row {}
+
+.row::after {
+  display: block;
+  content: '';
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+[class*="col"] {
+  float: left;
+  display: inline;
+  margin: 0 15px;
+}
+
+[class*="col"]:first-child {
+  margin-left: 29px;
+}
+
+[class*="col"]:last-child {
+  margin-right: 29px;
+}
+
+.col1  { width:   65px; };
+.col2  { width:  160px; };
+.col3  { width:  255px; };
+.col4  { width:  350px; };
+.col5  { width:  445px; };
+.col6  { width:  540px; };
+.col7  { width:  635px; };
+.col8  { width:  730px; };
+.col9  { width:  825px; };
+.col10 { width:  920px; };
+.col11 { width: 1015px; };
+.col12 { width: 1110px; };
+
+.offset1  { margin-left:   65px; };
+.offset2  { margin-left:  160px; };
+.offset3  { margin-left:  255px; };
+.offset4  { margin-left:  350px; };
+.offset5  { margin-left:  445px; };
+.offset6  { margin-left:  540px; };
+.offset7  { margin-left:  635px; };
+.offset8  { margin-left:  730px; };
+.offset9  { margin-left:  825px; };
+.offset10 { margin-left:  920px; };
+.offset11 { margin-left: 1015px; };
+.offset12 { margin-left: 1110px; };

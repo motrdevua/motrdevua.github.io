@@ -1,0 +1,205 @@
+//////////////////// FOOTER ////////////////////
+
+.footer {
+  position: relative;
+  height: 558px;
+  &__background {
+    position: absolute;
+    bottom: 0;
+    z-index: -5;
+    margin-left: -16px;
+    width: 1200px;
+    height: 558px;
+    background: $yellow url('../img/footerbg.jpg') no-repeat;
+    background-position: top center;
+  }
+}
+.fblocks {
+  height: 558px;
+}
+
+////// feedback form //////
+
+.ffeedback {
+  display: block;
+  height: 558px;
+  border-right: 1px solid $border;
+  letter-spacing: 2.4px;
+  font: 12px $plumbcondreg;
+	&__title {
+    margin: 159px 0 0 -1px;
+    width: 204px;
+    letter-spacing: 2.4px;
+	}
+	&__form {
+    margin-top: 8px;
+	}
+	&__send {
+    @extend .inputstyle;
+    padding-top: 5px;
+    height: 37px;
+    background-color: $black;
+    color: $white;
+    text-align: left;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+      color: $yellow;
+    }
+	}
+	&__name {
+    @extend .inputstyle;
+    height: 30px;
+    border-top: 0px;
+	}
+	&__surname {
+    @extend .inputstyle;
+    height: 30px;
+    border-top: 0px;
+	}
+	&__mail {
+    @extend .inputstyle;
+    height: 30px;
+    border-top: 0px;
+	}
+	&__message {
+    @extend .inputstyle;
+    padding-top: 7px;
+    height: 168px;
+    border-top: 0px;
+    text-align: justify;
+    resize: none;
+	}
+	&__description {
+    display: block;
+    margin-top: 4px;
+    width: 194px;
+	}
+}
+
+////// contacts //////
+
+.fcontacts {
+  height: 558px;
+  border-right: 1px solid $border;
+  color: $black;
+  letter-spacing: 2.4px;
+  font: 12px $plumbcondreg;
+  &__phone {
+    margin-top: 159px;
+    width: 90px;
+    letter-spacing: 2.45px;
+  }
+  &__mail {
+    margin-top: 33px;
+  }
+  &__subscribe {
+    margin-top: 30px;
+  }
+  &__title {
+    display: block;
+    width: 230px;
+    line-height: 15px;
+  }
+  &__form {
+    margin-top: 5px;
+  }
+  &__input {
+    display: block;
+    padding-left: 8px;
+    width: 160px;
+    height: 29px;
+    outline: none;
+    border: 1px solid $border;
+    background-color: transparent;
+    letter-spacing: 2.5px;
+    font: 12px $plumbcondreg;
+    &:focus {
+      background-color: $white;
+    }
+    &::placeholder {
+      color: $black;
+    }
+    &:focus::placeholder {
+      color: transparent;
+    }
+  }
+  &__btn {
+    display: block;
+    margin-top: 10px;
+    width: 100px;
+    height: 29px;
+    border: 1px solid $border;
+    background-color: $black;
+    color: $white;
+    text-align: left;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font: 12px $plumbcondreg;
+    cursor: pointer;
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
+
+////// socials //////
+
+.fsocials {
+  margin-right: 0 !important;
+  height: 558px;
+  color: $black;
+  letter-spacing: 2.4px;
+  font: 12px $plumbcondreg;
+	&__title {
+    display: block;
+    margin-top: 159px;
+    width: 150px;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+	}
+	&__list {
+    margin-top: 27px;
+    list-style-type: none;
+	}
+	&__item {
+    margin-bottom: 12px;
+    &:nth-child(3) {
+      margin-bottom: 10px;
+    }
+	}
+	&__link {
+    color: $black;
+    text-decoration: none;
+    &:hover .fsocials__description {
+      color: $white;
+      transform: translateX(-7px);
+    }
+	}
+  &__icon {
+    width: 26px;
+    height: 26px;
+  }
+	&__description {
+    display: inline-block;
+    padding-left: 13px;
+    height: 26px;
+    vertical-align: top;
+    line-height: 26px;
+	}
+}
+.flogo {
+  display: block;
+  margin: 50px 0 0 254px;
+  width: 97px;
+  height: 72px;
+}
+.fcopyrights {
+  display: block;
+  margin: 13px 0 0 66px;
+  width: 310px;
+  color: #525151;
+  letter-spacing: 2px;
+  font-size: 10px;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "DEV_Challenge",
+  "description": "semifinal",
+  "main": "index.js",
+  "authors": [
+    ""
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "reset-css": "^2.2.0"
+  }
+}

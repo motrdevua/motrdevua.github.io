@@ -1,0 +1,40 @@
+//---------------------- DEVICES @media ------------------------//
+
+$mobile: "(min-width: 320px) and (max-width: 767px)";
+$tablet: "(min-width: 768px) and (max-width: 959px)";
+$desktop: "(min-width: 960px)";
+
+//---------------------- FONTS ------------------------//
+
+$plumbreg: 'plumbregular', Arial, Tahoma, sans-serif;
+$plumbcondreg: 'plumbcondensedregular', Arial, Tahoma, sans-serif;
+$plumbcondblack: 'plumbcondensedblack', Arial, Tahoma, sans-serif;
+
+//---------------------- COLORS ------------------------//
+
+$black: #000000;
+$white: #ffffff;
+$grey: #bbbbbb;
+$grey2: #9c9c9c;
+$yellow: #f7b132;
+$border: rgba(0, 0, 0, 0.300);
+$red: #bf303e;
+$blue: #5ca5a5;
+
+//---------------------- Inheritance ------------------------//
+
+.inputstyle {
+  display: block;
+  width: 254px;
+  padding-left: 8px;
+  outline: none;
+  border: 1px solid $border;
+  letter-spacing: 2.4px;
+  font: 12px $plumbcondreg;
+  &::placeholder {
+    color: $black;
+  }
+  &:focus::placeholder {
+    color: transparent;
+  }
+}

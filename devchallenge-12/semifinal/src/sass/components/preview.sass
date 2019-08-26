@@ -1,0 +1,249 @@
+.preview
+  position: relative
+  background: $white
+  overflow: hidden
+  margin-bottom: 49px
+  &--medium,
+  &--videoS,
+  &--videoM,
+  &--pic
+    max-width: 370px
+  &--big
+    max-width: 787px
+  &--text,
+  &--textP
+    display: flex
+    justify-content: center
+    max-width: 370px
+    background-color: $white
+  &:hover
+    box-shadow: $shadow
+  &:hover .preview__title
+    color: $orange
+  &:hover::before,
+  &:hover::after
+    opacity: 1
+    visibility: visible
+    transform: translateY(-100%)
+  &::before,
+  &::after
+    position: absolute
+    content: ''
+    bottom: 0
+    width: 2px
+    height: 130px
+    background: $orange
+    opacity: 0
+    transform: translateY(100%)
+    transition: all 0.3s ease-in-out 0s
+    visibility: hidden
+    z-index: 999
+  &::before
+    left: 0
+  &::after
+    right: 0
+  &__link
+    display: flex
+    flex-direction: column
+    &--medium,
+    &--videoM,
+    &--text,
+    &--textP,
+    &--pic
+      justify-content: center
+      align-items: center
+      text-align: center
+      width: 100%
+  &__pic
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    &--medium,
+    &--videoS,
+    &--videoM
+      height: 259px
+    &--big
+      height: 567px
+  &__img
+    height: 100%
+  &__category
+    position: absolute
+    top: 20px
+    display: block
+    background: $categoryback
+    border-radius: 20px
+    +rfs(16)
+    font-family: $RobotoRegular
+    color: $white
+    &--medium,
+    &--pic
+      left: 19px
+      padding: 12px 29px
+    &--big
+      right: 20px
+      padding: 11px 43px 13px 43px
+  &__text
+    display: flex
+    flex-direction: column
+    &--medium,
+    &--videoM
+      justify-content: center
+      align-items: center
+      text-align: center
+      height: 259px
+    &--big
+      margin-left: 39px
+      margin-bottom: 48px
+      +to(1380px)
+        margin-bottom: 26px
+        margin-right: 40px
+    &--text,
+    &--textP
+      text-align: center
+  &__text-top
+    display: flex
+    &--medium,
+    &--videoM
+      flex-direction: column
+    &--big
+      justify-content: space-between
+      +to(1380px)
+        flex-direction: column
+  &__title
+    &--medium,
+    &--videoM
+      max-width: 280px
+      margin-top: 11px
+      margin-bottom: 11px
+    &--big
+      text-align-last: left
+      max-width: 430px
+      margin-top: 30px
+  &__date
+    +rfs(12)
+    font-family: $RobotoBold
+    letter-spacing: 0.08em
+    text-transform: uppercase
+    color: $main05
+    &--big
+      margin-top: 37px
+      margin-right: 39px
+      +to(1380px)
+        margin-top: 20px
+  &__desc
+    display: block
+    +rfs(15)
+    font-family: $RobotoRegular
+    line-height: 26px
+    color: $text
+    overflow: hidden
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+    &--medium
+      margin-top: 31px
+      margin-bottom: 19px
+      max-width: 259px
+    &--videoM
+      margin-top: 31px
+      margin-bottom: 19px
+      max-width: 270px
+    &--big
+      margin-top: 27px
+      max-width: 680px
+      text-align-last: left
+      +to(1380px)
+        margin-top: 17px
+    &--text,
+    &--textP
+      position: relative
+      margin-top: 25px
+      max-width: 240px
+      -webkit-line-clamp: 5
+      +rfs(27)
+      font-family: $RobotoSlabLight
+      line-height: 48px
+      color: $main
+      &::before,
+      &::after
+        position: absolute
+        +rfs(37.04)
+        font-family: $AmericanTB
+        line-height: 48.05px
+        color: $main03
+      &::before
+        top: 4px
+        left: -2px
+        content: '\201c'
+      &::after
+        bottom: -4px
+        right: 13px
+        content: '\201d'
+    &--textP
+      color: $white
+      &::before,
+      &::after
+        color: $orange
+  &__frame
+    position: absolute
+    top: 0
+    left: 0
+  &__btn
+    &--videoS
+      top: 50%
+      left: 50%
+    &--videoM
+      top: 25%
+      left: 50%
+  &__author
+    &--text,
+    &--textP
+      +rfs(12)
+      font-family: $RobotoBold
+      line-height: 84px
+      letter-spacing: 0.08em
+      color: $main05
+      text-transform: uppercase
+    &--textP
+      color: $white
+      opacity: 0.5
+
+
+.preview-btn
+  position: absolute
+  transform: translate(-40px, -40px)
+  z-index: 99
+  &:hover .preview-btn__circle
+    background: $categoryback
+  &:hover .preview-btn__play path
+    stroke: $orange
+  &__circle
+    position: relative
+    display: block
+    height: 80px
+    width: 80px
+    border-radius: 50%
+    background: $white
+  &__play
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-12px, -12px)
+
+
+.preview--text,
+.preview--textP,
+  &:hover::before,
+  &:hover::after
+    opacity: 1
+    visibility: visible
+    transform: translateY(-150%)
+.preview--videoS
+  &:hover::before,
+  &:hover::after
+    opacity: 1
+    visibility: visible
+    transform: translateY(-50%)

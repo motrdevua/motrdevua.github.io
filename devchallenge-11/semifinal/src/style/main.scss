@@ -1,0 +1,38 @@
+//////////////////// THIRD PARTY ////////////////////
+
+@import "../../bower_components/reset-css/_reset.scss";
+
+//////////////////// CUSTOM ////////////////////
+
+@import "partials/fontsstylesheet";
+@import "partials/variables";
+@import "partials/grid";
+
+//////////////////// MAIN ////////////////////
+
+* {
+  box-sizing: border-box;
+  transition: all .3s;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 1200px;
+}
+h4 {
+  color: $black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font: 12px $plumbcondreg;
+}
+
+@import "partials/sections/header";
+@import "partials/sections/filter";
+@import "partials/sections/status";
+@import "partials/sections/news";
+@import "partials/sections/footer";
+
+//////////////////// DEVICES ////////////////////
+
+@import "partials/mobile";
+@import "partials/tablet";
+@import "partials/desktop";

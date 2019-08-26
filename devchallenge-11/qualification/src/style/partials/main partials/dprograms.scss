@@ -1,0 +1,292 @@
+// -------------- PROGRAMS --------------
+
+.programs {
+  position: relative;
+  height: 2260px;
+}
+
+.program-wrapper {
+  height: 2260px;
+  background: url('../img/programbg.jpg') no-repeat;
+  background-size: cover;
+}
+
+.progtitle {
+  margin: 0 auto;
+  padding-top: 83px;
+  width: 1200px;
+  height: 130px;
+  text-align: center;
+
+  &__top {
+    color: $black;
+    text-transform: uppercase;
+    letter-spacing: 5.5px;
+    font: 50px $roboto;
+  }
+
+  &__star {
+    display: inline-block;
+    margin: 27px 22px 0 0;
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+
+    &--right {
+      @extend .progtitle__star;
+      margin: 27px 0 0 22px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 30px;
+    color: $lightgrey6;
+    letter-spacing: -0.1px;
+    font: 16px $georgia;
+  }
+}
+
+.progtabs {
+  position: relative;
+  margin: 50px auto 0;
+  width: 1200px;
+  height: 600px;
+
+  &__menu {
+    display: block;
+    margin: 0 auto;
+    width: 920px;
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 22px 24px;
+    width: 250px;
+    color: $lightgrey3;
+    list-style: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font: 21px $roboto;
+    line-height: 44px;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $black;
+      transition: color 0.3s;
+    }
+  }
+
+  &__desk {
+    position: relative;
+    z-index: 0;
+    float: left;
+    margin: 3px 0 0;
+    border-top: 2px solid $lightgrey3;
+  }
+
+  &__content {
+    display: none;
+    float: left;
+    padding: 97px 0 0 8px;
+    width: 1200px;
+    height: 500px;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__img {
+    float: left;
+  }
+
+  &__bigname {
+    position: absolute;
+    z-index: -1;
+    color: $lightgrey5;
+    text-transform: uppercase;
+    font: 200px $roboto;
+
+    &--basic {
+      top: -34px;
+      left: 548px;
+    }
+
+    &--premium {
+      top: -34px;
+      left: 262px;
+    }
+
+    &--platinum {
+      top: -34px;
+      left: 200px;
+    }
+  }
+
+  &__info {
+    float: right;
+    width: 502px;
+    height: 362px;
+  }
+
+  &__title {
+    display: block;
+    margin-top: 11px;
+    color: $darkgrey4;
+    letter-spacing: 1.1px;
+    font: 33px $georgia;
+  }
+
+  &__description {
+    display: block;
+    margin-top: 66px;
+    margin-left: 3px;
+    width: 130px;
+  }
+
+  .point {
+    display: block;
+    margin-top: 19px;
+    height: 30px;
+    line-height: 30px;
+
+    img {
+      padding-right: 16px;
+      vertical-align: middle;
+    }
+  }
+
+  &__price {
+    margin-top: 10px;
+    color: $black;
+    font: 68px $georgia;
+    font-weight: bold;
+
+    span {
+      font-size: 32px;
+    }
+  }
+
+  &__button {
+    margin-top: 23px;
+    width: 246px;
+    height: 58px;
+    border: none;
+    border-radius: 2px;
+    background-color: black;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    font: 14px $roboto;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      border: 1px solid $black;
+      background-color: $yellow;
+      color: $black;
+      transition: 0.3s;
+    }
+  }
+}
+
+.progarticles {
+  margin: 0 auto;
+  width: 1200px;
+  height: 500px;
+
+  &__block {
+    display: inline-block;
+    margin-top: -58px;
+    margin-left: 7px;
+    padding-top: 41px;
+    width: 320px;
+    border-top: 1px solid $lightgrey3;
+    vertical-align: top;
+
+    &:nth-child(2) {
+      margin-left: 99px;
+      padding-top: 65px;
+      width: 328px;
+    }
+
+    &:nth-child(3) {
+      margin-top: -58px;
+      margin-left: 114px;
+      padding-top: 15px;
+    }
+  }
+}
+
+.arttitle {
+  color: $black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font: 17.5px $roboto;
+}
+
+.artlist {
+  margin-top: 31px;
+  margin-left: 1px;
+
+  &__item {
+    display: block;
+    color: $lightgrey6;
+    letter-spacing: -0.2px;
+    font: 16px $georgia;
+
+    p {
+      line-height: 35px;
+    }
+  }
+}
+
+.progtable {
+  margin: 100px auto 0;
+  width: 1200px;
+  height: 600px;
+
+  &__wrapper {
+    margin: 18px 0 0 6px;
+  }
+
+  &__title {
+    margin: 10px 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font: 17.5px $roboto;
+  }
+}
+
+.table {
+  width: 694px;
+  border: 1px solid $lightgrey1;
+}
+
+.row {
+  height: 40px;
+  border-bottom: 1px solid $lightgrey1;
+}
+
+.cell {
+  padding-left: 15px;
+  border-right: 1px solid $lightgrey1;
+  color: $lightgrey6;
+  vertical-align: middle;
+  font: 16px $georgia;
+
+  &--check {
+    padding: 0;
+    width: 50px;
+    text-align: center;
+  }
+}
+
+.program-wrappermask {
+  height: 141px;
+  background: url('../img/headermask.png') no-repeat;
+  background-size: cover;
+  transform: rotate(180deg);
+}

@@ -1,0 +1,78 @@
+.sidebar
+  max-width: 370px
+  &:hover
+    box-shadow: $shadow
+  &__list
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    height: 100%
+  &__item
+    position: relative
+    border-left: 2px solid transparent
+    background: $white
+    overflow: hidden
+    cursor: pointer
+    &:first-child .sidebar__link
+      padding-top: 44px
+      padding-bottom: 28px
+    &:last-child .sidebar__link
+      padding-bottom: 41px
+    &--active .sidebar__link
+      padding: 32px 36px 30px 36px
+    &:last-child .sidebar__link::after
+      height: 0
+    &:hover, &--active
+      border-left: 2px solid $orange
+    &:hover .sidebar__title, &--active .sidebar__title
+      color: $orange
+    &:hover .sidebar__picture, &--active .sidebar__picture
+      width: 86px
+      margin-right: 23px
+      transform: translateX(0)
+      transition: all .3s ease-in-out
+  &__link
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 34px 43px 28px 35px
+    &::after
+      position: absolute
+      bottom: 0
+      display: block
+      content: ''
+      height: 1px
+      width: 78%
+      background: $main01
+  &__picture
+    height: 72px
+    width: 0px
+    transform: translateX(-200px)
+    transition: all .3s ease-in-out
+  &__desc
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  &__title
+    // display: block
+    display: -webkit-box
+    margin-top: -12px
+    margin-bottom: 12px
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+    text-overflow: ellipsis
+    overflow: hidden
+    max-width: 290px
+    font-family: $RobotoSlabBold
+    color: $articletitle
+    line-height: 30px
+    letter-spacing: -0.01em
+  &__date
+    display: block
+    width: 90px
+    +rfs(12)
+    font-family: $RobotoBold
+    color: $main05
+    text-transform: uppercase
+    letter-spacing: 0.08em

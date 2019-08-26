@@ -1,0 +1,56 @@
+// ===================================================
+//      uncomment if png or svg folder not empty
+// ===================================================
+// @import modules/mixin_png-sprite
+// @import modules/spritePng
+// ===================================================
+// @import modules/spriteSvg
+// ===================================================
+// =================== NORMALIZE =====================
+
+@import modules/normalize
+
+// ============== RESPONSIVE FONT SIZE ===============
+
+@import '../../bower_components/rfs/sass/_rfs'
+
+// ===================================================
+
+@import modules/mixin_font-face
+@import modules/fontsstylesheet
+@import modules/smart-grid
+@import modules/variables
+
+// ===================== GENERAL =====================
+
+*
+  transition: all ease-in-out .3s
+  +rfs(16)
+  font-family: $geometria
+  color: $blueDark
+
+input:focus:invalid,
+textarea:focus:invalid
+  border: solid 2px $lipstick
+
+input:focus:valid,
+textarea:focus:valid
+  border: solid 2px $blueLight
+
+h1
+  +rfs(64)
+  color: $blueDark
+  font-family: $geometriaEB
+  line-height: 64px
+  text-align: center
+
+// ================== MAIN BLOCKS ====================
+
+@import modules/loader
+@import modules/header
+@import modules/footer
+@import modules/modal
+
+// ===================== PAGES =======================
+
+@import pages/index

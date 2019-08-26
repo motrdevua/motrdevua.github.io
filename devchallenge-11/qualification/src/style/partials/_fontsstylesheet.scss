@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Roboto Black';
+    src: url('../fonts/Roboto-Black-webfont.eot');
+    src: url('../fonts/Roboto-Black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Black-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Black-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Black-webfont.svg#robotoblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Minion Pro';
+	src: url('../fonts/MinionPro-Regular.eot');
+	src: url('../fonts/MinionPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MinionPro-Regular.woff') format('woff'),
+		url('../fonts/MinionPro-Regular.ttf') format('truetype'),
+		url('../fonts/MinionPro-Regular.svg#MinionPro-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Georgia';
+	src: url('../fonts/Georgia.eot');
+	src: url('../fonts/Georgia.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Georgia.woff') format('woff'),
+		url('../fonts/Georgia.ttf') format('truetype'),
+		url('../fonts/Georgia.svg#Georgia') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

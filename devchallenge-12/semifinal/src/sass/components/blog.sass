@@ -1,0 +1,65 @@
+.blog
+  +wrapper()
+  margin-bottom: 102px
+  padding-left: 45px
+  &__row
+    +row-flex()
+    justify-content: space-between
+    +to($break_md)
+      flex-direction: column
+      align-items: center
+    .preview
+      +col()
+      +size(3)
+      +size-lg(4)
+      +size-md(12)
+  &--second
+    margin-bottom: 100px
+
+.blog--second    
+  .preview
+    &:nth-child(3)
+      .preview__category
+        padding: 11px 13px 13px 18px
+    &:nth-child(5)
+      .preview__category
+        padding: 10px 12px 13px 18px
+
+
+.section
+  +row-flex()
+  justify-content: space-between
+  margin: 99px 0 102px 0
+  +to($break_md)
+    flex-direction: column
+    align-items: center
+  &__column
+    height: 100%
+    +col()
+    &--left
+      +size(3)
+      +size-md(12)
+      margin-left: 0
+      +to($break_lg)
+        display: none
+      +to($break_md)
+        margin: 0 15px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    &--right
+      +size(3)
+      +size-lg(4)
+      +size-md(12)
+      margin-right: 0
+      +to($break_md)
+        margin: 0 15px
+    &--center
+      +size(6)
+      +size-lg(8)
+      +size-md(12)
+      +size-xs(12)
+      margin-left: 18px
+      width: calc(51% - 30px)
+

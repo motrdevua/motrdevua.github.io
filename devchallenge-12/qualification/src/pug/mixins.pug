@@ -1,0 +1,5 @@
+//- SVG Sprite mixin
+mixin icon(name,mod)
+  - mod = (' icon-' + name + '--' + mod) || ''
+  svg(class="icon icon-" + name + mod)
+    use(xlink:href="img/spriteSvg.svg#" + name)

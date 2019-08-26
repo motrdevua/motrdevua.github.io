@@ -1,0 +1,413 @@
+//////////////////// HEADER ////////////////////
+
+.header {
+  height: 846px;
+  border-bottom: 1px solid $border;
+}
+.htop {
+  position: relative;
+  z-index: 50;
+  height: 117px;
+  border-bottom: 1px solid $border;
+  // background-color: $yellow;
+}
+.htop [class*="col"]:first-child {
+  width: 431px;
+}
+.htop [class*="col"]:last-child {
+  margin-right: 0;
+}
+.htop [class*="col"]:nth-child(2) {
+  margin-right: 0;
+  margin-left: 0;
+  width: 516px;
+}
+.htop [class*="col"]:nth-child(3) {
+  margin-right: 0;
+}
+.htop [class*="col"]:last-child {
+  margin-left: 0;
+}
+.hlogo {
+  float: left;
+  padding-top: 10px;
+}
+.hsearch {
+  float: right;
+  margin-top: 70px;
+	&__field {
+    padding-left: 10px;
+    width: 201px;
+    height: 30px;
+    outline: none;
+    border: 1px solid #1a1a1a;
+    background: transparent url('../svg/search.svg') 177px no-repeat;
+    background-size: 17.229px;
+    color: $black;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font: 15px $plumbcondreg;
+    &:focus {
+      background-color: $white;
+    }
+    &::placeholder {
+      color: $black;
+    }
+    &:focus::placeholder {
+      color: transparent;
+    }
+	}
+}
+
+///// menu /////
+
+.hidden-menu-ticker {
+  display: none;
+}
+.hmenu {
+  width: 530px;
+  height: 117px;
+  border-left: 1px solid $border;
+	&__item {
+    display: inline-block;
+    border-right: 1px solid $border;
+    &:nth-child(2) .hmenu__link{
+      padding: 77px 12px 22px 14px;
+    }
+    &:nth-child(3) .hmenu__link{
+      padding: 77px 11px 22px 14px;
+    }
+    &:last-child .hmenu__link{
+      padding: 77px 11px 22px 15px;
+    }
+	}
+	&__link {
+    display: block;
+    padding: 77px 11px 22px 13px;
+    color: $black;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font: 15px $plumbcondreg, Arial, Tahoma, sans-serif;
+    &:hover {
+      background-color: $white;
+      box-shadow: 5px 8.7px 14.6px 0.5px rgba(0, 1, 1, 0.15);
+    }
+	}
+}
+
+.hlikes {
+  margin-top: 71px;
+  &__heart {
+    width: 25px;
+    height: 22px;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1, 1.1);
+    }
+  }
+  &__heart-path {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    &:hover {
+      fill: $white;
+    }
+  }
+  &__counter {
+    color: white;
+    vertical-align: top;
+    font: 24px $plumbcondreg;
+  }
+}
+
+.hcontrol {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font: 15px $plumbcondreg, Arial, Tahoma, sans-serif;
+}
+.lang {
+  display: block;
+  margin-top: 15px;
+  margin-left: 11px;
+  color: #333233;
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: $plumbreg;
+  &:hover .lang__lable {
+    color: $white;
+  }
+  &:hover .lang__img-path {
+    transform: translateX(-10px);
+    fill: $white;
+  }
+	&__img {
+    width: 10px;
+    height: 11px;
+	}
+	&__lable {
+    margin-left: 3px;
+	}
+}
+
+.login {
+  display: block;
+  color: $black;
+  text-decoration: none;
+  &:hover .login__lable {
+    color: $white;
+  }
+  &:hover .login__img-pathCircle {
+    stroke: $white;
+  }
+  &:hover .login__img-pathArrow {
+    transform: translateX(6px);
+    fill: $white;
+  }
+	&__img {
+    display: block;
+    margin-top: 12px;
+    margin-left: 14px;
+    width: 29px;
+    height: 23px;
+	}
+	&__lable {
+    display: block;
+    margin-top: 9px;
+    margin-left: 5px;
+	}
+}
+
+////// SLIDER //////
+
+.hslider {
+  position: relative;
+  top: -117px;
+  margin-left: -16px;
+  width: 1200px;
+  height: 846px;
+  letter-spacing: 2.4px;
+  font-family: $plumbcondreg;
+  &__overflow {
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+  }
+  &__inner {
+    width: 400%;
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    transform: translateZ(0);
+    &:after {
+      display: block;
+      clear: both;
+      height: 0;
+      content: '';
+    }
+  }
+  &__item {
+    float: left;
+    width: 25%;
+    height: 846px;
+  }
+  &__input {
+    display: none;
+  }
+  &__slide {
+    position: absolute;
+    z-index: -5;
+    width: 1200px;
+    height: 846px;
+    background-position: top center;
+    &--yellow {
+      background: url('../img/headerbg1.png') no-repeat;
+    }
+    &--blue {
+      background: url('../img/headerbg2.png') no-repeat;
+    }
+  }
+
+
+  &__commands {
+    position: absolute;
+    top: 277px;
+    width: 1200px;
+    height: 67px;
+    transition: all 0.1s ease-out;
+    transform: translateZ(0);
+  }
+  &__label {
+    display: none;
+    padding: 25px 17px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    font: 12px $plumbcondreg;
+    opacity: 1;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+    transform: translateZ(0);
+    &:hover {
+      color: $yellow;
+      opacity: 0.5;
+    }
+  }
+  &__title {
+    position: absolute;
+    top: 245px;
+    left: 54px;
+    display: block;
+    width: 260px;
+    color: white;
+    letter-spacing: 7.5px;
+    font-size: 36px;
+    font-family: $plumbcondblack;
+    line-height: 43px;
+    &--desc {
+      top: 129px;
+      left: 0;
+      color: black;
+      letter-spacing: 3.1px;
+      font-size: 15px;
+      font-family: $plumbcondreg;
+    }
+  }
+
+  &__dog {
+    position: absolute;
+    top: 327px;
+    left: 455px;
+    z-index: -40;
+    width: 145px;
+    height: 223px;
+  }
+  &__oldman {
+    position: absolute;
+    top: 192px;
+    left: 465px;
+    z-index: -40;
+    width: 195px;
+    height: 382px;
+  }
+  &__birds {
+    position: absolute;
+    top: 128px;
+    left: 229px;
+    width: 118px;
+    height: 115px;
+  }
+  &__shadow {
+    position: absolute;
+    z-index: -50;
+    &--dog {
+      top: 511px;
+      left: 414px;
+      width: 183px;
+      height: 58px;
+    }
+    &--oldman {
+      top: 515px;
+      left: 436px;
+      width: 271px;
+      height: 90px;
+    }
+  }
+  &__words {
+    position: absolute;
+    z-index: 0;
+    width: 300px;
+    letter-spacing: 2.7px;
+    &--dog {
+      top: 232px;
+      left: 560px;
+      line-height: 42px;
+    }
+    &--oldman {
+      top: 161px;
+      left: 674px;
+      line-height: 36px;
+    }
+    &--mod {
+      margin-left: 143px;
+    }
+  }
+  &__poryad {
+    position: absolute;
+    z-index: 50;
+    &--dog {
+      margin-top: -3px;
+      margin-left: 26px;
+    }
+    &--oldman {
+      display: block;
+      margin-top: 2px;
+      margin-left: -33px;
+    }
+  }
+
+
+  &__movedown {
+    position: absolute;
+    top: 589px;
+    left: 501px;
+    display: block;
+    width: 200px;
+    height: 70px;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover .hslider__downtext {
+      color: $white;
+      transform: translateY(-7px);
+    }
+    &:hover .hslider__downarrow {
+      transform: translateY(7px);
+    }
+    &:hover .hslider__downarrow path {
+      fill: $white;
+      stroke: $white;
+    }
+  }
+  &__downtext {
+    display: block;
+    color: $black;
+    text-align: center;
+    letter-spacing: 2.6px;
+  }
+  &__downarrow {
+    margin-top: 17px;
+    margin-left: 79px;
+    width: 38px;
+    height: 20px;
+  }
+}
+
+#hslide1:checked ~ .hslider__overflow .hslider__inner {  margin-left:    0%; }
+#hslide2:checked ~ .hslider__overflow .hslider__inner {  margin-left: -100%; }
+#hslide3:checked ~ .hslider__overflow .hslider__inner {  margin-left: -200%; }
+#hslide4:checked ~ .hslider__overflow .hslider__inner {  margin-left: -300%; }
+
+#hslide1:checked ~ .hslider__commands label:nth-child(2),
+#hslide2:checked ~ .hslider__commands label:nth-child(3),
+#hslide3:checked ~ .hslider__commands label:nth-child(4),
+#hslide4:checked ~ .hslider__commands label:nth-child(1) {
+  display: block;
+  float: right;
+  transform: rotate(90deg);
+  &:before {
+    content: 'next';
+  }
+}
+
+#hslide1:checked ~ .hslider__commands label:nth-child(4),
+#hslide2:checked ~ .hslider__commands label:nth-child(1),
+#hslide3:checked ~ .hslider__commands label:nth-child(2),
+#hslide4:checked ~ .hslider__commands label:nth-child(3) {
+  display: block;
+  float: left;
+  transform: rotate(270deg);
+  &:before {
+    content: 'prev';
+  }
+}

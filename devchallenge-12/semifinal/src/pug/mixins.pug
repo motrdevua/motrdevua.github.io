@@ -1,0 +1,98 @@
+//- SVG Sprite mixin
+mixin icon(name,mod)
+  - mod = (' icon-' + name + '--' + mod) || ''
+  svg(class="icon icon-" + name + mod)
+    use(xlink:href="img/spriteSvg.svg#" + name)
+
+//- Sidebar Item
+mixin sidebar-item(mod,link,img,title,date)
+  li(class='sidebar__item ' + mod)
+    a(href= link class="sidebar__link")
+      img(src= img, alt="preview" class="sidebar__picture")
+      div.sidebar__desc
+        h5.sidebar__title= title
+        span.sidebar__date= date
+
+//- Preview Medium
+mixin previewM(img,category,title,date,description)
+  .preview.preview--medium
+    a(href="#").preview__link.preview__link--medium
+      div.preview__pic.preview__pic--medium
+        img(src= img, alt="alt").preview__img.preview__img--medium
+        span.preview__category.preview__category--medium= category
+      div.preview__text.preview__text--medium
+        div.preview__text-top.preview__text-top--medium
+          h5.preview__title.preview__title--medium= title
+          span.preview__date.preview__date--medium= date
+        p.preview__desc.preview__desc--medium= description
+        
+//- Preview Big
+mixin previewB(img,category,title,date,description)
+  .preview.preview--big
+    a(href="#").preview__link.preview__link--big
+      div.preview__pic.preview__pic--big
+        img(src= img, alt="alt").preview__img.preview__img--big
+        span.preview__category.preview__category--big= category
+      div.preview__text.preview__text--big
+        div.preview__text-top.preview__text-top--big
+          h4.preview__title.preview__title--big= title
+          span.preview__date.preview__date--big= date
+        p.preview__desc.preview__desc--big= description
+
+//- Preview Video Small
+mixin videoS(id,img,src)
+  .preview.preview--videoS
+    .preview__btn.preview__btn--videoS.preview-btn
+      a(href="#" id="play").preview-btn__circle
+        svg(class="preview-btn__play" width="24" height="24" xmlns="http://www.w3.org/2000/svg")
+          path(fill="none" stroke="#444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M6 21V3l12 9z")
+    div.preview__pic.preview__pic--videoS
+      img(src= img alt="picture").preview__img.preview__img--videoS
+    iframe(id= id src= src allowfullscreen).preview__frame.preview__frame--videoS
+
+//- Preview Video Medium
+mixin videoM(id,img,src,title,date,description)
+  .preview.preview--videoM
+    .preview__btn.preview__btn--videoM.preview-btn
+      a(href="#" id="play-video").preview-btn__circle
+        svg(class="preview-btn__play" width="24" height="24" xmlns="http://www.w3.org/2000/svg")
+          path(fill="none" stroke="#444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M6 21V3l12 9z")
+    div.preview__pic.preview__pic--videoM
+      img(src= img alt="picture").preview__img.preview__img--videoM
+    iframe(id= id src= src allowfullscreen).preview__frame.preview__frame--videoM
+    div.preview__text.preview__text--videoM
+      div.preview__text-top.preview__text-top--videoM
+        h5.preview__title.preview__title--videoM= title
+        span.preview__date.preview__date--videoM= date
+      p.preview__desc.preview__desc--videoM= description
+
+//- Preview Text
+mixin text(text,author)
+  .preview.preview--text
+    a(href="#").preview__link.preview__link--text
+      p.preview__desc.preview__desc--text= text
+      span.preview__author.preview__author--text= author
+
+//- Preview Text + Picture
+mixin textP(img,text,author)
+  .preview.preview--textP
+    a(href="#" style="background: url('" + img +"');").preview__link.preview__link--textP
+      p.preview__desc.preview__desc--textP= text
+      span.preview__author.preview__author--textP= author
+
+//- Preview Picture
+mixin picture(img,category)
+  .preview.preview--pic
+    a(href="#").preview__link.preview__link--pic
+      img(src= img alt="picture").preview__img.preview__img--pic
+      span.preview__category.preview__category--pic= category
+
+//- Slide
+mixin slide(img,title,text,url)
+  .slider__slide.slide(style="background-image: url(" + img +");")
+    h3.slide__title= title
+    span.slide__desc= text
+    a(href= url).slide__btn.slide-btn
+      span.slide-btn__text read more
+      svg(class="slide-btn__arrow" width="24" height="24" xmlns="http://www.w3.org/2000/svg")
+        path(fill="#fff" d="M10 22l13.7-10L10 2v6H2c-.6 0-1 .4-1 1v6c0 .6.4 1 1 1h8v6z")

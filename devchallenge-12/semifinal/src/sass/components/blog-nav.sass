@@ -1,0 +1,72 @@
+.blog-nav
+  margin-top: 149px
+  display: flex
+  justify-content: space-between
+  +to(1120px)
+    margin-top: 100px
+    flex-direction: column
+    align-items: center
+  &__list
+    display: flex
+    +to(890px)
+      flex-direction: column
+  &__item
+    display: inline-block
+    margin: 0 7px 0 12px
+    &:first-child
+      margin-left: 0
+      +to(890px)
+        margin-left: 12px
+    &:nth-child(1) .blog-nav__link
+      padding-left: 66px
+      padding-right: 66px
+    &:nth-child(2) .blog-nav__link
+      padding-left: 35px
+      padding-right: 39px
+    &:nth-child(3) .blog-nav__link
+      padding-left: 30px
+      padding-right: 27px
+    &:nth-child(4) .blog-nav__link
+      padding-left: 34px
+      padding-right: 34px
+  &__link
+    display: block
+    padding: 18px 0 16px 0
+    background: $white
+    +rfs(16)
+    color: $main07
+    font-family: $RobotoMedium
+    &:hover
+      background: $skyblue
+      color: $main
+    &--active
+      background: $blue
+      color: $white
+  &__sort
+    position: relative
+    +to(1120px)
+      margin-top: 20px
+    &::after
+      position: absolute
+      right: 26px
+      top: 18px
+      display: block
+      font-family: "Fontawesome"
+      font-size: inherit
+      content: "\f107"
+      pointer-events: none
+
+.dropdown
+  width: 232px
+  padding: 17px 29px 15px 31px
+  +rfs(16)
+  font-family: $RobotoMedium
+  background: $white
+  border-radius: 0
+  border: none
+  outline: none
+  cursor: pointer
+  -webkit-appearance: none
+  -moz-appearance: none
+  &:hover
+    background: $skyblue

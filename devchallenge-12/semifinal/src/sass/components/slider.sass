@@ -1,0 +1,70 @@
+.slider
+  height: 770px
+  position: relative
+  margin-bottom: 150px
+
+.slide
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  height: 100%
+  background-repeat: no-repeat
+  background-size: cover
+  &__title
+    margin-top: -13px
+    margin-left: 11px
+    max-width: 840px
+    color: $white
+    text-align: center
+  &__desc
+    margin-top: 16px
+    margin-left: 10px
+    +rfs(27)
+    font-family: $RobotoRegular
+    line-height: 38px
+    color: $white
+    max-width: 660px
+    text-align: center
+  &__btn
+    margin-top: 35px
+    margin-left: 8px
+
+.slide-btn
+  display: flex
+  justify-content: center
+  align-items: center
+  &:hover &__text
+    color: $orange
+  &:hover &__arrow > path
+    fill: $orange
+  &:hover &__arrow
+    transform: translateX(5px)
+  &__text
+    +rfs(16)
+    letter-spacing: 0.08em
+    color: $white
+    text-transform: uppercase
+  &__arrow
+    margin-left: 18px
+
+.pagination
+  position: absolute
+  text-align: center
+  padding: 0
+  margin: 0 auto
+  bottom: 50px
+  left: 50%
+  transform: translateX(-43px)
+  &__dot
+    display: inline-block
+    margin: 0 9px
+    padding: 0
+    height: 8px
+    width: 8px
+    border-radius: 100%
+    background: $white
+    cursor: pointer
+    &:hover, &--active
+      transform: scale(1.4)
+      background: $orange

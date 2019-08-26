@@ -1,0 +1,72 @@
+//////////////////// NEWS ////////////////////
+
+.news {
+  height: 294px;
+}
+.news {
+	&__title {
+    padding-top: 37px;
+    padding-left: 29px;
+    height: 59px;
+    color: $black;
+    letter-spacing: 2.4px;
+    font: 12px $plumbcondreg;
+	}
+  &__deals {
+    height: 235px;
+    border-bottom: 1px solid $border;
+  }
+	&__item {
+    &:first-child .news__img {
+      background: rgba(156, 156, 156, 0.1) url('../img/deal-1.jpg') no-repeat;
+      background-position: center center;
+    }
+    &:nth-child(2) .news__img {
+      background: rgba(0, 0, 0, 0.1) url('../img/deal-2.jpg') no-repeat;
+      background-position: top center;
+    }
+    &:nth-child(3) .news__img {
+      background: rgba(156, 156, 156, 0.15) url('../img/deal-3.jpg') no-repeat;
+      background-position: center center;
+    }
+    &:nth-child(4) .news__img {
+      background: rgba(156, 156, 156, 0.14) url('../img/deal-4.jpg') no-repeat;
+      background-position: right center;
+    }
+    &:nth-child(5) .news__img {
+      background: rgba(156, 156, 156, 0.16) url('../img/deal-5.jpg') no-repeat;
+      background-position: center bottom ;
+    }
+    &:last-child .news__img {
+      background: rgba(156, 156, 156, 0.16) url('../img/deal-6.jpg') no-repeat;
+      background-position: center center;
+    }
+    &:last-child {
+      margin-right: 0 !important;
+    }
+	}
+	&__link {
+    text-decoration: none;
+    font: 12px $plumbreg;
+    &:hover .news__img {
+      border: 0.3px solid rgba(0, 0, 0, 0.3);
+      // background-blend-mode: normal;
+    }
+    &:hover .news__description {
+      color: $yellow;
+    }
+	}
+	&__img {
+    display: block;
+    width: 160px;
+    height: 160px;
+    border: 0.3px solid rgba(0, 0, 0, 0.0);
+    background-blend-mode: overlay;
+	}
+	&__description {
+    display: block;
+    margin-top: 6px;
+    width: 162px;
+    color: #4d4d4d;
+	}
+}

@@ -1,0 +1,178 @@
+@media #{$tablet} {
+
+
+  // --- header ---
+
+  .header__container--left {
+    display: none;
+  }
+  .header__container {
+    margin: 0 auto;
+    margin-left: 0px;
+  }
+  .head {
+    margin: 0 auto;
+    float: none;
+    width: 660px;
+  }
+  .phone {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+  .title {
+    &__stars {
+      margin: 70px auto 0;
+    }
+  }
+
+  // --- programs ---
+
+  .program-wrapper {
+    height: 3000px;
+  }
+  .progtitle {
+    width: 768px;
+  }
+  .progtabs {
+    width: 768px;
+    &__menu {
+      width: 768px;
+    }
+    &__item {
+      width: 208px;
+    }
+    &__content {
+      width: 768px;
+      margin: 0 auto;
+      padding: 97px 0 0 0;
+    }
+    &__img {
+      display: block;
+      float: none;
+      width: 642px;
+      height: 362px;
+      margin: 0 auto;
+    }
+    &__bigname {
+      &--basic {
+        top: -34px;
+        left: 110px;
+      }
+      &--premium {
+        top: -34px;
+        left: -75px;
+      }
+      &--platinum {
+        top: -34px;
+        left: -105px;
+      }
+    }
+  }
+  .progarticles {
+    margin: 0 auto;
+    margin-top: 450px;
+    width: 768px;
+    height: 840px;
+    &__block {
+      &:nth-child(3) {
+        margin-top: 60px;
+        margin-left: 0px;
+        padding-top: 15px;
+      }
+    }
+  }
+
+  .progtable {
+    margin: 100px auto 0;
+    width: 768px;
+  }
+
+  // --- reviews ---
+
+  .rpq {
+    height: 2080px;
+    background: url('/img/rpqbg.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .reviews-wrapper {
+    margin-top: -10px;
+    height: 800px;
+  }
+
+  .reviews-slider {
+    width: 740px;
+    &__slide {
+      width: 740px;
+      height: 450px;
+    }
+    &__content {
+      width: 740px;
+    }
+    &__arrows {
+      width: 750px;
+    }
+  }
+
+  // --- partners ---
+
+  .partners-slider {
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 700px;
+    &__arrows {
+      width: 750px;
+    }
+  }
+
+  // --- quest ---
+
+  .quest-wrapper {
+    margin: 0 auto;
+    padding-left: 0px;
+  }
+
+  // --- footer ---
+
+
+  .footer-wrapper {
+    width: 768px;
+  }
+
+  .footer-articles {
+    margin: 0 auto;
+    padding-top: 76px;
+    width: 768px;
+
+    &__article {
+      display: block;
+      margin: 0 auto;
+
+      &:first-child {
+        padding-right: 0px;
+      }
+      &:last-child {
+        display: none;
+        margin-top: 70px;
+      }
+    }
+  }
+
+  .footer-table {
+    margin-top: 68px;
+    width: 768px;
+
+    // --footer menu ---
+
+    .fmenu {
+      margin: 0 auto;
+      &__item {
+        &::before {
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+// ===================================================
+//      uncomment if png or svg folder not empty
+// ===================================================
+@import modules/mixin_png-sprite
+@import modules/spritePng
+// ===================================================
+// @import modules/spriteSvg
+// ===================================================
+// ===================== RESET =======================
+
+@import modules/reset
+
+// ============== RESPONSIVE FONT SIZE ===============
+
+@import '../../bower_components/rfs/sass/_rfs'
+
+// ===================================================
+
+@import modules/mixin_font-face
+@import modules/fontsstylesheet
+@import modules/font_icons
+@import modules/smart-grid
+@import modules/variables
+
+// ===================== GENERAL =====================
+
+*
+  transition: all ease-in-out .3s
+  color: $main
+
+h1
+  +rfs(120)
+  font-family: $RobotoSlabRegular
+  letter-spacing: -0.06em
+  line-height: 140px
+h2
+  +rfs(80)
+  font-family: $RobotoSlabRegular
+  letter-spacing: -0.06em
+  line-height: 130px
+h3
+  +rfs(72)
+  font-family: $RobotoSlabRegular
+  line-height: 87px
+  letter-spacing: -0.06em
+h4
+  +rfs(28)
+  font-family: $RobotoSlabBold
+  line-height: 40px
+h5
+  +rfs(18)
+  font-family: $RobotoSlabBold
+  line-height: 30px
+
+// ================== MAIN BLOCKS ====================
+
+@import components/header
+.content
+  background: $background
+
+@import components/banner
+@import components/blog
+@import components/blog-nav
+@import components/sidebar
+@import components/preview
+@import components/slider
+@import components/contact
+@import components/footer

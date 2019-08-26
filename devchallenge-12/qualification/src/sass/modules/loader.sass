@@ -1,0 +1,54 @@
+/* ====================  LOADER  =================== */
+
+.loader
+  height: 100vh
+  width: 100vw
+  position: fixed
+  z-index: 99999
+  top: 0
+  background: $blueLight
+  &__balls
+    margin: 0 auto
+    width: 70px
+    text-align: center
+    position: absolute
+    left: 0
+    right: 0
+    top: 50%
+  &__ball
+    position: relative
+    width: 15px
+    height: 15px
+    border-radius: 50%
+    display: inline-block
+    -webkit-animation: bouncedelay 3.0s infinite cubic-bezier(.62, .28, .23, .99) both
+    animation: bouncedelay 3.0s infinite cubic-bezier(.62, .28, .23, .99) both
+    &--1
+      -webkit-animation-delay: -.16s
+      animation-delay: -.16s
+    &--2
+      -webkit-animation-delay: -.08s
+      animation-delay: -.08s
+
+@keyframes bouncedelay
+  0%
+    bottom: 0
+    background-color: $blueDark
+  16.66%
+    bottom: 40px
+    background-color: $purpleish
+  33.33%
+    bottom: 0px
+    background-color: $lipstick
+  50%
+    bottom: 40px
+    background-color: $blueDark
+  66.66%
+    bottom: 0px
+    background-color: $purpleish
+  83.33%
+    bottom: 40px
+    background-color: $lipstick
+  100%
+    bottom: 0
+    background-color: $blueDark

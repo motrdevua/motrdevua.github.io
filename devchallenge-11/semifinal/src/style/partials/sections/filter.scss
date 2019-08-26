@@ -1,0 +1,396 @@
+//////////////////// FILTER ////////////////////
+
+.filter {
+  border-bottom: 1px solid $border;
+}
+
+.assist {
+  color: $black;
+	&__form {
+    height: 225px;
+	}
+}
+
+.categories {
+  margin: 59px 0 0 0;
+  width: 265px;
+	&__item {
+    margin: 0 4px 9px 0;
+    padding: 0 10px 0 13px;
+    height: 36px;
+    outline: none;
+    border: 1px solid $border;
+    background-color: $white;
+    text-align: center;
+    letter-spacing: 2.4px;
+    font: 12px $plumbcondreg;
+    cursor: pointer;
+    &:hover {
+      background-color: $yellow;
+    }
+    &:active {
+      background-color: $yellow;
+    }
+    &:nth-child(3) {
+      margin-right: 5px;
+      padding-right: 9px;
+    }
+    &:nth-child(4) {
+      padding-right: 9px;
+      padding-left: 11px;
+    }
+    &:nth-child(5) {
+      padding-right: 11px;
+    }
+    &:nth-child(6) {
+      margin-left: 1px;
+      padding-right: 6px;
+    }
+    &:last-child {
+      margin-left: 3px;
+      padding-right: 9px;
+    }
+	}
+  &__item--active {
+    background-color: $yellow;
+  }
+}
+
+.controls {
+  margin: 47px 0 0 1px;
+	&__item {
+    margin: 0 6px 0 0;
+    color: $black;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font: 12px $plumbcondreg;
+    &:last-child {
+      margin-left: 6px;
+    }
+    &:hover {
+      color: $yellow;
+    }
+    &:active {
+      color: $yellow;
+    }
+	}
+  &__arrow {
+    width: 12px;
+    height: 25px;
+    vertical-align: middle;
+  }
+}
+
+.shelters {
+  margin: 60px 0 79px -1px;
+	&__form {
+    height: 423px;
+	}
+  &__btn {
+    padding: 0 0 0 8px;
+  }
+  &__label {
+    &:nth-child(4) {
+      margin-top: 20px;
+    }
+    &:last-child {
+      margin-top: 20px;
+    }
+  }
+}
+
+///// Checkboxes style /////
+
+.chtitle {
+  margin: 37px 0 8px 0;
+  letter-spacing: 2.4px;
+}
+.chform {
+  width: 256px;
+  border: 1px solid $border;
+}
+.chbtn {
+  margin: 0 0 8px 0;
+  width: 255px;
+  height: 36px;
+  outline: none;
+  border: 1px solid $border;
+  background-color: black;
+  color: $white;
+  text-align: left;
+  letter-spacing: 2.5px;
+  font: 12px $plumbcondreg;
+  cursor: pointer;
+  &:hover {
+    color: $yellow;
+  }
+}
+.chboxlable {
+  display: block;
+  margin: 21px 0 0 0;
+  cursor: pointer;
+  &:hover .chbox:checked ~ .boxlable {
+    color: $yellow;
+  }
+  &:hover .boxlable {
+    color: $yellow;
+  }
+}
+.chbox {
+  display: none;
+  &:checked + .box::after {
+    display: block;
+  }
+  &:checked ~ .boxlable {
+    color: $black;
+  }
+}
+.box {
+  position: relative;
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  background: $yellow;
+  vertical-align: middle;
+  &::after {
+    position: absolute;
+    display: none;
+    width: 29px;
+    height: 29px;
+    background: url('../svg/heart-grey.svg') no-repeat;
+    background-position: center center;
+    background-size: 56%;
+    content: '';
+  }
+}
+.boxlable {
+  padding: 0 0 0 32px;
+  color: $grey2;
+  letter-spacing: 2.4px;
+  font: 12px $plumbcondreg;
+  &:hover {
+    color: $yellow;
+  }
+  &::selection {
+    background: transparent;
+  }
+}
+
+///// category /////
+
+.category {
+  margin-left: 0;
+	&__title {
+    margin: 37px 0 7px 15px;
+    letter-spacing: 2.4px;
+	}
+	&__list {
+    list-style-type: none;
+	}
+	&__item {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 60px;
+    height: 315px;
+    &:hover {
+      z-index: 99999;
+    }
+    &:hover .category__mask {
+      overflow: visible;
+      border: 1px solid $border;
+      box-shadow: 7px 7px 15px 3px rgba(0, 1, 1, 0.2);
+      transform: scaleX(1.08);
+    }
+    &:hover .category__img {
+      border-bottom: 1px solid $border;
+      transform: scaleX(1.08);
+    }
+    &:hover .category__close {
+      display: block;
+    }
+    &:hover .category__info {
+      display: block;
+    }
+    &:hover .category__like {
+      display: block;
+    }
+    &:hover .category__sum {
+      display: block;
+    }
+    &:hover .category__help {
+      display: block;
+    }
+    &:first-child {
+      margin-left: 0px;
+    }
+    &:nth-child(0n+4) {
+      margin-left: 0px;
+    }
+    &:nth-child(3n+3) {
+      margin-right: 0px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+	}
+	&__mask {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    width: 255px;
+    height: 404px;
+    background-color: $white;
+    transition: .3s;
+	}
+	&__picture {
+    position: absolute;
+    top: 0;
+    width: 255px;
+    height: 303px;
+	}
+	&__img {
+    width: 255px;
+    height: 255px;
+    border: 1px solid $border;
+	}
+	&__close {
+    position: absolute;
+    top: 9px;
+    left: 213px;
+    display: none;
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+    &:hover {
+      transform: rotate(180deg);
+    }
+    &:hover path {
+      fill: $black;
+    }
+	}
+	&__info {
+    position: absolute;
+    top: 94px;
+    left: 94px;
+    display: none;
+    padding: 25.5px 23.5px;
+    background-color: $black;
+    color: $white;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font: 12px $plumbcondreg;
+    cursor: pointer;
+    &:hover {
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: $yellow;
+      transform: rotate(360deg);
+      transform: scale(2);
+    }
+	}
+	&__like {
+    position: absolute;
+    top: 222px;
+    left: 114px;
+    display: none;
+    width: 26px;
+    height: 23px;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:hover path {
+      fill: $yellow;
+    }
+	}
+	&__description {
+    position: absolute;
+    top: 275px;
+    display: block;
+    width: 255px;
+    color: #4d4d4d;
+    letter-spacing: 0px;
+    font: 12px $plumbreg;
+	}
+	&__sum {
+    position: absolute;
+    top: 314px;
+    display: none;
+    margin-left: -2px;
+    color: #bf303e;
+    letter-spacing: 3px;
+    font: 15px $plumbcondreg;
+	}
+	&__help {
+    position: absolute;
+    top: 348px;
+    display: none;
+    margin-left: -1px;
+    padding: 9px 9px 9px 12px;
+    width: 93px;
+    height: 36px;
+    border: 1px solid $border;
+    background-color: white;
+    color: $black;
+    text-decoration: none;
+    letter-spacing: 2.4px;
+    font: 12px $plumbcondreg;
+    &:hover {
+      background-color: $yellow;
+    }
+	}
+  &__loader {
+    position: absolute;
+    top: -48px;
+    left: -15px;
+    z-index: 55;
+    width: 255px;
+    height: 100px;
+    cursor: pointer;
+    &:hover .category__loader-title {
+      color: $yellow;
+    }
+    &:hover .category__more {
+      transform: translateY(10px);
+    }
+    &:hover .category__more path:nth-child(1) {
+      fill: $yellow;
+    }
+    &:hover .category__more path:nth-child(2) {
+      stroke: $yellow;
+    }
+  }
+  &__more {
+    display: block;
+    margin: 0 auto;
+    width: 25px;
+    height: 41px;
+  }
+  &__loader-title {
+    margin-top: 47px;
+    text-align: center;
+    letter-spacing: 2.4px;
+    font: 12px $plumbcondreg;
+  }
+  &__dots {
+    margin: 71px 0 0 -30px;
+    list-style-type: none;
+    text-align: center;
+  }
+  &__point {
+    display: inline-block;
+    margin: 10px;
+    width: 15px;
+    height: 15px;
+    background: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2215%22%20height%3D%2215%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Ctitle%3Epoint%3C/title%3E%0A%3Cpath%20fill%3D%22%23e8e8e8%22%20d%3D%22M58.8%2032c0%2015.464-12.536%2028-28%2028s-28-12.536-28-28c0-15.464%2012.536-28%2028-28s28%2012.536%2028%2028z%22%3E%3C/path%3E%0A%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.2%22%20stroke-miterlimit%3D%22100%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M58.8%2032c0%2015.464-12.536%2028-28%2028s-28-12.536-28-28c0-15.464%2012.536-28%2028-28s28%2012.536%2028%2028z%22%3E%3C/path%3E%0A%3C/svg%3E%0A') no-repeat;
+    cursor: pointer;
+    &:hover {
+      background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2215%22%20height%3D%2215%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Ctitle%3Epoint-active%3C/title%3E%0A%3Cpath%20d%3D%22M59.2%2032c0%2015.464-12.536%2028-28%2028s-28-12.536-28-28c0-15.464%2012.536-28%2028-28s28%2012.536%2028%2028z%22%3E%3C/path%3E%0A%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.2%22%20stroke-miterlimit%3D%22100%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M59.2%2032c0%2015.464-12.536%2028-28%2028s-28-12.536-28-28c0-15.464%2012.536-28%2028-28s28%2012.536%2028%2028z%22%3E%3C/path%3E%0A%3C/svg%3E%0A');
+    }
+    &--active {
+      background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2215%22%20height%3D%2215%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Ctitle%3Epoint-active%3C/title%3E%0A%3Cpath%20d%3D%22M59.2%2032c0%2015.464-12.536%2028-28%2028s-28-12.536-28-28c0-15.464%2012.536-28%2028-28s28%2012.536%2028%2028z%22%3E%3C/path%3E%0A%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.2%22%20stroke-miterlimit%3D%22100%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M59.2%2032c0%2015.464-12.536%2028-28%2028s-28-12.536-28-28c0-15.464%2012.536-28%2028-28s28%2012.536%2028%2028z%22%3E%3C/path%3E%0A%3C/svg%3E%0A');
+    }
+  }
+}
