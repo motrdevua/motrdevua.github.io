@@ -12,6 +12,7 @@
   background-color: var(--bg-09);
 
   @include to($break_md) {
+    flex: 1;
     width: 100%;
     height: 40%;
   }
@@ -25,17 +26,19 @@
   width: 100%;
   height: auto;
 
-  .icon {
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-    transition: all .3s linear;
+  @include to($break_md) {
+    display: none;
+  }
+
+  .theme {
+    display: flex;
+    justify-content: center;
   }
 }
 
 .languages {
   align-self: center;
-  margin-bottom: 10px;
+  margin: 10px;
 
   &__item {
     padding: 2px;
@@ -51,7 +54,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5% 15%;
+  margin: 5% 15% 15% 15%;
 
   @include to($break_md) {
     display: none;
@@ -75,26 +78,39 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  color: var(--dark);
+  color: var(--text);
   text-align: center;
 
   &__name {
     margin: 0;
     font-weight: 400;
+
+    @include to($break_md) {
+      padding-top: 15px;
+    }
   }
 
   &__specialty {
     margin-bottom: 0;
     max-width: 155px;
     font-weight: 400;
+
+    @include to($break_md) {
+      display: none;
+    }
   }
 
   &__location {
     margin-top: 27px;
+
+    @include to($break_md) {
+      display: none;
+    }
   }
 
   &__communication {
     position: relative;
+    z-index: 99999;
     width: 220px;
     height: 80px;
     border-radius: 4px;
@@ -174,12 +190,13 @@
     position: absolute;
     left: 64px;
     display: block;
-    color: var(--dark);
+    color: var(--text);
     content: 'contacts';
     text-transform: uppercase;
-    @include rfs(19);
     line-height: 50px;
     transition: color .7s ease-in-out;
+
+    @include rfs(19);
   }
 }
 
@@ -225,24 +242,26 @@
     }
 
     &:hover {
-      .icon--phone {
-        color: var(--green);
-      }
+      .icon-contact {
+        &--phone {
+          color: var(--green);
+        }
 
-      .icon--mail {
-        color: var(--yellow);
-      }
+        &--mail {
+          color: var(--yellow);
+        }
 
-      .icon--github {
-        color: var(--black);
-      }
+        &--github {
+          color: var(--black);
+        }
 
-      .icon--telegram {
-        color: var(--active);
-      }
+        &--telegram {
+          color: var(--active);
+        }
 
-      .icon--linkedin {
-        color: var(--active-dark);
+        &--linkedin {
+          color: var(--active-dark);
+        }
       }
 
       &::after {
@@ -250,12 +269,5 @@
         transform: scale(1.15);
       }
     }
-  }
-
-  .icon {
-    width: 24px;
-    height: 24px;
-    color: var(--bg-09);
-    transition: none;
   }
 }

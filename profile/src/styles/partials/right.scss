@@ -10,19 +10,19 @@
   height: 100%;
 
   @include to($break_md) {
+    flex: 9;
     width: 100%;
     height: 60%;
   }
 }
 
-.panel {
+.section {
   position: relative;
-  z-index: 9999;
+  z-index: 99;
   display: flex;
   overflow: hidden;
   align-items: center;
   flex: 1;
-  flex-direction: column;
   justify-content: center;
   width: 100%;
   border-radius: 4px;
@@ -30,15 +30,15 @@
   transition: flex-grow .3s ease-in-out;
 
   &__title {
-    display: block;
     position: absolute;
-    z-index: 99;
-    color: var(--dark);
+    display: block;
+    margin: 0;
     text-transform: uppercase;
-    @include rfs(32);
+    font-weight: 400;
     cursor: pointer;
     transition: all .2s linear;
 
+    @include rfs(32);
     user-select: none;
 
     &--active {
@@ -55,62 +55,39 @@
   }
 
   &__container {
+    display: none;
     position: absolute;
-    z-index: -9999;
     overflow: visible;
     padding: 0 20px;
     width: 100%;
     height: 0;
-    color: var(--dark);
     opacity: 0;
     transition: height .7s, opacity .3s, overflow 3s;
     transition-timing-function: ease-in-out;
   }
 }
 
-.panel--active {
+.section--active {
   flex-grow: 8;
 
-  &::before {
-    margin-right: 0;
-    color: var(--active-dark);
-    opacity: 0;
-  }
-
-  & .panel__container {
+  .section__container {
     overflow-y: scroll;
     height: 100%;
     opacity: 1;
   }
 
-  & .portfolio {
+  .resume,
+  .skills {
     display: flex;
+    flex-direction: column;
   }
 
-  & .skills {
-    display: block;
-  }
-
-  & .resume {
+  .portfolio {
     display: flex;
   }
 }
 
-.resume {
-  display: none;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  &__objective .resume__text {
-    margin: 0 auto;
-
-    @include size(10);
-
-    @include to($break_md) {
-      @include size(12);
-    }
-  }
-
+.subsection {
   &__title {
     color: var(--active-dark);
     text-transform: uppercase;
@@ -120,8 +97,27 @@
       border-top: 1px dotted var(--dark);
       border-bottom: 1px dotted var(--dark);
       text-align: center;
+
       @include rfs(22);
     }
+  }
+}
+
+.resume {
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__objective .resume__desc {
+    flex-direction: column;
+    padding: 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__objective .resume__text {
+    margin: 0 auto;
   }
 
   &__desc {
@@ -130,11 +126,11 @@
     align-items: center;
     justify-content: space-around;
     padding: 15px 0;
-    color: var(--dark);
 
     @include to($break_md) {
       flex-direction: column;
-      @include rfs(19);
+
+      @include rfs(20);
     }
 
     &--university {
@@ -143,10 +139,20 @@
   }
 
   &__text {
-    text-align: center;
+    display: inline-block;
+    text-align: justify;
+    text-indent: 35px;
+    hyphens: auto;
+    line-height: 2;
   }
 
-  &__period {
+  &__period,
+  &__about,
+  &__level {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 
     @include size(3);
@@ -157,30 +163,15 @@
   }
 
   &__about {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
     @include size(6);
 
-    @include to($break_md) {
-      @include size(12);
+    span {
+      padding: 5px;
+
+      &:last-child {
+        border-top: 1px dotted var(--dark);
+      }
     }
-  }
-
-  &__institution {
-    padding: 5px;
-    text-align: center;
-  }
-
-  &__speciality {
-    padding: 5px;
-    border-top: 1px dotted var(--dark);
-    text-align: center;
-  }
-
-  &__link {
-    text-align: center;
   }
 
   &__picture {
@@ -189,40 +180,26 @@
 
     @include size(12);
   }
-
-  &__level {
-    text-align: center;
-
-    @include size(3);
-
-    @include to($break_md) {
-      @include size(12);
-    }
-  }
 }
 
 .skills {
-  display: none;
 
-  &__title {
-    color: var(--active-dark);
-    text-transform: uppercase;
-
-    @include to($break_md) {
-      padding: 10px 0;
-      border-top: 1px dotted var(--dark);
-      border-bottom: 1px dotted var(--dark);
-      text-align: center;
-      @include rfs(22);
-    }
+  .icon {
+    display: inline-block;
+    vertical-align: middle;
   }
 
-  &__item {
-    margin: 10px;
-    line-height: 1;
+  &__desc {
+    text-align: justify;
+    hyphens: auto;
+    line-height: 2;
 
     @include to($break_md) {
-      @include rfs(19);
+      @include rfs(20);
+    }
+
+    &--flex {
+      display: flex;
     }
   }
 
@@ -237,25 +214,7 @@
   }
 }
 
-.icon {
-  height: 100%;
-
-  @include size(1);
-
-  @include to($break_md) {
-    @include size(4);
-  }
-}
-
-.icon--check {
-  margin-right: 19px;
-  width: 16px;
-  height: 16px;
-  color: var(--active-dark);
-}
-
 .portfolio {
-  display: none;
   flex-wrap: wrap;
   justify-content: space-around;
 
@@ -267,15 +226,16 @@
     position: relative;
     display: block;
     overflow: hidden;
-    margin: 15px 0;
-    height: 49%;
-    border: 1px solid var(--dark);
-    border-radius: 4px;
+    margin: 30px 0 0 0;
 
     @include size(6);
 
     @include to($break_md) {
       @include size(12);
+    }
+
+    &:last-child {
+      margin-bottom: 30px;
     }
 
     &:hover .portfolio__title {
@@ -302,13 +262,16 @@
 
   &__link {
     display: block;
-    height: 100%;
     width: 100%;
+    height: 100%;
+    border: 1px solid var(--dark);
+    border-radius: 4px;
   }
 
   &__img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    border-radius: 4px;
     filter: grayscale(100%);
     transition: all .4s ease-in-out;
   }
@@ -325,7 +288,7 @@
     border: 1px solid var(--dark);
     border-radius: 4px;
     background: var(--bg-09);
-    color: var(--dark);
+    color: var(--text);
     text-align: center;
     transform: translate(-50%, -50%);
 
@@ -349,5 +312,17 @@
       content: ']';
       transform: translateX(-20px);
     }
+  }
+}
+
+.humor {
+
+  .icon,
+  .skills__desc {
+    display: inline-block;
+  }
+
+  .icon-smile {
+    vertical-align: middle;
   }
 }

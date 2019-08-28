@@ -92,6 +92,7 @@ canvas {
 html[data-theme='dark'] {
   --bg: #282d34;
   --bg-09: rgba(50, 56, 64, .9);
+  --text: #1d2126;
   --contact: #282d34;
   --dark: #1d2126;
   --light: #ffffff;
@@ -106,7 +107,8 @@ html[data-theme='dark'] {
 
 html[data-theme='light'] {
   --bg: #fcfcfc;
-  --bg-09: rgba(235, 235, 235, .9);
+  --bg-09: rgba(200, 200, 200, .9);
+  --text: #1d2126;
   --contact: #454d58;
   --dark: #1d2126;
   --light: #ffffff;
@@ -150,6 +152,46 @@ html.transition *::after {
     height: calc(100% - 30px);
   }
 }
+
+.icon {
+  @include rfs(24);
+  color: var(--bg-09);
+  transition: none;
+
+  &-switch {
+    @include rfs(32);
+    cursor: pointer;
+    transition: all .3s linear;
+  }
+
+  &-tech {
+    margin: 15px;
+    @include rfs(64);
+  }
+
+  &-check {
+    margin-right: 20px;
+    font-size: 12px;
+    color: var(--active-dark);
+
+    @include to($break_md) {
+      font-size: 12px;
+    }
+  }
+
+  &-smile {
+    @include rfs(32);
+    color: var(--dark);
+    margin-left: 13px;
+  }
+}
+
+.tech {
+  // color: var(--active);
+  color: rgba(228, 59, 70, .7);
+}
+
+
 
 // ====================== BLOCKS =====================
 

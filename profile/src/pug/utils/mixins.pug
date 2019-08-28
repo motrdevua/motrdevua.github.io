@@ -1,13 +1,13 @@
 //- SVG Sprite mixin
-mixin icon(name,mod)
+mixin icon(name, element, mod)
   if(mod)
-    svg(class="icon icon--" + name + ' ' + mod)
+    svg(class="icon icon-" + element + ' icon-' + element + '--' + mod)
       use(xlink:href="#" + name)
   else
-    svg(class="icon icon--" + name)
+    svg(class="icon icon-" + element)
       use(xlink:href="#" + name)
 
-//-Portfolio item
+//- Portfolio item
 mixin portfolio(address, src, name)
   .portfolio__item
     a(href= address target="_blank" rel="noopener").portfolio__link

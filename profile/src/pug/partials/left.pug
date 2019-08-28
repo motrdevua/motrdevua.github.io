@@ -5,7 +5,7 @@
       span.languages__item.languages__item--ua UA
       span.languages__item.languages__item--en RU
     .theme.dark
-      +icon('lightbulb-off')
+      +icon('lightbulb-off', 'switch')
   .photo
     img(src="assets/img/photo.jpg", alt="alt").photo__pic
   .profile
@@ -18,13 +18,13 @@
       .door.top
       .door.bottom
       .contacts
-        a(href="tel:+380956010640").contacts__link.contacts__link--phone
-          +icon('phone')
-        a(href="mailto:motrdevua@gmail.com").contacts__link.contacts__link--mail
-          +icon('mail')
-        a(href="https://github.com/motrdevua" target="_blank" rel="noopener").contacts__link.contacts__link--github
-          +icon('github')
-        a(href="skype:fedeveloperua?call").contacts__link.contacts__link--skype
-          +icon('telegram')
-        a(href="https://www.linkedin.com/in/igor-lukashev-52b25011b/" target="_blank" rel="noopener").contacts__link.contacts__link--linkedin
-          +icon('linkedin')
+        a(href="tel:+380956010640").contacts__link
+          +icon('phone', 'contact', 'phone')
+        a(href="mailto:motrdevua@gmail.com").contacts__link
+          +icon('mail', 'contact', 'mail')
+        a(href="https://github.com/motrdevua" target="_blank" rel="noopener").contacts__link
+          +icon('github', 'contact', 'github')
+        a(href="https://t.me/@motrdevua" target="_blank" rel="noopener").contacts__link
+          +icon('telegram', 'contact', 'telegram')
+        a(href="https://www.linkedin.com/in/igor-lukashev-52b25011b/" target="_blank" rel="noopener").contacts__link
+          +icon('linkedin', 'contact', 'linkedin')
