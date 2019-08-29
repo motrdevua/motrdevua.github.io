@@ -215,6 +215,7 @@
 .portfolio {
   flex-wrap: wrap;
   justify-content: space-around;
+  padding-bottom: 30px;
 
   @include to($break_md) {
     justify-content: center;
@@ -230,10 +231,6 @@
 
     @include to($break_md) {
       @include size(12);
-    }
-
-    &:last-child {
-      margin-bottom: 30px;
     }
 
     &:hover .portfolio__title {
