@@ -5,7 +5,7 @@ import './particles';
 import './left';
 import './right';
 import './theme';
-// import './parallax';
+import './parallax';
 
 $(document).ready(function() {
   svg4everybody({});

@@ -299,6 +299,7 @@ function fonts() {
 /* ====================  watch  =================== */
 
 function watchFiles() {
+  watch(path.src.static, statics).on('change', reload);
   watch(path.src.pug, pug).on('change', reload);
   watch(path.src.styles, styles);
   watch(path.src.js, js).on('change', reload);
