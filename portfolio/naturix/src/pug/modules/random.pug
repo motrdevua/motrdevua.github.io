@@ -1,0 +1,107 @@
+section.random
+  .random__topline
+    img(src="img/grapefruit.png", alt="grapefruit").random__logo
+    .random__caption
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      span.random__text a taste of
+        span.random__text.random__text--bold real food
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+  .random__middle
+    .random__col
+      span.random__subtitle NEW FROM THE FARM
+      h4.random__title organic&nbsp;
+        span.random__title.random__title--bold new arrivals
+      .random-slider-controls
+        .arrow-btn.arrow-btn--prev.new-prev
+          i.fas.fa-long-arrow-alt-left
+        .arrow-btn.arrow-btn--next.new-next
+          i.fas.fa-long-arrow-alt-right
+      .random-slider.random-slider--new
+        ul.random-slider__slide
+          +randomCard('blackberry', '$50.00')
+          +randomCard('peach', '$50.00')
+          +randomCard('redberry', '$50.00')
+        ul.random-slider__slide
+          +randomCard('strawberry', '$50.00')
+          +randomCard('mushroom', '$50.00')
+          +randomCard('apricot', '$50.00')
+        ul.random-slider__slide
+          +randomCard('grapes', '$50.00')
+          +randomCard('blackberry', '$50.00')
+          +randomCard('beans', '$50.00')
+    .random__col
+      span.random__subtitle NEW FROM THE FARM
+      h4.random__title organic&nbsp;
+        span.random__title.random__title--bold popular
+      .random-slider-controls
+        .arrow-btn.arrow-btn--prev.pop-prev
+          i.fas.fa-long-arrow-alt-left
+        .arrow-btn.arrow-btn--next.pop-next
+          i.fas.fa-long-arrow-alt-right
+      .random-slider.random-slider--pop
+        ul.random-slider__slide
+          +randomCard('blackberry', '$50.00')
+          +randomCard('peach', '$50.00')
+          +randomCard('redberry', '$50.00')
+        ul.random-slider__slide
+          +randomCard('strawberry', '$50.00')
+          +randomCard('mushroom', '$50.00')
+          +randomCard('apricot', '$50.00')
+        ul.random-slider__slide
+          +randomCard('grapes', '$50.00')
+          +randomCard('blackberry', '$50.00')
+          +randomCard('beans', '$50.00')
+    .random__col
+      span.random__subtitle NEW FROM THE FARM
+      h4.random__title organic&nbsp;
+        span.random__title.random__title--bold random
+      .random-slider-controls
+        .arrow-btn.arrow-btn--prev.random-prev
+          i.fas.fa-long-arrow-alt-left
+        .arrow-btn.arrow-btn--next.random-next
+          i.fas.fa-long-arrow-alt-right
+      .random-slider.random-slider--random
+        ul.random-slider__slide
+          +randomCard('blackberry', '$50.00')
+          +randomCard('peach', '$50.00')
+          +randomCard('redberry', '$50.00')
+        ul.random-slider__slide
+          +randomCard('strawberry', '$50.00')
+          +randomCard('mushroom', '$50.00')
+          +randomCard('apricot', '$50.00')
+        ul.random-slider__slide
+          +randomCard('grapes', '$50.00')
+          +randomCard('blackberry', '$50.00')
+          +randomCard('beans', '$50.00')
+  .random__bottom
+    .banner.banner--green
+      .banner__box
+        span.banner__italics Vegetable
+        span.banner__title GREEN&nbsp;
+          span.banner__title.banner__title--bold OLIVE
+        span.banner__desc 35% OFF IN JUNE-JULY
+      a(href="#", title="title").banner__btn
+        span SHOP NOW
+        i.fas.fa-long-arrow-alt-right
+      img(src="img/banner-olive1.png", alt="banner").banner__pic.banner__pic--1
+      img(src="img/banner-olive2.png", alt="banner").banner__pic.banner__pic--2
+      .banner__text
+        span.banner__subtitle FRESH FROM OUR FARM :
+          span.banner__subtitle.banner__subtitle--bold &nbsp;GREEN OLIVE
+    .banner.banner--orange
+      .banner__box
+        span.banner__italics Fruits
+        span.banner__title all&nbsp;
+          span.banner__title.banner__title--bold summer
+        span.banner__desc 35% OFF IN JUNE-JULY
+      a(href="#", title="title").banner__btn
+        span SHOP NOW
+        i.fas.fa-long-arrow-alt-right
+      img(src="img/banner-fruits.png", alt="banner").banner__pic
+      .banner__text
+        span.banner__subtitle FRESH SUMMER
+          span.banner__subtitle.banner__subtitle--bold &nbsp;FRUITS

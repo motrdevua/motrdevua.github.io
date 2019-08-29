@@ -1,0 +1,10 @@
+//= require parts/page-loader.js
+//= require parts/menu.js
+//= require parts/scrollToAnchor.js
+//= require parts/header-slider.js
+//= require parts/cards.js
+//= require parts/goods.js
+//= require parts/timer.js
+//= require parts/deals-slider.js
+//= require parts/random-slider.js
+//= require parts/testimonials.js

@@ -158,7 +158,7 @@ html.transition *::after {
   transition: none;
 
   &-photo {
-    @include rfs(220);
+    @include rfs(200);
     color: var(--dark);
   }
 

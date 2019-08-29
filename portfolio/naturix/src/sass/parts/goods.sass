@@ -1,0 +1,86 @@
+.goods
+  height: 1505px
+  padding: 0 60px
+  +wrapper()
+  display: flex
+  flex-direction: column
+  align-items: center
+  overflow: hidden
+  &__subtitle
+    color: #525252
+    font-family: $RobotoMedium
+    font-size: 12px
+    text-transform: uppercase
+    letter-spacing: 4.8px
+    margin-bottom: 28px
+  &__title-block
+    position: relative
+    width: 470px
+    height: 70px
+    line-height: 68px
+    border: 1px solid #e1e1e1
+    border-radius: 35px
+    text-align: center
+    background-color: #ffffff
+    +to($break_xs)
+      width: 350px
+      height: 140px
+    &::before, &::after
+      position: absolute
+      top: 35px
+      content: ''
+      width: 100%
+      height: 1px
+      background-color: #ecebe7
+      z-index: -999
+      +to($break_xs)
+        top: 70px
+    &::before
+      left: 100%
+    &::after
+      right: 100%
+  &__title
+    display: inline-block
+    color: #525252
+    font-family: $RobotoLight
+    font-size: 40px
+    &--bold
+      font-family: $RobotoBlack
+  &__tabs-block
+    margin-top: 66px
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+  &__tab
+    margin: 0 6px 12px 6px
+    padding: 8px 20px
+    border: 1px solid #e1e1e1
+    border-radius: 50px
+    cursor: pointer
+    &--active
+      background-color: #7fbc00
+      box-shadow: 0 15px 50px -10px rgba(0, 0, 0, .2)
+    &--active .goods__tab-title
+      color: #ffffff
+    &:hover
+      background-color: #7fbc00
+      box-shadow: 0 15px 50px -10px rgba(0, 0, 0, .2)
+    &:hover .goods__tab-title
+      color: #ffffff
+  &__tab-title
+    font-family: $Roboto
+    font-size: 14px
+    color: #9f9e9b
+    &--bold
+      font-family: $RobotoBlack
+  &__slider
+    +wrapper()
+    +size(12)
+    display: flex
+    justify-content: center
+    align-items: center
+  &__good
+
+.goods__slider .slick-slide
+  margin: 0 15px

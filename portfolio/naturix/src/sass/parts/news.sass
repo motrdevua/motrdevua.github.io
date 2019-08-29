@@ -1,0 +1,106 @@
+.news
+  +wrapper()
+  padding-top: 75px
+  padding-bottom: 75px
+  display: flex
+  flex-direction: column
+  align-items: center
+  +to($break_xs)
+    padding-bottom: 45px
+  &__subtitle
+    display: block
+    margin-bottom: 25px
+    color: #525252
+    font-family: $RobotoMedium
+    font-size: 12px
+    line-height: 14.4px
+    text-transform: uppercase
+    letter-spacing: 4.8px
+  &__title
+    color: #525252
+    font-family: $RobotoLight
+    font-size: 35px
+    &--bold
+      font-family: $RobotoBlack
+  &__row
+    +size(12)
+    +size-xs(12)
+    margin-top: 80px
+    +row-flex()
+    flex-wrap: nowrap
+    +to($break_xs)
+      flex-wrap: wrap
+    +to($break_md)
+      flex-wrap: wrap
+  &__item
+    +col()
+    +size(6)
+    +size-xs(12)
+    display: flex
+    width: 570px
+    +to($break_xs)
+      flex-direction: column
+      margin-bottom: 30px
+    +to($break_md)
+      margin-bottom: 30px
+  &__img
+    position: relative
+    width: 240px
+    height: 220px
+    border-radius: 10px
+    display: flex
+    justify-content: center
+    +to($break_xs)
+      margin-bottom: 20px
+    &::before
+      content: ''
+      position: absolute
+      top: -19px
+      left: -21px
+      border: 1px solid #efefef
+      border-radius: 10px
+      height: 100%
+      width: 100%
+      z-index: -99
+  &__text
+    display: flex
+    flex-direction: column
+    margin-left: 36px
+    +to($break_xs)
+      margin-left: 0
+  &__date
+    margin-bottom: 20px
+    color: #9f9f9f
+    font-family: $RobotoMedium
+    font-size: 10px
+    text-transform: uppercase
+  &__topic
+    color: #525252
+    font-family: $RobotoLight
+    font-size: 22px
+    line-height: 30.8px
+    &--bold
+      font-family: $RobotoBlack
+      &::after
+        content: ''
+        display: block
+        width: 30px
+        height: 2px
+        background-color: #efefef
+        margin: 24px 0
+  &__desc
+    margin-bottom: 30px
+    color: #525252
+    font-family: $Helvetica
+    font-size: 14px
+    line-height: 25.2px
+  &__link
+    color: #84c400
+    font-family: $RobotoMedium
+    font-size: 13px
+    line-height: 15.6px
+    text-transform: uppercase
+    &:hover svg
+      transform: translateX(5px)
+    & svg
+      margin-left: 10px

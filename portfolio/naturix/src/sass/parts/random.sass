@@ -1,0 +1,228 @@
+// ==================== random ======================
+
+.random
+  +wrapper()
+  &__topline
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    z-index: 9999
+    margin-bottom: 75px
+  &__logo
+    max-width: 160px
+    height: auto
+  &__caption
+    margin-top: 6px
+    color: #8dd3a5
+    font-size: 10px
+  &__text
+    margin: 0 4px 0 8px
+    color: #666666
+    font-family: $Roboto
+    font-size: 15px
+    &--bold
+      font-family: $RobotoBold
+  &__middle
+    display: flex
+    justify-content: center
+    flex-wrap: nowrap
+    +to($break_md)
+      flex-direction: column
+  &__col
+    +col()
+    +size(4)
+    +size-md(12)
+    position: relative
+    margin: 0 15px
+  &__subtitle
+    color: #9f9f9f
+    font-family: $RobotoMedium
+    font-size: 10px
+    text-transform: uppercase
+    letter-spacing: 4px
+  &__title
+    margin-top: 12px
+    margin-bottom: 30px
+    color: #525252
+    font-size: 28px
+    font-family: $RobotoLight
+    &--bold
+      font-family: $RobotoBlack
+  &-slider-controls
+    position: absolute
+    top: 30px
+    right: 0
+  &-slider
+    &__slide
+      +size(12)
+      +size-md(12)
+    &__card
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      margin-bottom: 30px
+      padding: 20px 20px
+      border: 1px solid #ebebeb
+      border-radius: 10px
+      background-color: #ffffff
+      &:hover .random-slider__title
+        color: #7fbb00
+    &__pic
+      & img
+        max-height: 80px
+        max-width: 80px
+    &__text
+      margin-left: 20px
+    &__title
+      color: #525252
+      font-family: $Roboto
+      font-size: 18px
+      line-height: 21.6px
+      &--bold
+        font-family: $RobotoBlack
+    &__price
+      display: block
+      color: #7fbb00
+      font-family: $HelveticaBold
+      font-size: 14px
+      line-height: 16.8px
+      &::before
+        content: ''
+        display: block
+        margin: 16px 0
+        width: 25px
+        height: 2px
+        background-color: #eeeeee
+  &__bottom
+    +row-flex()
+    justify-content: center
+    align-items: center
+    margin-bottom: 70px
+    +to($break_lg)
+      flex-direction: column
+
+.banner
+  position: relative
+  z-index: 99
+  height: 300px
+  border-radius: 10px
+  margin-bottom: 30px
+  +col()
+  +size(6)
+  +size-lg(8)
+  +size-md(8)
+  +to(900px)
+    +size(9)
+  +size-sm(10)
+  +to(700px)
+    +size(12)
+  +size-xs(12)
+  +size-s(12)
+  +to($break_s)
+    height: 325px
+  +to($break_xs)
+    height: 325px
+  &--green
+    background-color: #d7edcd
+    .banner__btn
+      background-color: #b8c800
+  &--orange
+    background-color: #fbefa1
+    .banner__btn
+      background-color: #ffbd0e
+    .banner__pic
+      right: 0
+      top: 55px
+      max-width: 300px
+    .banner__text
+      left: 45px
+    .banner__subtitle
+      color: #afa765
+    .banner__italics
+      color: #ffbe00
+  &__box
+    height: 65%
+    margin: 60px 35px 35px 35px
+    border: 5px solid #ffffff
+  &__btn
+    position: absolute
+    bottom: 20px
+    left: 70px
+    display: block
+    width: 150px
+    height: 30px
+    border: 4px solid #ffffff
+    border-radius: 30px
+    color: #ffffff
+    font-family: $RobotoBold
+    font-size: 12px
+    line-height: 30px
+    text-align: center
+    text-transform: uppercase
+    z-index: 999
+    &:hover
+      background-color: #90d3a6
+    &:hover svg
+      transform: translateX(5px)
+    & span
+      display: inline-block
+      margin-right: 40px
+  &__pic
+    position: absolute
+    top: 0
+    z-index: 100
+    &--2
+      right: 0
+  &__text
+    position: absolute
+    top: 35px
+    left: 240px
+    width: 260px
+    z-index: 999
+    +to(700px)
+      left: 220px
+    +to($break_xs)
+      left: 45px
+    +to($break_s)
+      left: 20px
+  &__subtitle
+    display: inline-block
+    color: #a7c57f
+    font-family: $Roboto
+    font-size: 14px
+    text-transform: uppercase
+    &--bold
+      font-family: $RobotoBlack
+  &__italics
+    position: relative
+    display: block
+    color: #95a200
+    font-family: $GreatVibes
+    font-size: 40px
+    margin: 40px 0 4px 40px
+    z-index: 999
+  &__title
+    position: relative
+    display: inline-block
+    margin-left: 35px
+    color: #525252
+    font-family: $RobotoLight
+    font-size: 35px
+    text-transform: uppercase
+    z-index: 999
+    &--bold
+      margin-left: 0
+      font-family: $RobotoBlack
+  &__desc
+    position: relative
+    display: block
+    margin-left: 40px
+    margin-top: 16px
+    color: #525252
+    font-family: $RobotoMedium
+    font-size: 11px
+    text-transform: uppercase
+    letter-spacing: 2.2px
+    z-index: 999

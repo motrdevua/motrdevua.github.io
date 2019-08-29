@@ -1,0 +1,276 @@
+// ==================== FOOTER ======================
+.footer
+  background-color: #f9f8f4
+  &__top
+    position: relative
+    +wrapper()
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    margin-bottom: 142px
+    +to(1220px)
+      flex-direction: column
+      margin-bottom: 100px
+  &__bottom
+    position: relative
+    height: 130px
+    background-color: #ffffff
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      height: 75px
+      width: 100%
+      margin-top: -42px
+      background: url('../img/bottom-line.png') no-repeat bottom center
+      background-size: cover
+  &__bottom-wrap
+    +wrapper()
+    height: 130px
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+    +to(1220px)
+      flex-direction: column
+      justify-content: center
+      height: 160px
+  &__copyrights
+    +size(6)
+    color: #999999
+    font-family: $Myriad
+    font-size: 15px
+    line-height: 21px
+    +to(1220px)
+      +size(12)
+      text-align: center
+  &__menu
+    +size(6)
+    display: flex
+    justify-content: flex-end
+    flex-direction: row
+    flex-wrap: nowrap
+    +to(1220px)
+      +size(12)
+      justify-content: center
+      margin-top: 20px
+  &__item
+    margin: 0 18px
+    text-align: center
+    +to(1220px)
+      margin: 0 5px
+  &__link
+    color: #999999
+    font-family: $RobotoMedium
+    font-size: 15px
+    line-height: 21px
+    &:hover
+      color: #7ac200
+    &--active
+      color: #545454
+
+.pageup
+  position: absolute
+  top: -20px
+  left: 50%
+  margin-left: -14px
+  z-index: 9999
+  &:hover
+    transform: translateY(-5px)
+  &__link
+    text-align: center
+    color: #e2e1de
+    font-size: 28px
+    line-height: 33.6px
+    &:hover svg path
+      fill: #7ac200
+
+.footer-logo
+  margin-top: 76px
+  +to($break_md)
+    margin-left: 0
+    margin-top: 45px
+  +to($break_sm)
+    margin: 0 auto
+    margin-top: 45px
+  +to($break_xs)
+    margin-top: 45px
+    margin-left: 0
+
+.contacts
+  +col()
+  +size(4)
+  +size-lg(6)
+  +size-md(6)
+  +size-sm(8)
+  +size-xs(12)
+  +size-s(12)
+  display: flex
+  flex-direction: column
+  align-content: center
+  align-self: center
+  color: #525252
+  & svg
+    margin-right: 22px
+  &__text
+    font-family: $Helvetica
+    font-size: 14px
+    line-height: 21px
+    &::before
+      content: ''
+      display: block
+      margin: 45px 0
+      width: 30px
+      height: 2px
+      background-color: #7ac200
+  &__address
+    margin-top: 25px
+    color: #525252
+    text-decoration: none
+    &:hover span
+      color: #7abf00
+    &:hover svg path
+      color: #7abf00
+  &__location
+    font-size: 15px
+    font-family: $Myriad
+    line-height: 27.75px
+    &--bold
+      font-family: $RobotoBold
+  &__email
+    font-family: $Myriad
+    color: #525252
+    line-height: 27.75px
+    &:hover span
+      color: #7abf00
+    &:hover svg path
+      color: #7abf00
+  &__phone
+    color: #525252
+    line-height: 27.75px
+    &:hover span
+      color: #7abf00
+    &:hover svg path
+      color: #7abf00
+  &__phone span
+    font-family: $RobotoBold
+
+.info
+  +col()
+  +size(2)
+  +size-lg(6)
+  +size-md(6)
+  +size-sm(6)
+  +size-xs(12)
+  +size-s(12)
+  margin-top: 100px
+  align-self: center
+  +to($break_lg)
+    margin-top: 45px
+  +to($break_md)
+    margin-top: 45px
+  +to($break_sm)
+    margin-top: 45px
+  +to($break_xs)
+    margin-top: 45px
+  +to($break_s)
+    margin-top: 45px
+  &__topic
+    &::after
+      content: ''
+      display: block
+      margin: 45px 0
+      width: 30px
+      height: 2px
+      background-color: #7ac200
+  &__title
+    color: #525252
+    font-family: $Roboto
+    font-size: 18px
+    line-height: 25.2px
+    &--bold
+      font-family: $RobotoBlack
+  &__menu
+  &__item
+    list-style-type: none
+  &__link
+    color: #525252
+    font-family: $Roboto
+    font-size: 15px
+    line-height: 33px
+    &:hover span
+      color: #7ac200
+    &:hover svg path
+      fill: #7ac200
+    & svg
+      margin-right: 5px
+    & svg path
+      fill: #e1e0de
+
+.account
+  @extend .info
+  &__topic
+    &::after
+      @extend .info__topic::after
+  &__title
+    @extend .info__title
+    &--bold
+      @extend .info__title--bold
+  &__item
+    @extend .info__item
+  &__link
+    @extend .info__link
+    & svg
+      margin-right: 5px
+    & svg path
+      fill: #e1e0de
+
+.instagram
+  +col()
+  +size(4)
+  +size-lg(6)
+  +size-md(6)
+  +size-sm(6)
+  +size-xs(12)
+  +size-s(12)
+  display: flex
+  flex-direction: column
+  align-self: center
+  margin-top: 100px
+  +to($break_lg)
+    margin: 45px 0 0 0
+  +to($break_md)
+    margin: 45px 0 0 0
+  +to($break_sm)
+    margin: 45px 0 0 0
+  +to($break_xs)
+    margin: 45px 0 0 0
+  +to($break_s)
+    margin: 45px 0 0 0
+  &__topic
+    margin: 0 auto
+    +to($break_lg)
+      margin: 0
+    &::after
+      @extend .info__topic::after
+  &__title
+    @extend .info__title
+    &--bold
+      @extend .info__title--bold
+  &__list
+    align-self: flex-end
+    list-style-type: none
+    width: 240px
+    +to(1220px)
+      align-self: center
+    +to($break_sm)
+      align-self: flex-start
+    +to($break_xs)
+      align-self: flex-start
+    +to($break_s)
+      align-self: flex-start
+  &__item
+    display: inline-block
+  &__link
+    &:hover img
+      transform: scale(1.05)

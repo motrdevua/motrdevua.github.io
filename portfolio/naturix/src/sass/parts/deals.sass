@@ -1,0 +1,325 @@
+.deals-wrap
+  +wrapper()
+  display: flex
+  flex-direction: column
+  align-items: center
+  position: relative
+  z-index: 99
+
+.deals
+  position: relative
+  background-color: #f7f6f2
+  &::after
+    content: ''
+    position: absolute
+    bottom: -35px
+    height: 75px
+    width: 100%
+    margin-top: -42px
+    background: url("../img/bottom-line.png") no-repeat bottom center
+    background-size: cover
+  &__img
+    position: absolute
+    &--left
+      z-index: 10
+      left: 0
+      bottom: -53px
+    &--right
+      right: 0
+      top: -20px
+  &__topline
+    +to(1260px)
+      flex-direction: column
+    display: flex
+    flex-wrap: nowrap
+    justify-content: center
+    align-items: center
+    margin-top: 60px
+    padding-bottom: 40px
+  &__left
+    +size(5)
+    +to(1128px)
+      +size(12)
+  &__center
+    +size(2)
+    margin: 0 auto
+    text-align: center
+    height: 128px
+    width: 200px
+    background: url('../img/tomatologo.png') no-repeat center center
+    +to(1260px)
+      +size(12)
+  &__right
+    +size(5)
+    color: #525252
+    font-family: $Helvetica
+    font-size: 14px
+    line-height: 25.2px
+    +to(1260px)
+      +size(12)
+      text-align: center
+  &__subtitle
+    display: block
+    color: #525252
+    font-family: $RobotoMedium
+    font-size: 12px
+    text-transform: uppercase
+    letter-spacing: 4.8px
+    margin-bottom: 23px
+    text-align: right
+    +to(1260px)
+      text-align: center
+  &__title
+    color: #525252
+    font-family: $RobotoLight
+    font-size: 40px
+    text-align: right
+    +to(1260px)
+      text-align: center
+    &--bold
+      font-family: $RobotoBlack
+  &-timer
+    +size(12)
+    position: relative
+    padding: 46px 0 30px 0
+    border-top: 2px solid #ffffff
+    &::before
+      position: absolute
+      top: -2px
+      left: 50%
+      margin-left: -85px
+      content: ''
+      width: 170px
+      height: 2px
+      background-color: #7dbe00
+    &__list
+      display: flex
+      justify-content: center
+      flex-wrap: nowrap
+    &__item
+      text-align: center;
+      width: 80px
+      height: 80px
+      margin: auto 3px;
+      border-top: 5px solid #a6d3a0;
+      border-bottom: 5px solid #5ec6ce;
+      border-radius: 6px;
+      font-size: 14px
+      font-family: $HelveticaBold
+      line-height: 0px
+      text-transform: uppercase
+      color: #74d1d1
+      box-sizing: border-box;
+      background-image: linear-gradient(to bottom, #a6d3a0 0%, #5ec6ce 100%), linear-gradient(to bottom, #a6d3a0 0%, #5ec6ce 100%);
+      background-position: 0 0, 100% 0;
+      background-repeat: no-repeat;
+      background-size: 5px 100%;
+    &__item span
+      display: block
+      color: #525252
+      font-family: $HelveticaBold
+      font-size: 40px
+      line-height: 58px
+  &-slider
+    +col()
+    +size(12)
+    +size-lg(7)
+    +size-md(10)
+    +size-sm(12)
+    +size-s(12)
+    +to(1250px)
+      +size(7)
+    +to(1025px)
+      +size(8)
+    margin-top: 15px
+    margin-bottom: 75px
+
+.deals-card
+  position: relative
+  display: flex !important
+  flex-direction: row
+  flex-wrap: nowrap
+  justify-content: space-between
+  background-color: #ffffff
+  border-radius: 10px
+  +to($break_xs)
+    justify-content: flex-start
+  +to($break_s)
+    justify-content: flex-start
+  &::after
+    position: absolute
+    right: 0
+    top: 0
+    content: ''
+    display: block
+    height: 54px
+    margin: auto
+    vertical-align: middle
+    width: 3px
+    background-color: #7fba00
+    transform: translateY(0px)
+    transition: all 0.3s ease-in-out 0s
+    visibility: hidden
+    opacity: 0
+  &:hover::after
+    opacity: 1
+    visibility: visible
+    transform: translateY(98px)
+  &:hover
+    box-shadow: 0 10px 25px 5px rgba(0,0,0,0.2)
+  &__nav
+    display: flex
+    flex-direction: column
+    height: 100%
+    border-right: 2px solid #f7f6f2
+  &__link
+    display: block
+    height: 100%
+    padding: 55% 15px
+    background-color: #ffffff
+    font-size: 22px
+    &:not(:last-child)
+      border-bottom: 2px solid #f7f6f2
+    & svg
+      display: block
+      margin: 0 auto
+    & svg path
+      fill: #dedede
+    &:hover svg path
+      fill: #ffffff
+    &:hover
+      background-color: #92d2a7
+    &--like
+      border-radius: 10px 0 0 0
+    &--basket
+      &:hover
+        background-color: #79d1d6
+    &--modal
+      border-radius: 0 0 0 10px
+  &__content
+    height: 100%
+    margin-top: 40px
+    margin-left: 20px
+    +to($break_sm)
+      margin-top: 20px
+    +to($break_xs)
+      margin-top: 20px
+    +to($break_s)
+      margin-top: 20px
+  &__subtitle
+    margin-bottom: 19px
+    color: #a0a0a0
+    font-family: $RobotoMedium
+    font-size: 10px
+    line-height: 12px
+    text-transform: uppercase
+    letter-spacing: 4px
+  &__title
+    margin-bottom: 25px
+    color: #525252
+    font-size: 30px
+    line-height: 36px
+    font-family: $RobotoLight
+    +to($break_sm)
+      font-size: 28px
+    +to($break_xs)
+      font-size: 28px
+    +to($break_s)
+      font-size: 28px
+    &--bold
+      font-family: $RobotoBlack
+  &__desc
+    width: 260px
+    margin-bottom: 20px
+    color: #525252
+    font-family: $Helvetica
+    font-size: 14px
+    line-height: 25.2px
+    +to($break_sm)
+      width: 180px
+    +to($break_xs)
+      width: 180px
+    +to($break_s)
+      width: 180px
+  &__price
+    display: inline-block
+    text-align: left
+    width: 100%
+    color: #7fbb00
+    font-family: $HelveticaBold
+    font-size: 14px
+    line-height: 16.8px
+    &--old
+      color: #dddddd
+      text-decoration: line-through
+  &__right
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    margin-top: 20px
+    min-width: 220px
+    +to($break_xs)
+      display: none
+    +to($break_s)
+      display: none
+  &__label
+    display: flex
+    justify-content: space-around
+  &__tag
+    width: 70px
+    height: 24px
+    margin: 0 2px
+    border: 1px solid #ffffff
+    border-radius: 15px
+    color: #ffffff
+    font: 11px $HelveticaBold
+    text-transform: uppercase
+    letter-spacing: 2.2px
+    line-height: 24px
+    text-align: center
+    user-select: none
+    z-index: 99
+    &--new
+      background-color: #92d2a7
+    &--sale
+      background-color: #79d1d6
+  &__pic
+    position: absolute
+    top: 60px
+    &--pineapple
+      top: 20px
+    & img
+
+
+
+
+.deals-slider .slick-list
+  padding: 25px 0 75px 0
+
+.deals-slider .slick-slide
+  margin: 0 15px
+
+.deals-slider .slick-dots
+  +row-flex()
+  justify-content: center
+  margin-top: 25px
+  & li
+    display: inline-block
+    margin: 4px
+  & button
+    width: 24px
+    height: 24px
+    border-radius: 50%
+    background-color: #ffffff
+    border: 0px solid
+    font-family: $RobotoBold
+    font-size: 12px
+    color: #bfbfbf
+    cursor: pointer
+    outline: none
+
+  & .slick-active button
+    color: #ffffff
+    background-color: #90d3a6
