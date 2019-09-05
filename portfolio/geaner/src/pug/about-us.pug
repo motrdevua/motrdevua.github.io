@@ -1,0 +1,32 @@
+extends template/main
+
+block variables
+  - var title = "Geaner short story how it all began"
+  - var description = "Geaner now - 14 Employees, 23 Partner Vehicles and 97% of inquiries answered within the first 10 minutes"
+  - var pageClass = "about-page"
+
+block content
+
+  include ./modules/header
+
+  .content
+    section.section.about
+      .about-title
+        .container
+          .row
+            h2.about__title
+              | 14 Employees, 23 Partner Vehicles and 97 % of inquiries
+            h2.about__title
+              | answered within the first 10 minutes
+      include ./modules/timeline
+      .container
+        .row.justify-content-center
+          .col-xl-6.d-flex.justify-content-center
+            button.button.button--big(type='submit') view the fleet we use
+      .container
+        .row.justify-content-center
+          .col-xl-5
+            include ./modules/form
+
+
+  include ./modules/footer

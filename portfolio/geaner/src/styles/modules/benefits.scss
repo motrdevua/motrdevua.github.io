@@ -1,0 +1,16 @@
+.benefits {
+  &__item {
+    background: $white;
+    height: 100%;
+
+    &:hover .benefits__desc {
+      color: $gold-light;
+    }
+  }
+
+  &__desc {
+    padding: 15px;
+    line-height: 24px;
+  }
+
+}

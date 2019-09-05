@@ -1,0 +1,144 @@
+// =====================  utils  ==========================
+
+// @import 'utils/reset';
+@import 'utils/normalize';
+@import 'utils/mixin_font-face';
+@import 'utils/fontstylesheet';
+@import 'utils/variables';
+
+// Bootstrap
+
+@import '../../node_modules/bootstrap/scss/bootstrap-grid';
+
+// Rfs
+
+@import '../../node_modules/rfs/scss';
+
+// ========================================================
+//      Uncomment if png or svg folder not empty
+// ========================================================
+//
+// @import 'utils/mixin-spritePng';
+// @import 'tmp/spritePng';
+@import 'tmp/spriteSvg';
+
+// ====================  Default  =========================
+
+p {
+  hyphens: auto;
+}
+
+button,
+a,
+input {
+  outline: 0;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: all .2s linear;
+}
+
+li {
+  list-style-type: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: $black;
+  font-weight: 300;
+  font-family: $open-sans;
+
+  @include font-size(18px);
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+// =====================  modules  ========================
+
+@import 'modules/buttons';
+@import 'modules/navigation-arrows';
+
+@import 'modules/header';
+@import 'modules/form';
+@import 'modules/benefits';
+@import 'modules/transfer';
+@import 'modules/why';
+@import 'modules/footer';
+
+@import 'modules/fleet';
+@import 'modules/about';
+@import 'modules/contacts';
+
+.section {
+  &__title {
+    margin: 28px auto;
+    padding: 15px 28px;
+    border: 3px solid $gold-light;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+
+    @include font-size(32px);
+  }
+}
+
+.transfer,
+.fleet-item,
+.about {
+  ul li {
+    position: relative;
+    padding-left: 13px;
+    line-height: 24px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 3px;
+      display: block;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: $black;
+      content: '';
+    }
+  }
+}
+
+.fleet {
+  ul {
+    padding: 0;
+  }
+}
+
+// =====================  Media  ==========================
+
+@import 'modules/media';

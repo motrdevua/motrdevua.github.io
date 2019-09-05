@@ -1,0 +1,39 @@
+.navigation {
+  background: $gold-light;
+  text-align: center;
+  padding: 27px;
+
+  &-arrow {
+    width: 20px;
+    height: 8px;
+    background: $black;
+    cursor: pointer;
+
+    &:hover {
+      background: $white;
+
+      &::before {
+        background: $white;
+      }
+    }
+
+    &-prev {
+      margin-bottom: 9px;
+      transform: rotate(-45deg);
+    }
+
+    &-next {
+      margin-top: 9px;
+      transform: rotate(135deg);
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 20px;
+      background: $black;
+
+    }
+  }
+}

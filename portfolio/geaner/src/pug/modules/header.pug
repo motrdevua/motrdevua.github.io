@@ -1,0 +1,20 @@
+header.header.container-fluid
+  .container
+    .row.align-items-center
+      .col-xl-4.col-md-4.justify-content-center
+        a.header__logo(href='/')
+          +icon('geaner-logo', '')
+      .col-xl-5.col-md-5
+        nav.header-nav
+          ul.menu.d-flex.justify-content-end
+            li.menu__item
+              a.menu__link(href='/fleet.html') Fleet
+            li.menu__item
+              a.menu__link(href='/about-us.html') About Us
+            li.menu__item
+              a.menu__link(href='/contacts.html') Contacts
+      .col-xl-3.col-md-3
+        .header-book.d-flex.flex-column.justify-content-between.align-items-center
+          a.header-book__phone(href='tel:+380501231212') +380&nbsp;50&nbsp;123&nbsp;12&nbsp;12
+          button.button.button--small.header-button(type='submit')
+            | Book a Car

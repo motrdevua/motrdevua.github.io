@@ -1,0 +1,17 @@
+.form.d-flex.flex-column
+  h3.form__title Book your car for Kiev trip
+  span.form__desc From &euro;8 per hour.
+  span.form__desc Free wait time up to 60 minutes
+  form.form__container.d-flex.flex-column.justify-content-start(action='post')
+    input#name(type='text' name='name' placeholder='Name')
+    input#phone(type='tel' name='phone' placeholder='Phone')
+    input#email(type='email' name='email' placeholder='Email')
+    input#message(type='text' name='message' placeholder='Message')
+    .form__checkbox
+      input#accept(type='checkbox' name='accept')
+      label(for='accept')
+        | I accept the Terms of Use and Privacy
+        | Policy
+    button.button.button--small.button.button--small--send(type='submit')
+      | Send
+      | Request

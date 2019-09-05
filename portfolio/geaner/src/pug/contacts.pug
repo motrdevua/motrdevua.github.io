@@ -1,0 +1,54 @@
+extends template/main
+
+block variables
+  - var title = "If you have any questions, contact us"
+  - var description = "Please fill out the form and we'll respond to you shortly"
+  - var pageClass = "contacts-page"
+
+block content
+
+  header.header.container-fluid
+    .container
+      .row.align-items-center
+        .col-xl-4.col-md-4.justify-content-center
+          a.header__logo(href='/')
+            +icon('geaner-logo', '')
+        .col-xl-5.col-md-5
+          nav.header-nav
+            ul.menu.d-flex.justify-content-end
+              li.menu__item
+                a.menu__link(href='/fleet.html') Fleet
+              li.menu__item
+                a.menu__link(href='/about-us.html') About Us
+              li.menu__item
+                a.menu__link(href='/contacts.html') Contacts
+        .col-xl-3.col-md-3
+          .header-book.d-flex.flex-column.justify-content-between.align-items-center
+            a.header-book__phone(href='tel:+380501231212') +380&nbsp;50&nbsp;123&nbsp;12&nbsp;12
+
+  .content
+    section.section.contacts
+      .container
+        .row
+          h2.section__title Contacts
+        .row
+          .col-xl-12
+            h3.contacts__title Please fill out the form and we'll respond to you shortly
+            p.contacts__text
+              | Please complete the form below with any questions or concerns.
+              br
+              | If you need immediate assistance please call +380 50 028 98 89
+        .row
+          .col-xl-4
+            include ./modules/form
+          .col-xl-7.offset-1
+            h3.contacts__title.contacts__title--address Address
+            .map
+              #map
+
+
+  include ./modules/footer
+
+block script
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAebS1vSYh_6rp0poWp6iCVh0sEryAIBEo&callback=initMap"
+    async defer)

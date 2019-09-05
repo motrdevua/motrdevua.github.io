@@ -1,0 +1,30 @@
+.footer {
+  padding: 19px 0;
+  background: $white;
+  box-shadow: 0 0 10px 0 $black;
+
+  @include font-size(14px);
+
+  &-copyright {
+    font-family: $days-one;
+    color: $black;
+  }
+
+  &-nav {
+    text-transform: uppercase;
+
+    &__item {
+      padding: 0 0 0 60px;
+    }
+
+    &__link {
+      color: $black;
+      text-decoration: underline;
+      font-weight: 400;
+
+      &:hover {
+        color: $gold-light;
+      }
+    }
+  }
+}

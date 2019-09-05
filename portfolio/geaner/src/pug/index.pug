@@ -1,0 +1,25 @@
+extends template/main
+
+block variables
+  - var title = "Premium cars with drivers. It is Geaner"
+  - var description = "Friendly English-speaking assistant available from 8am up to 2am local time every day before, during, and after your trip to Ukraine to answer all your questions within the first 10 minutes"
+  - var pageClass = "index-page"
+
+
+block content
+
+  include ./modules/header
+
+  .content
+    include ./modules/header-form
+    include ./modules/benefits
+    include ./modules/transfer
+    include ./modules/why
+
+    .container.booknow
+      .row.justify-content-center
+        .col-xl-6.d-flex.justify-content-center
+          button.button.button--big(type='submit')
+            | book your safe ride in kiev (ukraine) now
+
+  include ./modules/footer

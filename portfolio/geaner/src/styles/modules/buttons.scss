@@ -1,0 +1,122 @@
+.button {
+  position: relative;
+  z-index: 1;
+  border: none;
+  color: $white;
+  font-family: $days-one;
+  cursor: pointer;
+  transition: all .2s linear;
+  border-radius: 3px;
+
+  @include font-size(16px);
+  text-shadow: 1px 1px 1px $black;
+
+  &--small {
+    padding: 7px 26px 9px 26px;
+  }
+
+  &--small-white {
+    padding: 7px 26px 9px 26px;
+
+    &::after {
+      border: 1px solid $black;
+      background: $white;
+      opacity: 0;
+      transition: all .2s linear;
+    }
+
+    &:hover {
+      color: $black;
+      text-shadow: 1px 1px 1px $white;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      transition: all .2s linear;
+    }
+  }
+
+  &--big {
+    text-transform: uppercase;
+    padding: 22px 32px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    content: '';
+  }
+
+  &::before {
+    border: 1px solid $black;
+    background: $gradient-black;
+  }
+
+  &::after {
+    border: 1px solid $gold-medium;
+    background: $gradient-gold;
+    opacity: 0;
+    transition: all .2s linear;
+  }
+
+  &:hover {
+    text-shadow: 1px 1px 1px $gold-dark;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    transition: all .2s linear;
+  }
+}
+
+// gold button, hover black
+.fleet-page,
+.about-page {
+  .button--big {
+    text-shadow: 1px 1px 1px $gold-dark;
+
+    &::before {
+      border: 1px solid $gold-medium;
+      background: $gradient-gold;
+    }
+
+    &::after {
+      border: 1px solid $black;
+      background: $gradient-black;
+    }
+
+    &:hover {
+      text-shadow: 1px 1px 1px $black;
+    }
+  }
+}
+
+// white button on dark back
+.fleet-page,
+.about-page {
+  .form .button {
+    text-shadow: 1px 1px 1px $gold-dark;
+
+    &::before {
+      border: 1px solid $gold-medium;
+      background: $gradient-gold;
+    }
+
+    &::after {
+      border: 1px solid $white;
+      background: $white;
+    }
+
+    &:hover {
+      color: $black;
+      text-shadow: none;
+    }
+  }
+
+}

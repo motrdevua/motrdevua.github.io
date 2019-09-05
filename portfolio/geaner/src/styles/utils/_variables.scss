@@ -1,0 +1,37 @@
+// =================== Bootstrap ====================
+
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px);
+$container-max-widths: (sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px);
+
+// ==================== FONTS =======================
+
+$main-font: Arial,
+Tahoma,
+sans-serif;
+
+$days-one: 'Days One',
+$main-font;
+$open-sans: 'Open Sans',
+$main-font;
+
+// =================== COLORS =======================
+
+$black: #000000;
+$white: #ffffff;
+$grey: #999999;
+$red: #d9534f;
+$gold-dark: #a0843e;
+$gold-medium: #be9943;
+$gold-light: #d4aa49;
+
+$gradient-black: linear-gradient(#313132, $black);
+$gradient-gold: linear-gradient($gold-light, $gold-medium);

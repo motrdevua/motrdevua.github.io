@@ -1,0 +1,92 @@
+.form {
+  // width: 75%;
+  padding: 15px;
+  border-radius: 4px;
+  background: $white;
+
+  &__title {
+    margin: 0 auto;
+    max-width: 260px;
+    color: $gold-light;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 36px;
+
+    @include font-size(32px);
+  }
+
+  &__desc {
+    text-align: center;
+    line-height: 22px;
+  }
+
+  &__checkbox {
+
+    input,
+    label {
+      cursor: pointer;
+    }
+
+    label {
+      line-height: 36px;
+
+      @include font-size(12px);
+    }
+  }
+
+  form {
+    padding: 5px;
+  }
+
+  input[type=text],
+  input[type=tel],
+  input[type=email] {
+    padding: 40px 0 4px 2px;
+    border: none;
+    border-bottom: 1px solid $grey;
+
+    @include font-size(16px);
+
+    &::placeholder {
+      opacity: 1;
+      transition: all .2s linear;
+    }
+
+    &:focus {
+      background: $white;
+    }
+
+    &:focus::placeholder {
+      opacity: 0;
+    }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    box-shadow: 0 0 0 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
+
+.fleet-page,
+.about-page {
+  .form {
+    background: $black;
+    color: $white;
+    margin: 54px 0;
+
+    input,
+    input:focus {
+      background: #000;
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.icon-geaner-logo {
+  display: block;
+  margin: 10px 0;
+  width: 212px;
+  height: 70px;
+}
+
+.header {
+  background: $white;
+  box-shadow: 0 0 10px 0 $black;
+
+  &-form {
+    .form {
+      margin: 12px 0 45px 0;
+    }
+  }
+
+  a {
+    color: $black;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  &__logo {
+    display: block;
+  }
+
+  &-book {
+    text-align: center;
+    height: 100%;
+
+    &__phone {
+
+      &:hover {
+        color: $gold-medium;
+      }
+    }
+  }
+
+  &-button {
+    margin-top: 15px;
+  }
+}
+
+.menu {
+  &__item {
+    padding: 0 0 0 60px;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    text-align: center;
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      display: block;
+      width: 0;
+      height: 4px;
+      background: $gold-light;
+      content: '';
+      transition: all .2s linear;
+    }
+  }
+}

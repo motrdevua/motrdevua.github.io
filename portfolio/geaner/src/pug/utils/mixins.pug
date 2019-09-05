@@ -1,0 +1,34 @@
+mixin icon(name, mod)
+  if(mod)
+    svg(class="icon icon-" + name + ' ' + mod)
+      use(xlink:href="#" + name)
+  else
+    svg(class="icon icon-" + name)
+      use(xlink:href="#" + name)
+
+mixin fleet-card(title, subtitle, people, bag, transfer, perhour, throughout)
+  .fleet-card
+    h4.fleet-card__title= title
+    .fleet-card__preview
+      +icon('eye-01', '')
+    .fleet-card__image
+      +icon('s-class', '')
+    span.fleet-card__subtitle= subtitle
+    .fleet-card__details
+      .fleet-card__counter.fleet-card__counter--seat
+        .fleet-card__icon
+          +icon('ico-people', '')
+        .fleet-card__num= people
+      .fleet-card__counter.fleet-card__counter--luggage
+        .fleet-card__icon
+          +icon('ico-bag', '')
+        .fleet-card__num= bag
+    .fleet-card__description
+      div
+        h5= 'Airport transfer: ' + transfer + ' EUR'
+        ul
+          li= 'Minimum order: ' + transfer + ' EUR (delivery + 2 hours)'
+          li= 'Per hour: ' + perhour + ' EUR'
+          li= 'Throughout Ukraine: ' + throughout + ' EUR/km'
+      button.button.button--small(type='submit')
+        | Book a Car

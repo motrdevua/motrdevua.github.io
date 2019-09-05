@@ -1,0 +1,80 @@
+.fleet-item {
+  &__title {
+    text-align: center;
+    font-family: $days-one;
+
+    @include font-size(40px);
+  }
+
+  &__navigation {
+    padding: 27px;
+    background: $gold-light;
+    text-align: center;
+
+    &-desc {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &-title {
+      font-weight: 600;
+    }
+
+    &-counter {
+      font-weight: 300;
+    }
+  }
+
+  &__slider {
+    background: $white;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+
+    .button {
+      margin: 0 auto;
+    }
+  }
+
+  &__type {
+    font-family: $days-one;
+    line-height: 36px;
+
+    @include font-size(24px);
+  }
+
+  &__minimum {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    line-height: 24px;
+
+    div:first-child {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-title {
+      font-weight: 600;
+    }
+
+    &-price {
+      margin: 0 0 0 24px;
+      padding: 12px;
+      border: 1px solid $black;
+      border-radius: 3px;
+      background: $gradient-black;
+      color: $white;
+      font-family: $days-one;
+    }
+  }
+
+  &__desc {
+    padding: 26px 0;
+    border-top: 3px solid $gold-light;
+  }
+}
