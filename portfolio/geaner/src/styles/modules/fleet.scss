@@ -1,3 +1,19 @@
+.use {
+
+  &__item {
+    margin-bottom: 17px;
+    padding: 0 45px 28px 45px;
+    background: $white;
+  }
+
+  &__desc {
+    text-align: center;
+    font-weight: 400;
+    font-family: $days-one;
+    line-height: 24px;
+  }
+}
+
 .fleet-item {
   &__title {
     text-align: center;
@@ -34,6 +50,7 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 25px;
+    max-width: 80%;
 
     .button {
       margin: 0 auto;
@@ -41,6 +58,7 @@
   }
 
   &__type {
+    max-width: 235px;
     font-family: $days-one;
     line-height: 36px;
 

@@ -10,59 +10,9 @@ block content
   include ./modules/header
 
   .content
-    section.section.use
-      .container
-        .row
-          h2.section__title fleet we use
 
-    section.section.fleet-items
-      .fleet-item
-        h3.fleet-item__title Premium
-        .fleet-item__navigation
-          .container
-            .row
-              .col-xl-2.d-flex.justify-content-center.align-items-center
-                .navigation-arrow.navigation-arrow-prev
-              .col-xl-8.fleet-item__navigation-desc
-                span.fleet-item__navigation-title
-                  | Mercedes S-class (221)
-                span.fleet-item__navigation-counter
-                  | 1/3 available cars
-              .col-xl-2.d-flex.justify-content-center.align-items-center
-                .navigation-arrow.navigation-arrow-next
-        .fleet-item__slider
-          .container
-            .row
-              .col-xl-6
-                .fleet-item__details
-                  h4.fleet-item__type
-                    | Mercedes S-class
-                    br
-                    | (221) Long
-                  .fleet-item__minimum
-                    div
-                      span.fleet-item__minimum-title
-                        | Minimum order:
-                      span.fleet-item__minimum-desc
-                        | (delivery + 2 hours)
-                    span.fleet-item__minimum-price
-                      | 63 EUR
-                  ul.fleet-item__desc
-                    li.fleet-item__desc-item
-                      | Airport transfer: 63 EUR
-                    li.fleet-item__desc-item
-                      | People: 4
-                    li.fleet-item__desc-item
-                      | Luggage: 3
-                    li.fleet-item__desc-item
-                      | Per hour: 21 EUR
-                    li.fleet-item__desc-item
-                      | Throughout Ukraine: 0,70 EUR/km
-                  button.button.button--big(type='submit')
-                    | Book this Car
-              .col-xl-6
-                .fleet-item__galery
-
+    include ./modules/use
+    include ./modules/fleet-items
 
     .container
       .row.justify-content-center

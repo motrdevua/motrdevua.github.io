@@ -97,19 +97,39 @@ function serve() {
 
 /* =====================  pug  ==================== */
 
+const emitty = require('emitty').setup(path.src.pug, 'pug', {
+  makeVinylFile: true,
+});
+
+global.watch = true;
+global.emittyChangedFile = {
+  path: '',
+  stats: null,
+};
+
 function pug() {
-  return src(`${path.src.pug}*.pug`)
+  return src(`${path.src.pug}*.pug`, { read: false })
     .pipe(
       plugin.plumber({
         errorHandler: onError,
       })
     )
     .pipe(
+      plugin.if(
+        global.watch,
+        emitty.stream(
+          global.emittyChangedFile.path,
+          global.emittyChangedFile.stats
+        )
+      )
+    )
+    .pipe(
       plugin.pug({
         pretty: true,
       })
     )
-    .pipe(dest(path.dist));
+    .pipe(dest(path.dist))
+    .pipe(browserSync.stream());
 }
 
 /* ===================  styles  =================== */
@@ -303,7 +323,7 @@ function move() {
 /* ====================  watch  =================== */
 
 function watchFiles() {
-  watch(`${path.src.pug}**/*.pug`, pug).on('change', reload);
+  watch(`${path.src.pug}**/*.pug`, pug);
   watch(path.src.styles, styles);
   watch(path.src.js, js).on('change', reload);
   watch(path.src.img, img);
