@@ -77,6 +77,8 @@
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
     "rfs": "^9.0.0",
-    "svg4everybody": "^2.1.9"
+    "slick-carousel": "^1.8.1",
+    "svg4everybody": "^2.1.9",
+    "swiper": "^4.5.0"
   }
 }

@@ -8,6 +8,7 @@
     height: 8px;
     background: $black;
     cursor: pointer;
+    outline: none;
 
     &:hover {
       background: $white;
@@ -37,3 +38,41 @@
     }
   }
 }
+
+// .fleet-item__galery .navigation-arrow {
+//   position: absolute;
+//   z-index: 99;
+//   background: $white;
+
+//   &::before {
+//     background: $white;
+//   }
+// }
+
+// .fleet-item__galery .gallery-top .navigation-arrow {
+//   &-prev {
+//     top: 50%;
+//     left: 3%;
+//     transform: rotate(-45deg) scale(1.5) translateY(-50%);
+//   }
+
+//   &-next {
+//     top: 49%;
+//     right: 3%;
+//     transform: rotate(135deg) scale(1.5) translateY(-49%);
+//   }
+// }
+
+// .fleet-item__galery .gallery-thumbs .navigation-arrow {
+//   &-prev {
+//     top: 41%;
+//     left: 3%;
+//     transform: rotate(-45deg) scale(1.2) translateY(-41%);
+//   }
+
+//   &-next {
+//     top: 40%;
+//     right: 3%;
+//     transform: rotate(135deg) scale(1.2) translateY(-40%);
+//   }
+// }
